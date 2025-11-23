@@ -61,3 +61,6 @@ def validate_config() -> bool:
 # Validate on import (but only in production)
 if ENVIRONMENT == "production":
     validate_config()
+
+# Redis configuration
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
