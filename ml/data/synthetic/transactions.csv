@@ -1,6 +1,6 @@
 transaction_id,user_id,date,merchant,amount,category,persona,is_anomaly
 320a2fc14f0743658abd076c124066c3,user_55d583c9,2025-08-24T13:27:05.845592,Trader Joe's,7.05,Food,The Partier,False
-275c4e88deec4bd29dfd3170b6f1a869,user_55d583c9,2025-08-24T13:27:05.845592,Subway,28.50,Food,The Partier,False
+275c4e88deec4bd29dfd3170b6f1a869,user_55d583c9,2025-08-24T13:27:05.845592,Subway,28.5,Food,The Partier,False
 de6cbf23d743428595e14367dd92158e,user_55d583c9,2025-08-24T13:27:05.845592,Spotify,20.65,Entertainment,The Partier,False
 0a268d146e7d40a294aaeffdf50b212e,user_55d583c9,2025-08-24T13:27:05.845592,Trader Joe's,15.92,Food,The Partier,False
 a9abdb2fdd4241a6a5d8645ec52111b5,user_55d583c9,2025-08-25T13:27:05.845592,Target,159.51,Shopping,The Partier,False
@@ -19,7 +19,7 @@ f8c1ac0d99f2401cbf2082e9972de03a,user_55d583c9,2025-08-30T13:27:05.845592,AMC Th
 b3d8d1d0a6a5463e9a75d4d116a70525,user_55d583c9,2025-08-30T13:27:05.845592,Chipotle,10.84,Food,The Partier,False
 bfc733dd0b224462925d63cb79e5cfad,user_55d583c9,2025-08-31T13:27:05.845592,DoorDash,38.77,Food,The Partier,False
 ae7aa8f0b3f74dfa9e573855837c81d0,user_55d583c9,2025-08-31T13:27:05.845592,Whole Foods,26.16,Food,The Partier,False
-356c7597620347439ec6d28c0062be9a,user_55d583c9,2025-08-31T13:27:05.845592,Lyft,26.70,Transportation,The Partier,False
+356c7597620347439ec6d28c0062be9a,user_55d583c9,2025-08-31T13:27:05.845592,Lyft,26.7,Transportation,The Partier,False
 87f362c26f1d4a6baab4a2c417031c8c,user_55d583c9,2025-08-31T13:27:05.845592,Netflix,585.16,Entertainment,The Partier,True
 72bbbc42308c4d0e918e0e95cc1e92b5,user_55d583c9,2025-09-01T13:27:05.845592,Starbucks,17.75,Food,The Partier,False
 3bd5d970bfbe462ca9d9f0e805984ae5,user_55d583c9,2025-09-01T13:27:05.845592,Netflix,44.09,Entertainment,The Partier,False
@@ -41,7 +41,7 @@ de847a54bae348c2a1cfcbcee2ca98fa,user_55d583c9,2025-09-06T13:27:05.845592,PlaySt
 186a16659c3e4344872e22fbc74695b8,user_55d583c9,2025-09-06T13:27:05.845592,Starbucks,32.44,Food,The Partier,False
 c46983ada72c4d73a0e2846b235bfb28,user_55d583c9,2025-09-07T13:27:05.845592,DoorDash,13.03,Food,The Partier,False
 01ed4abd3ada43749839a32504415d0e,user_55d583c9,2025-09-07T13:27:05.845592,Amazon,122.56,Shopping,The Partier,False
-e261afad35a84402980288862aaa0eb8,user_55d583c9,2025-09-07T13:27:05.845592,Netflix,16.70,Entertainment,The Partier,False
+e261afad35a84402980288862aaa0eb8,user_55d583c9,2025-09-07T13:27:05.845592,Netflix,16.7,Entertainment,The Partier,False
 a759e2cdd0fd4e23a5c2eed11c0b11d1,user_55d583c9,2025-09-08T13:27:05.845592,Lime Scooter,53.95,Transportation,The Partier,False
 2f6e350e4e254d48bce3ce062a452fca,user_55d583c9,2025-09-09T13:27:05.845592,Apple Store,169.04,Shopping,The Partier,False
 14ab4951161d4139b5b4f61a605a8044,user_55d583c9,2025-09-09T13:27:05.845592,Uber,52.68,Transportation,The Partier,False
@@ -58,7 +58,7 @@ fd16ce59c954404d84b074d1a74f1768,user_55d583c9,2025-09-12T13:27:05.845592,AMC Th
 278da65f6aa64b86aca2ae911251c1ad,user_55d583c9,2025-09-12T13:27:05.845592,Trader Joe's,21.82,Food,The Partier,False
 8948737070394d378e7abfc6660cdbb2,user_55d583c9,2025-09-13T13:27:05.845592,DoorDash,25.88,Food,The Partier,False
 63497120c4214ec886d149a546190011,user_55d583c9,2025-09-14T13:27:05.845592,Uber,53.18,Transportation,The Partier,False
-ccfe450417ff415eb56b4bdb5472cf3b,user_55d583c9,2025-09-14T13:27:05.845592,DoorDash,9.50,Food,The Partier,False
+ccfe450417ff415eb56b4bdb5472cf3b,user_55d583c9,2025-09-14T13:27:05.845592,DoorDash,9.5,Food,The Partier,False
 8a74badfd2d9497aa0947a09e8a5078a,user_55d583c9,2025-09-14T13:27:05.845592,PlayStation Network,58.56,Entertainment,The Partier,False
 0d7abebecbb9457d927a108ec9db8a14,user_55d583c9,2025-09-14T13:27:05.845592,Shell Gas,57.13,Transportation,The Partier,False
 989596aa72454b02b54a0497bb98edae,user_55d583c9,2025-09-15T13:27:05.845592,Steam Games,62.75,Entertainment,The Partier,False
@@ -66,7 +66,7 @@ ccfe450417ff415eb56b4bdb5472cf3b,user_55d583c9,2025-09-14T13:27:05.845592,DoorDa
 db33dee73d3e47a9a6453dce026e25fd,user_55d583c9,2025-09-16T13:27:05.845592,Trader Joe's,7.29,Food,The Partier,False
 aeb5860c0af24fb8a653465c0cd7d6ba,user_55d583c9,2025-09-16T13:27:05.845592,Starbucks,6.94,Food,The Partier,False
 cfba08cf08fc4e93bb9df89763963d56,user_55d583c9,2025-09-17T13:27:05.845592,Netflix,29.66,Entertainment,The Partier,False
-15a31696d2b7439f870f2567b78bdba0,user_55d583c9,2025-09-17T13:27:05.845592,Trader Joe's,34.20,Food,The Partier,False
+15a31696d2b7439f870f2567b78bdba0,user_55d583c9,2025-09-17T13:27:05.845592,Trader Joe's,34.2,Food,The Partier,False
 d9160f9722024ff592a95c0460f74ced,user_55d583c9,2025-09-18T13:27:05.845592,Steam Games,33.88,Entertainment,The Partier,False
 16ef032e5e5d450aa21780bacc03e24a,user_55d583c9,2025-09-19T13:27:05.845592,McDonalds,17.44,Food,The Partier,False
 0127fec8ab7b4ce08eb3dabeb02a4b3c,user_55d583c9,2025-09-19T13:27:05.845592,Local Bar,79.49,Entertainment,The Partier,False
@@ -74,25 +74,25 @@ e7fa55fa009044b7adf0b72e0f497536,user_55d583c9,2025-09-19T13:27:05.845592,Whole 
 781dee0f04644c1a92361ea54f1cfeba,user_55d583c9,2025-09-20T13:27:05.845592,Subway,8.71,Food,The Partier,False
 2d23bc60a76a48fb95ad07eb7234c8eb,user_55d583c9,2025-09-20T13:27:05.845592,DoorDash,21.84,Food,The Partier,False
 d166451405f24463bef71ac0e98f06b7,user_55d583c9,2025-09-20T13:27:05.845592,Nike,109.66,Shopping,The Partier,False
-982ae52acb38466f992af2382463318b,user_55d583c9,2025-09-21T13:27:05.845592,PlayStation Network,58.70,Entertainment,The Partier,False
-ab87a57fece84cf3b12c004f51d0fa66,user_55d583c9,2025-09-21T13:27:05.845592,Netflix,52.00,Entertainment,The Partier,False
+982ae52acb38466f992af2382463318b,user_55d583c9,2025-09-21T13:27:05.845592,PlayStation Network,58.7,Entertainment,The Partier,False
+ab87a57fece84cf3b12c004f51d0fa66,user_55d583c9,2025-09-21T13:27:05.845592,Netflix,52.0,Entertainment,The Partier,False
 4b75ffa0b0b2469d812145c8f38859b6,user_55d583c9,2025-09-21T13:27:05.845592,AMC Theaters,89.56,Entertainment,The Partier,False
 44d21ee6921742e0919f0eaf278c46f6,user_55d583c9,2025-09-21T13:27:05.845592,Steam Games,72.12,Entertainment,The Partier,False
 ca403e0da3e74b90ba464f7de754dce2,user_55d583c9,2025-09-21T13:27:05.845592,McDonalds,26.13,Food,The Partier,False
 04a6babc49ce4925ad14da0dda5504c8,user_55d583c9,2025-09-22T13:27:05.845592,Steam Games,51.46,Entertainment,The Partier,False
 fc4afbe502ea438fad2ee25c1e239a17,user_55d583c9,2025-09-22T13:27:05.845592,AMC Theaters,86.48,Entertainment,The Partier,False
 1df0c906196f4c68a63cb9743fcd1bab,user_55d583c9,2025-09-23T13:27:05.845592,Walmart,129.26,Shopping,The Partier,False
-60dba180f4894ccaaa8683cccc3a87d9,user_55d583c9,2025-09-24T13:27:05.845592,AMC Theaters,77.00,Entertainment,The Partier,False
+60dba180f4894ccaaa8683cccc3a87d9,user_55d583c9,2025-09-24T13:27:05.845592,AMC Theaters,77.0,Entertainment,The Partier,False
 ac63b2eff4d744e7a5df1f5fbd7ca9bb,user_55d583c9,2025-09-25T13:27:05.845592,Steam Games,66.54,Entertainment,The Partier,False
 433154e10e8242da87491d6d28ff1978,user_55d583c9,2025-09-25T13:27:05.845592,Target,42.96,Shopping,The Partier,False
 be220c3cfd094cdabd42bf6cab76f6c6,user_55d583c9,2025-09-25T13:27:05.845592,AMC Theaters,12.26,Entertainment,The Partier,False
 f785328d2e064819bb42f590b918102c,user_55d583c9,2025-09-25T13:27:05.845592,AMC Theaters,78.94,Entertainment,The Partier,False
 29868b1f1c6f49afa8744a306ed15fe1,user_55d583c9,2025-09-25T13:27:05.845592,Best Buy,84.24,Shopping,The Partier,False
-86b29130fec84f26b1eebb30cbe3e9d0,user_55d583c9,2025-09-26T13:27:05.845592,Local Bar,69.20,Entertainment,The Partier,False
+86b29130fec84f26b1eebb30cbe3e9d0,user_55d583c9,2025-09-26T13:27:05.845592,Local Bar,69.2,Entertainment,The Partier,False
 f39e53e4603347849544035ec6fb13ea,user_55d583c9,2025-09-26T13:27:05.845592,Steam Games,98.92,Entertainment,The Partier,False
 302cdc98a8f34e7eb2999d4c06c146cd,user_55d583c9,2025-09-27T13:27:05.845592,Steam Games,17.04,Entertainment,The Partier,False
 d0b742ca392d4ac09991b790b75437c7,user_55d583c9,2025-09-27T13:27:05.845592,PlayStation Network,50.15,Entertainment,The Partier,False
-02eac2cbe00345d6a857fb44313ed2aa,user_55d583c9,2025-09-27T13:27:05.845592,Nike,159.20,Shopping,The Partier,False
+02eac2cbe00345d6a857fb44313ed2aa,user_55d583c9,2025-09-27T13:27:05.845592,Nike,159.2,Shopping,The Partier,False
 ade83af05c60448bbc00cef415b08650,user_55d583c9,2025-09-27T13:27:05.845592,Chipotle,35.64,Food,The Partier,False
 acd96227f3de42c5b5219b51bbb4512e,user_55d583c9,2025-09-27T13:27:05.845592,Chipotle,37.65,Food,The Partier,False
 a51e6f786a9d47cc910244af54a9b973,user_55d583c9,2025-09-28T13:27:05.845592,Subway,12.67,Food,The Partier,False
@@ -121,7 +121,7 @@ b2de75b0fcf04536bbfafc887cbc8d23,user_55d583c9,2025-10-04T13:27:05.845592,Starbu
 761bbeb5f0494e7da426417df745de02,user_55d583c9,2025-10-04T13:27:05.845592,Spotify,75.36,Entertainment,The Partier,False
 9a34518e13904f45b615f7de29e137e6,user_55d583c9,2025-10-04T13:27:05.845592,PlayStation Network,37.48,Entertainment,The Partier,False
 318c448aa6c54aa896b2c4d8651f9ad5,user_55d583c9,2025-10-04T13:27:05.845592,Local Bar,89.71,Entertainment,The Partier,False
-10acc52d26eb4ced86ec7c5e49fc2eae,user_55d583c9,2025-10-05T13:27:05.845592,Trader Joe's,33.70,Food,The Partier,False
+10acc52d26eb4ced86ec7c5e49fc2eae,user_55d583c9,2025-10-05T13:27:05.845592,Trader Joe's,33.7,Food,The Partier,False
 7dff153fd83440489a05d2e40f578530,user_55d583c9,2025-10-06T13:27:05.845592,Best Buy,108.76,Shopping,The Partier,False
 813b6a19e3fd460ca732d82fdd3d2a0e,user_55d583c9,2025-10-07T13:27:05.845592,PlayStation Network,36.95,Entertainment,The Partier,False
 0709e46f4e954fa9afbfa5bf8e250723,user_55d583c9,2025-10-07T13:27:05.845592,Subway,36.28,Food,The Partier,False
@@ -141,7 +141,7 @@ e8ff6a6a4ce0488bb6ccd21646e61226,user_55d583c9,2025-10-10T13:27:05.845592,Netfli
 1d44e41f5c7841b7bbf6df901e811a73,user_55d583c9,2025-10-10T13:27:05.845592,PlayStation Network,29.39,Entertainment,The Partier,False
 a634a577f98442598a8983688460af86,user_55d583c9,2025-10-10T13:27:05.845592,PlayStation Network,99.51,Entertainment,The Partier,False
 b38e1da904bb4536b0bb8f4ffb5bf10b,user_55d583c9,2025-10-11T13:27:05.845592,PlayStation Network,77.82,Entertainment,The Partier,False
-e29d7c8b0b564a4b9885ac27cc35b39a,user_55d583c9,2025-10-12T13:27:05.845592,McDonalds,13.40,Food,The Partier,False
+e29d7c8b0b564a4b9885ac27cc35b39a,user_55d583c9,2025-10-12T13:27:05.845592,McDonalds,13.4,Food,The Partier,False
 ebcf675859d448748533bf40f753bcc9,user_55d583c9,2025-10-12T13:27:05.845592,Trader Joe's,28.14,Food,The Partier,False
 7292577a8d504bdc93fa108fc768806f,user_55d583c9,2025-10-12T13:27:05.845592,Shell Gas,54.53,Transportation,The Partier,False
 5f29edb004754e43aebec21e8c176818,user_55d583c9,2025-10-12T13:27:05.845592,AMC Theaters,221.43,Entertainment,The Partier,True
@@ -150,10 +150,10 @@ ebcf675859d448748533bf40f753bcc9,user_55d583c9,2025-10-12T13:27:05.845592,Trader
 067f70669f9c479f90c13fc898867aa5,user_55d583c9,2025-10-13T13:27:05.845592,Local Bar,94.15,Entertainment,The Partier,False
 8167bed3b83447128a6437edf3d212a1,user_55d583c9,2025-10-13T13:27:05.845592,Steam Games,22.85,Entertainment,The Partier,False
 6f5bdec42ef64a59b0bbb7b73e74c665,user_55d583c9,2025-10-13T13:27:05.845592,Subway,15.15,Food,The Partier,False
-b824804eaba74aea94b8c3c941dc9ab9,user_55d583c9,2025-10-14T13:27:05.845592,AMC Theaters,94.10,Entertainment,The Partier,False
+b824804eaba74aea94b8c3c941dc9ab9,user_55d583c9,2025-10-14T13:27:05.845592,AMC Theaters,94.1,Entertainment,The Partier,False
 5256b07f3ad64a89a6e89b554b58d553,user_55d583c9,2025-10-15T13:27:05.845592,Amazon,183.08,Shopping,The Partier,False
 eef055ce2e064111b25996ec3ceed622,user_55d583c9,2025-10-15T13:27:05.845592,Best Buy,130.86,Shopping,The Partier,False
-1fe88b6d3ded4452b6f4ccd5e1c8525c,user_55d583c9,2025-10-15T13:27:05.845592,Local Bar,75.50,Entertainment,The Partier,False
+1fe88b6d3ded4452b6f4ccd5e1c8525c,user_55d583c9,2025-10-15T13:27:05.845592,Local Bar,75.5,Entertainment,The Partier,False
 d5f8a81da50c4fa9ab26e269b2d0f05d,user_55d583c9,2025-10-15T13:27:05.845592,DoorDash,14.98,Food,The Partier,False
 8a3f11bf19d04b3dab8cf048882bf001,user_55d583c9,2025-10-16T13:27:05.845592,DoorDash,16.97,Food,The Partier,False
 d39897721a004b158b0daba924e95f02,user_55d583c9,2025-10-17T13:27:05.845592,Uber,10.17,Transportation,The Partier,False
@@ -174,9 +174,9 @@ c0e32bcd906247fe8fb8c0dcb356e9aa,user_55d583c9,2025-10-21T13:27:05.845592,McDona
 2af34703989f41e1901b2dfc75f93022,user_55d583c9,2025-10-21T13:27:05.845592,AMC Theaters,84.72,Entertainment,The Partier,False
 72dc3c43f8ba4d9cade91e8f2d9ce91f,user_55d583c9,2025-10-22T13:27:05.845592,Netflix,80.09,Entertainment,The Partier,False
 4fd178ebc3824a61b880247f808a5244,user_55d583c9,2025-10-22T13:27:05.845592,MTA Kiosk,39.13,Transportation,The Partier,False
-0eb7d2a3d75141e3902b66bd05f46905,user_55d583c9,2025-10-22T13:27:05.845592,McDonalds,32.40,Food,The Partier,False
+0eb7d2a3d75141e3902b66bd05f46905,user_55d583c9,2025-10-22T13:27:05.845592,McDonalds,32.4,Food,The Partier,False
 5824e80556514813a7282ba67e435bda,user_55d583c9,2025-10-22T13:27:05.845592,Lyft,25.33,Transportation,The Partier,False
-5b07a3ea508b4d45bb6573637a915f77,user_55d583c9,2025-10-22T13:27:05.845592,AMC Theaters,12.90,Entertainment,The Partier,False
+5b07a3ea508b4d45bb6573637a915f77,user_55d583c9,2025-10-22T13:27:05.845592,AMC Theaters,12.9,Entertainment,The Partier,False
 5a715e0d061a41cfa173d1a907ffdcff,user_55d583c9,2025-10-23T13:27:05.845592,PlayStation Network,81.03,Entertainment,The Partier,False
 541beb3bb5364f8d8dba8e704a35d829,user_55d583c9,2025-10-23T13:27:05.845592,PlayStation Network,41.54,Entertainment,The Partier,False
 183d81b5051a40ab830e0b2b26d74a6a,user_55d583c9,2025-10-23T13:27:05.845592,Netflix,13.44,Entertainment,The Partier,False
@@ -190,10 +190,10 @@ c92bec2503a740648270369f16268449,user_55d583c9,2025-10-24T13:27:05.845592,Whole 
 b81fba70ec554e8b859949d6e65dd5a6,user_55d583c9,2025-10-26T13:27:05.845592,Walmart,143.12,Shopping,The Partier,False
 39431ff67d0a4c69b09ecce5a34d61a9,user_55d583c9,2025-10-26T13:27:05.845592,Best Buy,170.01,Shopping,The Partier,False
 3b6b7475a90946cea418099002dc0090,user_55d583c9,2025-10-26T13:27:05.845592,McDonalds,34.42,Food,The Partier,False
-c93b604d809c49189291a8a6f9e56a2f,user_55d583c9,2025-10-26T13:27:05.845592,Chipotle,14.70,Food,The Partier,False
+c93b604d809c49189291a8a6f9e56a2f,user_55d583c9,2025-10-26T13:27:05.845592,Chipotle,14.7,Food,The Partier,False
 9294e67af3a846588eedcce581eb0317,user_55d583c9,2025-10-27T13:27:05.845592,Spotify,38.53,Entertainment,The Partier,False
 c695a25cc3284118b8363decd4a55791,user_55d583c9,2025-10-27T13:27:05.845592,Spotify,24.95,Entertainment,The Partier,False
-cd03d37e9bb14e9c8967508b325e563c,user_55d583c9,2025-10-27T13:27:05.845592,DoorDash,29.10,Food,The Partier,False
+cd03d37e9bb14e9c8967508b325e563c,user_55d583c9,2025-10-27T13:27:05.845592,DoorDash,29.1,Food,The Partier,False
 f46e14de0d6f49b383c4dad9e47f4a14,user_55d583c9,2025-10-28T13:27:05.845592,Apple Store,151.02,Shopping,The Partier,False
 389eec0928b44ca1b3be5d58dbd927bf,user_55d583c9,2025-10-28T13:27:05.845592,Local Bar,53.42,Entertainment,The Partier,False
 4fe3c7e050b64c46aa43a1ff34da3717,user_55d583c9,2025-10-29T13:27:05.845592,Subway,16.62,Food,The Partier,False
@@ -225,7 +225,7 @@ ab86f456076e45edb515b10a7d489b59,user_55d583c9,2025-11-06T13:27:05.845592,Netfli
 7eb778a16268405e9e8a2e1735a0b072,user_55d583c9,2025-11-07T13:27:05.845592,Whole Foods,28.95,Food,The Partier,False
 5a87f0a5a32d41cf9832c611d8cf1999,user_55d583c9,2025-11-07T13:27:05.845592,Nike,49.57,Shopping,The Partier,False
 0376e7fe7f2e42d6901edfb96ca729d3,user_55d583c9,2025-11-08T13:27:05.845592,AMC Theaters,62.21,Entertainment,The Partier,False
-def86a492c29412c9bd3fea7e5fa4b25,user_55d583c9,2025-11-08T13:27:05.845592,McDonalds,19.20,Food,The Partier,False
+def86a492c29412c9bd3fea7e5fa4b25,user_55d583c9,2025-11-08T13:27:05.845592,McDonalds,19.2,Food,The Partier,False
 56f0b5990e1c4c518f3dccb0faf2bd56,user_55d583c9,2025-11-08T13:27:05.845592,Spotify,97.84,Entertainment,The Partier,False
 f3d9857bcf96442ba7a49e4a4822b837,user_55d583c9,2025-11-09T13:27:05.845592,Subway,21.01,Food,The Partier,False
 0e463b2fe09a4175ac4099f36774b014,user_55d583c9,2025-11-09T13:27:05.845592,Spotify,82.95,Entertainment,The Partier,False
@@ -233,21 +233,21 @@ f3d9857bcf96442ba7a49e4a4822b837,user_55d583c9,2025-11-09T13:27:05.845592,Subway
 29af586dc109454390ec44812c92e691,user_55d583c9,2025-11-09T13:27:05.845592,Whole Foods,30.18,Food,The Partier,False
 24c570f86ccc42a1b7c729ab9ff1055e,user_55d583c9,2025-11-09T13:27:05.845592,Local Bar,93.48,Entertainment,The Partier,False
 0a359773b3cc4f24bfe62532912446b1,user_55d583c9,2025-11-10T13:27:05.845592,Chevron,53.88,Transportation,The Partier,False
-c35b75589623486a8ce664b5ee075a3f,user_55d583c9,2025-11-10T13:27:05.845592,Uber,20.60,Transportation,The Partier,False
+c35b75589623486a8ce664b5ee075a3f,user_55d583c9,2025-11-10T13:27:05.845592,Uber,20.6,Transportation,The Partier,False
 814d574856aa40dda3a8ace50fd4ab2f,user_55d583c9,2025-11-10T13:27:05.845592,AMC Theaters,94.46,Entertainment,The Partier,False
 8ebedadc088b4ba9b9648705f158e4f6,user_55d583c9,2025-11-10T13:27:05.845592,Starbucks,6.53,Food,The Partier,False
 e1524db55dff4ae89e650c1eb26406db,user_55d583c9,2025-11-11T13:27:05.845592,Chipotle,28.86,Food,The Partier,False
 c4a019f5020649fa8b82921ecf49ede9,user_55d583c9,2025-11-11T13:27:05.845592,Uber,21.74,Transportation,The Partier,False
 ac90a4e3086e4ab2bad1562a0430bba4,user_55d583c9,2025-11-11T13:27:05.845592,Starbucks,17.86,Food,The Partier,False
-37d13486bb5b49fb99c1b7c76f5bb5aa,user_55d583c9,2025-11-11T13:27:05.845592,AMC Theaters,67.40,Entertainment,The Partier,False
+37d13486bb5b49fb99c1b7c76f5bb5aa,user_55d583c9,2025-11-11T13:27:05.845592,AMC Theaters,67.4,Entertainment,The Partier,False
 39f5a6bef0034dd7966c6abe95353d62,user_55d583c9,2025-11-11T13:27:05.845592,Netflix,95.42,Entertainment,The Partier,False
-df20532161294d9388db5b9ef19fd577,user_55d583c9,2025-11-12T13:27:05.845592,Starbucks,37.70,Food,The Partier,False
+df20532161294d9388db5b9ef19fd577,user_55d583c9,2025-11-12T13:27:05.845592,Starbucks,37.7,Food,The Partier,False
 3c65821e072b4fb19fed8812db0e8ae9,user_55d583c9,2025-11-13T13:27:05.845592,Steam Games,42.47,Entertainment,The Partier,False
 3ac74a9e53724123812917ac22b9586b,user_55d583c9,2025-11-13T13:27:05.845592,DoorDash,14.94,Food,The Partier,False
 e89408ee995047eb97c0a3c40b47c4a0,user_55d583c9,2025-11-13T13:27:05.845592,DoorDash,36.76,Food,The Partier,False
 a723f2e33e8749d79514688f0e373783,user_55d583c9,2025-11-13T13:27:05.845592,Chevron,28.24,Transportation,The Partier,False
 b691c92e46d848698087536079278f96,user_55d583c9,2025-11-13T13:27:05.845592,Subway,31.16,Food,The Partier,False
-2d5c733cad994750ad1e4d02e0d59833,user_55d583c9,2025-11-14T13:27:05.845592,Subway,6.10,Food,The Partier,False
+2d5c733cad994750ad1e4d02e0d59833,user_55d583c9,2025-11-14T13:27:05.845592,Subway,6.1,Food,The Partier,False
 9f98e13511ea4700be227787877df897,user_55d583c9,2025-11-15T13:27:05.845592,Spotify,75.44,Entertainment,The Partier,False
 903cd7ae9ede42f0bac41f059732ac6b,user_55d583c9,2025-11-15T13:27:05.845592,Uber,16.47,Transportation,The Partier,False
 ff17667ada1d4aa899f09d7ac1845d07,user_55d583c9,2025-11-15T13:27:05.845592,Trader Joe's,37.48,Food,The Partier,False
@@ -263,8 +263,8 @@ cda2b267f1954ec5bcb8917abd2ba59a,user_55d583c9,2025-11-18T13:27:05.845592,AMC Th
 f29aae89c82847d78fb270a292f3a4ba,user_55d583c9,2025-11-18T13:27:05.845592,Apple Store,131.21,Shopping,The Partier,False
 3dafc6def3724d2f8fc52319fd3534e9,user_55d583c9,2025-11-18T13:27:05.845592,Local Bar,82.65,Entertainment,The Partier,False
 41b69925177b403fb6eefb06a7d67bed,user_55d583c9,2025-11-19T13:27:05.845592,Lyft,38.84,Transportation,The Partier,False
-0d0e073c70cc43dab8bfeae6053a249a,user_55d583c9,2025-11-19T13:27:05.845592,Trader Joe's,34.00,Food,The Partier,False
-609ffa435c334b04a549158dd5dccc94,user_55d583c9,2025-11-20T13:27:05.845592,Trader Joe's,32.40,Food,The Partier,False
+0d0e073c70cc43dab8bfeae6053a249a,user_55d583c9,2025-11-19T13:27:05.845592,Trader Joe's,34.0,Food,The Partier,False
+609ffa435c334b04a549158dd5dccc94,user_55d583c9,2025-11-20T13:27:05.845592,Trader Joe's,32.4,Food,The Partier,False
 cd1da8d98ab54f46a5d41cc27b63d619,user_55d583c9,2025-11-20T13:27:05.845592,Best Buy,135.47,Shopping,The Partier,False
 0f161471c0094b16bbf3200e5ae9ad6d,user_55d583c9,2025-11-20T13:27:05.845592,PlayStation Network,67.27,Entertainment,The Partier,False
 21bdf536bc4543de962edbe6b3f49191,user_55d583c9,2025-11-20T13:27:05.845592,Steam Games,31.36,Entertainment,The Partier,False
@@ -274,7 +274,7 @@ f252d169435545b88b4452736734d4ec,user_55d583c9,2025-11-21T13:27:05.845592,Netfli
 c99b7d19898a4deeac5aabe46a61e2f6,user_55d583c9,2025-11-21T13:27:05.845592,Spotify,64.48,Entertainment,The Partier,False
 14e2c74b70274dec9d39f7efd1879643,user_55d583c9,2025-11-21T13:27:05.845592,Shell Gas,46.49,Transportation,The Partier,False
 f7ef62fa9d0b4bd09e6ba2793b611a31,user_55d583c9,2025-11-22T13:27:05.845592,Lyft,49.01,Transportation,The Partier,False
-d09b1c63687d49e78cd21e064388e56d,user_55d583c9,2025-11-22T13:27:05.845592,Netflix,62.10,Entertainment,The Partier,False
+d09b1c63687d49e78cd21e064388e56d,user_55d583c9,2025-11-22T13:27:05.845592,Netflix,62.1,Entertainment,The Partier,False
 282c47e779294f4687cb711c9d9fcb4e,user_8d364b49,2025-08-24T13:27:05.845592,City Water,49.15,Utilities,The Saver,False
 5a102387a50547f0bc28d121dd98e372,user_8d364b49,2025-08-24T13:27:05.845592,Maintenance Fee,1483.35,Housing,The Saver,False
 0fb86cf32def4ebfb1f08d76f0c5f7c0,user_8d364b49,2025-08-24T13:27:05.845592,Starbucks,16.51,Food,The Saver,False
@@ -330,7 +330,7 @@ a39a96749a2e4dfeaf131fa4bde6ab04,user_8d364b49,2025-09-07T13:27:05.845592,Chase 
 d2597b328e9346748db48481c98f8873,user_8d364b49,2025-09-08T13:27:05.845592,McDonalds,17.35,Food,The Saver,False
 93cac408b5af46c5a201f3625ef6bcbc,user_8d364b49,2025-09-09T13:27:05.845592,Chipotle,12.02,Food,The Saver,False
 73f74fb70cb94d56a57b6dc1c776275b,user_8d364b49,2025-09-09T13:27:05.845592,Maintenance Fee,1388.43,Housing,The Saver,False
-628f1b9d82f1470396f4ea76daefaddd,user_8d364b49,2025-09-09T13:27:05.845592,Chase Savings,11.10,Savings,The Saver,False
+628f1b9d82f1470396f4ea76daefaddd,user_8d364b49,2025-09-09T13:27:05.845592,Chase Savings,11.1,Savings,The Saver,False
 8e3086a142b148da8863f0371adf6346,user_8d364b49,2025-09-09T13:27:05.845592,Comcast,15.38,Utilities,The Saver,False
 a21d65bb62c048b8b29ea77db41873cf,user_8d364b49,2025-09-09T13:27:05.845592,Verizon,14.55,Utilities,The Saver,False
 26bc84cc299c4ef7bdb96c62a48055b9,user_8d364b49,2025-09-10T13:27:05.845592,Chase Savings,20.17,Savings,The Saver,False
@@ -339,10 +339,10 @@ fec7dbbc20aa40d3a20fc59ef6381eb4,user_8d364b49,2025-09-10T13:27:05.845592,Vangua
 806e48b6c33f45e58787e80392f77574,user_8d364b49,2025-09-11T13:27:05.845592,Trader Joe's,21.23,Food,The Saver,False
 71908d5e628b40f49fc3c2f83a2b313c,user_8d364b49,2025-09-12T13:27:05.845592,Robinhood Deposit,39.69,Savings,The Saver,False
 a555f3b054f54a64a11df21d1c29593b,user_8d364b49,2025-09-12T13:27:05.845592,Rent Payment,1071.91,Housing,The Saver,False
-43265123384845eb9160f4f5e4ead3b1,user_8d364b49,2025-09-12T13:27:05.845592,Whole Foods,25.40,Food,The Saver,False
+43265123384845eb9160f4f5e4ead3b1,user_8d364b49,2025-09-12T13:27:05.845592,Whole Foods,25.4,Food,The Saver,False
 5c1d814be7ba46608b369f49fd7c3047,user_8d364b49,2025-09-12T13:27:05.845592,Comcast,11.15,Utilities,The Saver,False
 e52dc1dee29444b4bc5db2d05a2c2dc8,user_8d364b49,2025-09-12T13:27:05.845592,Comcast,44.14,Utilities,The Saver,False
-dda4e5a2d613452581e5a4506d6d13f6,user_8d364b49,2025-09-13T13:27:05.845592,Maintenance Fee,1075.90,Housing,The Saver,False
+dda4e5a2d613452581e5a4506d6d13f6,user_8d364b49,2025-09-13T13:27:05.845592,Maintenance Fee,1075.9,Housing,The Saver,False
 cc1cabca0fc64687a985183c60fde7e3,user_8d364b49,2025-09-13T13:27:05.845592,Rent Payment,1413.33,Housing,The Saver,False
 04bf15f696be4a119799cfb25e8032bd,user_8d364b49,2025-09-14T13:27:05.845592,Starbucks,16.83,Food,The Saver,False
 76a8f9bf83514e389c343eaf95ced3f2,user_8d364b49,2025-09-14T13:27:05.845592,Rent Payment,944.87,Housing,The Saver,False
@@ -363,13 +363,13 @@ e1a507ba998242e2a412e6ec6a16ded0,user_8d364b49,2025-09-17T13:27:05.845592,Mainte
 b010446a711e4f9e99a6ec4880e2e5d5,user_8d364b49,2025-09-17T13:27:05.845592,Verizon,42.11,Utilities,The Saver,False
 3100ce168299438eb9f73b5aee5f9d7d,user_8d364b49,2025-09-18T13:27:05.845592,Camden Apartments,1377.59,Housing,The Saver,False
 14b5d320fd8746e581a5a8f12a53161f,user_8d364b49,2025-09-18T13:27:05.845592,Comcast,30.33,Utilities,The Saver,False
-3a297ae0634641e5936a37afd42d0909,user_8d364b49,2025-09-18T13:27:05.845592,Subway,16.80,Food,The Saver,False
-b8baf9646f1b473887519017da2f99a5,user_8d364b49,2025-09-18T13:27:05.845592,PG&E,15.80,Utilities,The Saver,False
+3a297ae0634641e5936a37afd42d0909,user_8d364b49,2025-09-18T13:27:05.845592,Subway,16.8,Food,The Saver,False
+b8baf9646f1b473887519017da2f99a5,user_8d364b49,2025-09-18T13:27:05.845592,PG&E,15.8,Utilities,The Saver,False
 5abbd56654b8468381580265c1a2dfba,user_8d364b49,2025-09-18T13:27:05.845592,Rent Payment,909.14,Housing,The Saver,False
 2efc32db934d424e92cc51250e7e192b,user_8d364b49,2025-09-19T13:27:05.845592,McDonalds,16.98,Food,The Saver,False
 c40ad8878b88457d9bfc8a429881673a,user_8d364b49,2025-09-19T13:27:05.845592,Vanguard Transfer,16.58,Savings,The Saver,False
 f5889cdf7ea741b1a1af76e551fac514,user_8d364b49,2025-09-19T13:27:05.845592,Rent Payment,1045.73,Housing,The Saver,False
-0c21da36711d4fd7969fabf90f4609bf,user_8d364b49,2025-09-19T13:27:05.845592,Vanguard Transfer,36.70,Savings,The Saver,False
+0c21da36711d4fd7969fabf90f4609bf,user_8d364b49,2025-09-19T13:27:05.845592,Vanguard Transfer,36.7,Savings,The Saver,False
 f33084682aa6424d86344383dcd7d2ae,user_8d364b49,2025-09-19T13:27:05.845592,Rent Payment,1350.38,Housing,The Saver,False
 6e21a52344d54856bc5b0acd3b6af35e,user_8d364b49,2025-09-20T13:27:05.845592,PG&E,24.48,Utilities,The Saver,False
 8bdc26cd533d4251a6065b12c88df1d1,user_8d364b49,2025-09-20T13:27:05.845592,Chase Savings,28.09,Savings,The Saver,False
@@ -377,23 +377,23 @@ f33084682aa6424d86344383dcd7d2ae,user_8d364b49,2025-09-19T13:27:05.845592,Rent P
 ea43a96292844fd9ae117ff00876bb65,user_8d364b49,2025-09-20T13:27:05.845592,Vanguard Transfer,25.74,Savings,The Saver,False
 2513103412e241759c19f2d3e08f05d7,user_8d364b49,2025-09-21T13:27:05.845592,Robinhood Deposit,40.51,Savings,The Saver,False
 1a242ff64a524039a141bc512898e118,user_8d364b49,2025-09-21T13:27:05.845592,Camden Apartments,984.74,Housing,The Saver,False
-5506932c25c241cca69423903d59ef08,user_8d364b49,2025-09-22T13:27:05.845592,Camden Apartments,935.80,Housing,The Saver,False
+5506932c25c241cca69423903d59ef08,user_8d364b49,2025-09-22T13:27:05.845592,Camden Apartments,935.8,Housing,The Saver,False
 e5e393161b8f4894ad74d89abeddce30,user_8d364b49,2025-09-22T13:27:05.845592,Rent Payment,1258.26,Housing,The Saver,False
 bcd01be076574574a68caefc2ad318b3,user_8d364b49,2025-09-22T13:27:05.845592,Robinhood Deposit,45.23,Savings,The Saver,False
 721cf7a47bfa4daf9b0c4ec3eb96a480,user_8d364b49,2025-09-22T13:27:05.845592,PG&E,24.38,Utilities,The Saver,False
 46d35000935145978a199382d0389b16,user_8d364b49,2025-09-23T13:27:05.845592,Verizon,22.88,Utilities,The Saver,False
 df7fbcd64c17407aa41ff7bc49c6215b,user_8d364b49,2025-09-23T13:27:05.845592,Rent Payment,924.74,Housing,The Saver,False
 bd5fd4452ac04d20a5d99632c8341ed2,user_8d364b49,2025-09-24T13:27:05.845592,Robinhood Deposit,14.06,Savings,The Saver,False
-7cc725ab0b594d24a5309e0db8ce74cb,user_8d364b49,2025-09-24T13:27:05.845592,PG&E,22.60,Utilities,The Saver,False
-317adb1ed0244778a8616e5ff55f7bd5,user_8d364b49,2025-09-25T13:27:05.845592,Camden Apartments,990.70,Housing,The Saver,False
+7cc725ab0b594d24a5309e0db8ce74cb,user_8d364b49,2025-09-24T13:27:05.845592,PG&E,22.6,Utilities,The Saver,False
+317adb1ed0244778a8616e5ff55f7bd5,user_8d364b49,2025-09-25T13:27:05.845592,Camden Apartments,990.7,Housing,The Saver,False
 ae6a1a1e6f974946a229702aa561aad1,user_8d364b49,2025-09-25T13:27:05.845592,Chase Savings,21.33,Savings,The Saver,False
 c79140f18d254c50a1d4cceb9a99af37,user_8d364b49,2025-09-25T13:27:05.845592,Rent Payment,1160.57,Housing,The Saver,False
 761282fe17854bfa9c8422f1f00fce16,user_8d364b49,2025-09-25T13:27:05.845592,Chase Savings,43.07,Savings,The Saver,False
-f413aeee68cb418bbc3b3f67f4ba7836,user_8d364b49,2025-09-26T13:27:05.845592,Vanguard Transfer,17.20,Savings,The Saver,False
+f413aeee68cb418bbc3b3f67f4ba7836,user_8d364b49,2025-09-26T13:27:05.845592,Vanguard Transfer,17.2,Savings,The Saver,False
 45b015afe1ef44ccafbf00638a4c45bf,user_8d364b49,2025-09-26T13:27:05.845592,PG&E,48.54,Utilities,The Saver,False
 65b84fc300d345ea8568b44244a25e4a,user_8d364b49,2025-09-26T13:27:05.845592,Verizon,43.93,Utilities,The Saver,False
 56ae43c143a1464bb1315e93f45cd9f0,user_8d364b49,2025-09-26T13:27:05.845592,Comcast,28.67,Utilities,The Saver,False
-0c440702eaa9472bb501544a0d626ecd,user_8d364b49,2025-09-27T13:27:05.845592,Chase Savings,48.00,Savings,The Saver,False
+0c440702eaa9472bb501544a0d626ecd,user_8d364b49,2025-09-27T13:27:05.845592,Chase Savings,48.0,Savings,The Saver,False
 0c90b5748cb5409faeed8d20255b471c,user_8d364b49,2025-09-27T13:27:05.845592,Verizon,39.71,Utilities,The Saver,False
 04579efab2c848b085e3030fd43fc66b,user_8d364b49,2025-09-27T13:27:05.845592,Trader Joe's,9.65,Food,The Saver,False
 cc3c99cdba324912ac40e5601e151e29,user_8d364b49,2025-09-27T13:27:05.845592,City Water,39.85,Utilities,The Saver,False
@@ -404,22 +404,22 @@ b4bfbc76e9f54cf9909c346c6e57cabf,user_8d364b49,2025-09-30T13:27:05.845592,Chase 
 5174fcdb60c64924a1a5b5a525c7e4c1,user_8d364b49,2025-09-30T13:27:05.845592,Chase Savings,31.96,Savings,The Saver,False
 452256662a384774bb123e80f2268e66,user_8d364b49,2025-09-30T13:27:05.845592,DoorDash,38.51,Food,The Saver,False
 4df8f3bbb5274e9e9733f5eb9a64a7ff,user_8d364b49,2025-09-30T13:27:05.845592,Chase Savings,28.25,Savings,The Saver,False
-fd18dbc70e224526be766fe32d206e92,user_8d364b49,2025-09-30T13:27:05.845592,Chase Savings,35.90,Savings,The Saver,False
+fd18dbc70e224526be766fe32d206e92,user_8d364b49,2025-09-30T13:27:05.845592,Chase Savings,35.9,Savings,The Saver,False
 d197435e7cd74ae7b3671414fba120b6,user_8d364b49,2025-10-01T13:27:05.845592,Chase Savings,36.84,Savings,The Saver,False
 3d9d5f82d1df4d64a28911764533478b,user_8d364b49,2025-10-01T13:27:05.845592,Vanguard Transfer,47.23,Savings,The Saver,False
-8c57291767364859abd6e727e327597a,user_8d364b49,2025-10-01T13:27:05.845592,Chase Savings,22.70,Savings,The Saver,False
+8c57291767364859abd6e727e327597a,user_8d364b49,2025-10-01T13:27:05.845592,Chase Savings,22.7,Savings,The Saver,False
 56f1ce8eae954f75b342fe959ecb9993,user_8d364b49,2025-10-02T13:27:05.845592,Rent Payment,846.91,Housing,The Saver,False
 1214ee7785ea4a47a0335b54adb2df55,user_8d364b49,2025-10-02T13:27:05.845592,Vanguard Transfer,27.51,Savings,The Saver,False
 8c2ef80a605140b9a9f1b12ce8e51d27,user_8d364b49,2025-10-02T13:27:05.845592,Rent Payment,1009.56,Housing,The Saver,False
-31babd76189a487b809067215d0e4296,user_8d364b49,2025-10-03T13:27:05.845592,Robinhood Deposit,28.30,Savings,The Saver,False
+31babd76189a487b809067215d0e4296,user_8d364b49,2025-10-03T13:27:05.845592,Robinhood Deposit,28.3,Savings,The Saver,False
 01daa4e7d3904a5db680d4617fde463c,user_8d364b49,2025-10-03T13:27:05.845592,Robinhood Deposit,48.25,Savings,The Saver,False
 fdfe244c0f904264857c10f03dd43e3c,user_8d364b49,2025-10-03T13:27:05.845592,Maintenance Fee,1044.69,Housing,The Saver,False
-b0450b734d2d4505b7d0ca149958d6af,user_8d364b49,2025-10-03T13:27:05.845592,Chase Savings,44.80,Savings,The Saver,False
+b0450b734d2d4505b7d0ca149958d6af,user_8d364b49,2025-10-03T13:27:05.845592,Chase Savings,44.8,Savings,The Saver,False
 7f25b48843994bb68120a89f4a51f240,user_8d364b49,2025-10-03T13:27:05.845592,Verizon,11.62,Utilities,The Saver,False
-b1bdb1436f5341a28eb17d8ff0e81fc2,user_8d364b49,2025-10-04T13:27:05.845592,Vanguard Transfer,48.90,Savings,The Saver,False
+b1bdb1436f5341a28eb17d8ff0e81fc2,user_8d364b49,2025-10-04T13:27:05.845592,Vanguard Transfer,48.9,Savings,The Saver,False
 24f8bf93a6d64742bf4eff9c9187dcdb,user_8d364b49,2025-10-05T13:27:05.845592,Vanguard Transfer,25.68,Savings,The Saver,False
-074026e469724697b8b9dcb4176f7fb0,user_8d364b49,2025-10-06T13:27:05.845592,DoorDash,34.40,Food,The Saver,False
-683de01585854ca697bbe0454f327266,user_8d364b49,2025-10-06T13:27:05.845592,PG&E,26.30,Utilities,The Saver,False
+074026e469724697b8b9dcb4176f7fb0,user_8d364b49,2025-10-06T13:27:05.845592,DoorDash,34.4,Food,The Saver,False
+683de01585854ca697bbe0454f327266,user_8d364b49,2025-10-06T13:27:05.845592,PG&E,26.3,Utilities,The Saver,False
 772c7ee8fca3445b94fdce51d15372d6,user_8d364b49,2025-10-06T13:27:05.845592,Rent Payment,981.26,Housing,The Saver,False
 2a36ce7ffb2648b0a2892825ec864250,user_8d364b49,2025-10-06T13:27:05.845592,Chase Savings,11.25,Savings,The Saver,False
 ce4d9c2a17d24fb6a50190f1663db4a0,user_8d364b49,2025-10-06T13:27:05.845592,Verizon,11.63,Utilities,The Saver,False
@@ -432,13 +432,13 @@ da7d5218dd4c434b9a688bcf522999dc,user_8d364b49,2025-10-09T13:27:05.845592,Whole 
 e0b0686caa70414abfc032a429b94826,user_8d364b49,2025-10-09T13:27:05.845592,Chase Savings,28.77,Savings,The Saver,False
 abf80601e7a44ddfbfd4f583f29a745a,user_8d364b49,2025-10-09T13:27:05.845592,Robinhood Deposit,48.38,Savings,The Saver,False
 aa948b1b62c0408cb4111c0beccc1814,user_8d364b49,2025-10-10T13:27:05.845592,Vanguard Transfer,37.64,Savings,The Saver,False
-e486766e06424740bc40a8b247d48817,user_8d364b49,2025-10-10T13:27:05.845592,Rent Payment,1046.70,Housing,The Saver,False
-6b4f607d03db4ac09ec81c05e09b2885,user_8d364b49,2025-10-10T13:27:05.845592,Chase Savings,21.10,Savings,The Saver,False
+e486766e06424740bc40a8b247d48817,user_8d364b49,2025-10-10T13:27:05.845592,Rent Payment,1046.7,Housing,The Saver,False
+6b4f607d03db4ac09ec81c05e09b2885,user_8d364b49,2025-10-10T13:27:05.845592,Chase Savings,21.1,Savings,The Saver,False
 421de50c56744bdca92673e1e87a1945,user_8d364b49,2025-10-10T13:27:05.845592,Chevron,32.94,Transportation,The Saver,False
-fa01f9c385294c1b929cdfe63dc535d0,user_8d364b49,2025-10-10T13:27:05.845592,City Water,17.40,Utilities,The Saver,False
+fa01f9c385294c1b929cdfe63dc535d0,user_8d364b49,2025-10-10T13:27:05.845592,City Water,17.4,Utilities,The Saver,False
 f35ae66b46614103b6feb6ddcfa1da76,user_8d364b49,2025-10-11T13:27:05.845592,Robinhood Deposit,40.94,Savings,The Saver,False
 63eb19fab3c342c791bd1ff7bfe633fd,user_8d364b49,2025-10-11T13:27:05.845592,Chase Savings,48.14,Savings,The Saver,False
-f3cfe0c9ac9c4e77974097c014a4193b,user_8d364b49,2025-10-11T13:27:05.845592,Chase Savings,21.60,Savings,The Saver,False
+f3cfe0c9ac9c4e77974097c014a4193b,user_8d364b49,2025-10-11T13:27:05.845592,Chase Savings,21.6,Savings,The Saver,False
 de98394c329b49cb9078e2520e52efdb,user_8d364b49,2025-10-12T13:27:05.845592,Robinhood Deposit,44.62,Savings,The Saver,False
 96fc0c293c8d42e38bd2385a2d318a8a,user_8d364b49,2025-10-12T13:27:05.845592,Verizon,17.87,Utilities,The Saver,False
 890a742ada9f4a6f8d81329442dcdf7c,user_8d364b49,2025-10-12T13:27:05.845592,Starbucks,37.54,Food,The Saver,False
@@ -448,7 +448,7 @@ a2ebb5859f324f1f937a7bd1af05cd18,user_8d364b49,2025-10-12T13:27:05.845592,Verizo
 6b8d71abd07949f59ad50894b708af7a,user_8d364b49,2025-10-14T13:27:05.845592,Camden Apartments,1389.66,Housing,The Saver,False
 929dd5d3770a476a856bc3540c4877f5,user_8d364b49,2025-10-14T13:27:05.845592,Rent Payment,904.92,Housing,The Saver,False
 dfbaec3ffb6e462794d9ff4e71e9c808,user_8d364b49,2025-10-14T13:27:05.845592,Rent Payment,1107.52,Housing,The Saver,False
-367532aec6e641cd99f602b0489099ae,user_8d364b49,2025-10-14T13:27:05.845592,Vanguard Transfer,27.80,Savings,The Saver,False
+367532aec6e641cd99f602b0489099ae,user_8d364b49,2025-10-14T13:27:05.845592,Vanguard Transfer,27.8,Savings,The Saver,False
 e3a0b30a0f26404d84dbf1012651badc,user_8d364b49,2025-10-14T13:27:05.845592,Robinhood Deposit,26.57,Savings,The Saver,False
 d68e37e5da7a4ce5b5718b8ffb9109c4,user_8d364b49,2025-10-15T13:27:05.845592,Camden Apartments,1080.65,Housing,The Saver,False
 e78be74155474fbda1422476c8b7e164,user_8d364b49,2025-10-15T13:27:05.845592,Whole Foods,31.43,Food,The Saver,False
@@ -457,12 +457,12 @@ ff57717a57ec41c18921ab2c927b548a,user_8d364b49,2025-10-16T13:27:05.845592,City W
 74f99f0cabfb4dbba717473144e8dd0a,user_8d364b49,2025-10-16T13:27:05.845592,Chipotle,17.17,Food,The Saver,False
 41d4e9bc43ad4d5f9084b9fcc0246b06,user_8d364b49,2025-10-16T13:27:05.845592,Rent Payment,951.53,Housing,The Saver,False
 fe90c9d45b1a47988715a950fa147216,user_8d364b49,2025-10-16T13:27:05.845592,Maintenance Fee,1100.99,Housing,The Saver,False
-7fec630161f44307a51b6f4278257240,user_8d364b49,2025-10-17T13:27:05.845592,Starbucks,34.50,Food,The Saver,False
-3ce74c38c1f9449f872b447e63ebddde,user_8d364b49,2025-10-18T13:27:05.845592,Vanguard Transfer,13.00,Savings,The Saver,False
+7fec630161f44307a51b6f4278257240,user_8d364b49,2025-10-17T13:27:05.845592,Starbucks,34.5,Food,The Saver,False
+3ce74c38c1f9449f872b447e63ebddde,user_8d364b49,2025-10-18T13:27:05.845592,Vanguard Transfer,13.0,Savings,The Saver,False
 3894832a90ea4e4a992cb083fdf74234,user_8d364b49,2025-10-18T13:27:05.845592,DoorDash,21.73,Food,The Saver,False
 a24e3923f6a545d1b3db910a174df68e,user_8d364b49,2025-10-19T13:27:05.845592,Rent Payment,1412.94,Housing,The Saver,False
 a175b437ed7d4654a1a8088ea36cfcc3,user_8d364b49,2025-10-20T13:27:05.845592,Camden Apartments,1109.23,Housing,The Saver,False
-f0c14375565c4fd68de06fd0671b3a9f,user_8d364b49,2025-10-20T13:27:05.845592,Comcast,12.90,Utilities,The Saver,False
+f0c14375565c4fd68de06fd0671b3a9f,user_8d364b49,2025-10-20T13:27:05.845592,Comcast,12.9,Utilities,The Saver,False
 4b8b581da051471ca13eac146c1dd104,user_8d364b49,2025-10-20T13:27:05.845592,Trader Joe's,13.21,Food,The Saver,False
 8720c18d52854a00b0570b273344cf63,user_8d364b49,2025-10-20T13:27:05.845592,Rent Payment,1478.53,Housing,The Saver,False
 48f4833ae3f7476eaa0675ae5483b9c4,user_8d364b49,2025-10-21T13:27:05.845592,Rent Payment,1158.52,Housing,The Saver,False
@@ -475,7 +475,7 @@ fbe93f29e51246dbbb5ec35967b4cd4b,user_8d364b49,2025-10-22T13:27:05.845592,Camden
 89dbfa0204fd40188c3e97de2acaf406,user_8d364b49,2025-10-22T13:27:05.845592,Lime Scooter,13.35,Transportation,The Saver,False
 b5a04a172a9143779bcfc1b7ef87e170,user_8d364b49,2025-10-23T13:27:05.845592,Chase Savings,13.67,Savings,The Saver,False
 7aa1e808976649fab3cfc773718c6157,user_8d364b49,2025-10-23T13:27:05.845592,Robinhood Deposit,15.47,Savings,The Saver,False
-99d19351d5c14522a81dd2caf218e50f,user_8d364b49,2025-10-23T13:27:05.845592,Comcast,33.60,Utilities,The Saver,False
+99d19351d5c14522a81dd2caf218e50f,user_8d364b49,2025-10-23T13:27:05.845592,Comcast,33.6,Utilities,The Saver,False
 1c76a1a7e8b84804aeddfde5bf0d5ee3,user_8d364b49,2025-10-23T13:27:05.845592,Chipotle,20.41,Food,The Saver,False
 2a03a077b5454fff9ea6e8701bcef774,user_8d364b49,2025-10-24T13:27:05.845592,Subway,20.04,Food,The Saver,False
 9a94c87d057e45e9b72930ba9821f8f9,user_8d364b49,2025-10-24T13:27:05.845592,Vanguard Transfer,34.06,Savings,The Saver,False
@@ -489,7 +489,7 @@ c71dbbaf98704b4f8765c23eb1d229fe,user_8d364b49,2025-10-25T13:27:05.845592,Chase 
 7a746a8614ca4dc5989075a4e81de43f,user_8d364b49,2025-10-26T13:27:05.845592,Maintenance Fee,1326.78,Housing,The Saver,False
 0587a279cc574ddfaf2f2df6f66fe04b,user_8d364b49,2025-10-26T13:27:05.845592,Chase Savings,23.82,Savings,The Saver,False
 a6e76791a0514b90ba822c0036fb47a2,user_8d364b49,2025-10-27T13:27:05.845592,Chase Savings,44.18,Savings,The Saver,False
-c152049ba8ae4741b3a773d68981fc5c,user_8d364b49,2025-10-27T13:27:05.845592,Subway,35.90,Food,The Saver,False
+c152049ba8ae4741b3a773d68981fc5c,user_8d364b49,2025-10-27T13:27:05.845592,Subway,35.9,Food,The Saver,False
 d1af9ee5aef64624b64baaf3c7e4d403,user_8d364b49,2025-10-27T13:27:05.845592,Vanguard Transfer,24.83,Savings,The Saver,False
 4f68f92484cf446b9e9e3fe5f368b4d7,user_8d364b49,2025-10-27T13:27:05.845592,Vanguard Transfer,28.48,Savings,The Saver,False
 71eb162c905e43038a997fdb29376db7,user_8d364b49,2025-10-28T13:27:05.845592,Trader Joe's,34.13,Food,The Saver,False
@@ -498,7 +498,7 @@ a5ff3a0a87cf407e872451fa56ffc21f,user_8d364b49,2025-10-29T13:27:05.845592,Chase 
 a87f80ad5f0d43bfb623fd0bd2b8f91d,user_8d364b49,2025-10-29T13:27:05.845592,Verizon,18.32,Utilities,The Saver,False
 eb3999e5eb4a4d8fb3eff2012c9ff478,user_8d364b49,2025-10-29T13:27:05.845592,Shell Gas,14.25,Transportation,The Saver,False
 7a1f395d5ce544fd915bdd289f8b36b4,user_8d364b49,2025-10-29T13:27:05.845592,Verizon,28.12,Utilities,The Saver,False
-b7af6a6d4a5b44a48cf403ece847c7cd,user_8d364b49,2025-10-29T13:27:05.845592,Rent Payment,1405.90,Housing,The Saver,False
+b7af6a6d4a5b44a48cf403ece847c7cd,user_8d364b49,2025-10-29T13:27:05.845592,Rent Payment,1405.9,Housing,The Saver,False
 d307f01e64ab4c089842a7a38e3d1598,user_8d364b49,2025-10-30T13:27:05.845592,Camden Apartments,809.17,Housing,The Saver,False
 d2ce16c984644c37bd09fb3d00988214,user_8d364b49,2025-10-30T13:27:05.845592,Starbucks,18.73,Food,The Saver,False
 3173c6a59a4e401f8727bc6a18e8539b,user_8d364b49,2025-10-31T13:27:05.845592,Vanguard Transfer,27.59,Savings,The Saver,False
@@ -506,7 +506,7 @@ cf7a643b5d564457bb9205f1fe0ca824,user_8d364b49,2025-11-01T13:27:05.845592,City W
 6de40202c3e347d29cbdae5b3a9b5fca,user_8d364b49,2025-11-02T13:27:05.845592,MTA Kiosk,24.05,Transportation,The Saver,False
 3ea654d83abe4a4991597ab25b6ece73,user_8d364b49,2025-11-02T13:27:05.845592,Vanguard Transfer,45.32,Savings,The Saver,False
 db679ac55ab04455b5caea0bee5a16e0,user_8d364b49,2025-11-02T13:27:05.845592,Maintenance Fee,1006.63,Housing,The Saver,False
-e63e0ee4bda842828a6841651b424a86,user_8d364b49,2025-11-02T13:27:05.845592,Rent Payment,1020.10,Housing,The Saver,False
+e63e0ee4bda842828a6841651b424a86,user_8d364b49,2025-11-02T13:27:05.845592,Rent Payment,1020.1,Housing,The Saver,False
 c717c9150f694b48a7a1b6489d659d8f,user_8d364b49,2025-11-03T13:27:05.845592,Vanguard Transfer,38.37,Savings,The Saver,False
 8cea894af082438e9de81731e9cb38f1,user_8d364b49,2025-11-03T13:27:05.845592,Chase Savings,44.58,Savings,The Saver,False
 ba0a2f1fb1b24adf9b3f164a6e7fa295,user_8d364b49,2025-11-03T13:27:05.845592,Camden Apartments,1380.56,Housing,The Saver,False
@@ -515,7 +515,7 @@ ba0a2f1fb1b24adf9b3f164a6e7fa295,user_8d364b49,2025-11-03T13:27:05.845592,Camden
 4899792c44a747c4a7230f241cbe38c5,user_8d364b49,2025-11-05T13:27:05.845592,Maintenance Fee,816.53,Housing,The Saver,False
 fc56c3fc4b9545229ab8c7c5868eee00,user_8d364b49,2025-11-05T13:27:05.845592,Chase Savings,24.78,Savings,The Saver,False
 bf2a4f46fe8648c4b979156971c1c8c6,user_8d364b49,2025-11-05T13:27:05.845592,Rent Payment,1439.03,Housing,The Saver,False
-7643863cfeeb46be805d0ec3461bfae4,user_8d364b49,2025-11-05T13:27:05.845592,Lime Scooter,44.20,Transportation,The Saver,False
+7643863cfeeb46be805d0ec3461bfae4,user_8d364b49,2025-11-05T13:27:05.845592,Lime Scooter,44.2,Transportation,The Saver,False
 445b3c64ed454233b474a94999c02a88,user_8d364b49,2025-11-06T13:27:05.845592,Starbucks,6.77,Food,The Saver,False
 3c6f77d286bf4091bdc20cf219d48701,user_8d364b49,2025-11-06T13:27:05.845592,Verizon,17.85,Utilities,The Saver,False
 2750d5d0a7d542efbeedff601a9e7fe1,user_8d364b49,2025-11-06T13:27:05.845592,Comcast,25.01,Utilities,The Saver,False
@@ -529,7 +529,7 @@ d376a7403e8b434b954780b7e2462c64,user_8d364b49,2025-11-09T13:27:05.845592,Robinh
 035187a539bf4cc981c097da9d580491,user_8d364b49,2025-11-10T13:27:05.845592,City Water,21.76,Utilities,The Saver,False
 3d037ad432744ae7b86fadb7212a1512,user_8d364b49,2025-11-10T13:27:05.845592,Vanguard Transfer,31.26,Savings,The Saver,False
 7c06a1393e834cdfb28ba5c429bc74e5,user_8d364b49,2025-11-10T13:27:05.845592,City Water,17.42,Utilities,The Saver,False
-e2ff74388d004648806822f76e921fbd,user_8d364b49,2025-11-10T13:27:05.845592,Comcast,11.00,Utilities,The Saver,False
+e2ff74388d004648806822f76e921fbd,user_8d364b49,2025-11-10T13:27:05.845592,Comcast,11.0,Utilities,The Saver,False
 c7e8385026914c8d93031beac1d85719,user_8d364b49,2025-11-11T13:27:05.845592,Robinhood Deposit,48.86,Savings,The Saver,False
 d627b8c0c77d49a5b6dd0a8a5f06f22a,user_8d364b49,2025-11-11T13:27:05.845592,Subway,18.44,Food,The Saver,False
 29ed18c1ea8e426495509b0680e4481d,user_8d364b49,2025-11-12T13:27:05.845592,Vanguard Transfer,18.28,Savings,The Saver,False
@@ -568,10 +568,10 @@ ed04501d5b6749f898fb5325ba120be7,user_3da7464e,2025-08-24T13:27:05.845592,Chipot
 49bd6842a5b6425daa058bd75ad69e33,user_3da7464e,2025-08-25T13:27:05.845592,Trader Joe's,9.52,Food,The Broke Student,False
 f1a73f99153e4830b3729bdd4ef06fdf,user_3da7464e,2025-08-26T13:27:05.845592,Lyft,30.91,Transportation,The Broke Student,False
 cefcdcdb59e24c8b80a1baa91168f3e9,user_3da7464e,2025-08-26T13:27:05.845592,DoorDash,21.09,Food,The Broke Student,False
-7e3ff17a067944f5bc693e0f9e1510b7,user_3da7464e,2025-08-26T13:27:05.845592,Maintenance Fee,1321.10,Housing,The Broke Student,False
+7e3ff17a067944f5bc693e0f9e1510b7,user_3da7464e,2025-08-26T13:27:05.845592,Maintenance Fee,1321.1,Housing,The Broke Student,False
 545334420dbe45e88dbf6f08d3ca62ec,user_3da7464e,2025-08-26T13:27:05.845592,Whole Foods,26.62,Food,The Broke Student,False
 5a5fde9ede6c4c108d5293c67f6044ea,user_3da7464e,2025-08-26T13:27:05.845592,McDonalds,14.07,Food,The Broke Student,False
-6f68212d81d54ef78a28f82f1a99918b,user_3da7464e,2025-08-27T13:27:05.845592,Camden Apartments,1423.50,Housing,The Broke Student,False
+6f68212d81d54ef78a28f82f1a99918b,user_3da7464e,2025-08-27T13:27:05.845592,Camden Apartments,1423.5,Housing,The Broke Student,False
 c237277686924d06943360e75b2341b5,user_3da7464e,2025-08-27T13:27:05.845592,Rent Payment,1134.59,Housing,The Broke Student,False
 8ed388c22ee64448aeb58365b460a6f8,user_3da7464e,2025-08-27T13:27:05.845592,Subway,35.49,Food,The Broke Student,False
 139e75af2baa4d75968173867bf6bd25,user_3da7464e,2025-08-27T13:27:05.845592,Camden Apartments,1259.66,Housing,The Broke Student,False
@@ -583,8 +583,8 @@ d4091c9db22b4612b32e8a8e4c0fae28,user_3da7464e,2025-08-28T13:27:05.845592,Whole 
 605ff2315189467d91a022f14fdbb9c2,user_3da7464e,2025-08-29T13:27:05.845592,Shell Gas,47.88,Transportation,The Broke Student,False
 b931b874aca142d384d5b8f5db81ab38,user_3da7464e,2025-08-29T13:27:05.845592,Camden Apartments,1378.61,Housing,The Broke Student,False
 4f5c52584a754f83aa9c6f663a0912fb,user_3da7464e,2025-08-29T13:27:05.845592,Subway,23.51,Food,The Broke Student,False
-6d4505128ad442a5921451626344dfab,user_3da7464e,2025-08-29T13:27:05.845592,Udemy,23.60,Education,The Broke Student,False
-9d61324ccac34048ad8df108a13e667d,user_3da7464e,2025-08-30T13:27:05.845592,Rent Payment,1410.30,Housing,The Broke Student,False
+6d4505128ad442a5921451626344dfab,user_3da7464e,2025-08-29T13:27:05.845592,Udemy,23.6,Education,The Broke Student,False
+9d61324ccac34048ad8df108a13e667d,user_3da7464e,2025-08-30T13:27:05.845592,Rent Payment,1410.3,Housing,The Broke Student,False
 60a3f8c27c7a4935a79119025e554a36,user_3da7464e,2025-08-30T13:27:05.845592,Chipotle,10.13,Food,The Broke Student,False
 00be585dea284d0ea8e309511ad33dc1,user_3da7464e,2025-08-30T13:27:05.845592,Camden Apartments,1478.73,Housing,The Broke Student,False
 cb1d7b647d2a4b3e947dbf4cb77890d2,user_3da7464e,2025-08-30T13:27:05.845592,Rent Payment,822.26,Housing,The Broke Student,False
@@ -595,7 +595,7 @@ cb1d7b647d2a4b3e947dbf4cb77890d2,user_3da7464e,2025-08-30T13:27:05.845592,Rent P
 c40e7c846bf3429bac70331cd15a3581,user_3da7464e,2025-09-01T13:27:05.845592,Camden Apartments,1318.59,Housing,The Broke Student,False
 319b6ea9473040e38ca3ea667d80839e,user_3da7464e,2025-09-01T13:27:05.845592,Camden Apartments,972.08,Housing,The Broke Student,False
 2b3780d9818242f5809821e5b6702c26,user_3da7464e,2025-09-01T13:27:05.845592,Maintenance Fee,1165.88,Housing,The Broke Student,False
-b4579dd5d2b9463c94a788e13b58f3a5,user_3da7464e,2025-09-01T13:27:05.845592,Starbucks,39.70,Food,The Broke Student,False
+b4579dd5d2b9463c94a788e13b58f3a5,user_3da7464e,2025-09-01T13:27:05.845592,Starbucks,39.7,Food,The Broke Student,False
 524a5fc3cd354c968fdda14e5ba3ea15,user_3da7464e,2025-09-01T13:27:05.845592,Camden Apartments,1034.46,Housing,The Broke Student,False
 0fe5c8dd3bb44cbdbb54606c9ebb1659,user_3da7464e,2025-09-02T13:27:05.845592,McDonalds,18.78,Food,The Broke Student,False
 a594f56c37f747c4b56f0d87ee9b3cd5,user_3da7464e,2025-09-02T13:27:05.845592,Chegg,27.68,Education,The Broke Student,False
@@ -620,7 +620,7 @@ dd80e06538e64ec6aa1932f526c92730,user_3da7464e,2025-09-08T13:27:05.845592,Camden
 45b8ab406f9f403bab4002ea005bdd7e,user_3da7464e,2025-09-08T13:27:05.845592,Camden Apartments,1283.22,Housing,The Broke Student,False
 daa420a33506496386683552927f8ac1,user_3da7464e,2025-09-08T13:27:05.845592,Rent Payment,1422.98,Housing,The Broke Student,False
 047a0c92bbaa4a2686bc6052743312cf,user_3da7464e,2025-09-08T13:27:05.845592,DoorDash,7.21,Food,The Broke Student,False
-199892b437f34d2283024dbfb1145d8a,user_3da7464e,2025-09-08T13:27:05.845592,University Bookstore,10.00,Education,The Broke Student,False
+199892b437f34d2283024dbfb1145d8a,user_3da7464e,2025-09-08T13:27:05.845592,University Bookstore,10.0,Education,The Broke Student,False
 6d6770a8b700418596830f3d877c6b4f,user_3da7464e,2025-09-09T13:27:05.845592,MTA Kiosk,53.25,Transportation,The Broke Student,False
 ed91505bce424a8bb01d089718117a0b,user_3da7464e,2025-09-10T13:27:05.845592,Starbucks,32.93,Food,The Broke Student,False
 6806039bd95c4649b0ea490d317d6dca,user_3da7464e,2025-09-10T13:27:05.845592,McDonalds,29.45,Food,The Broke Student,False
@@ -628,7 +628,7 @@ ed91505bce424a8bb01d089718117a0b,user_3da7464e,2025-09-10T13:27:05.845592,Starbu
 bc7526d8bec841f3b748b79cc96cb87d,user_3da7464e,2025-09-10T13:27:05.845592,Subway,37.34,Food,The Broke Student,False
 7bb4bf0c2e4a4433ac6bf7410f2fd0af,user_3da7464e,2025-09-11T13:27:05.845592,Camden Apartments,828.58,Housing,The Broke Student,False
 352d29bc3bd64e94be0ea24555bdf997,user_3da7464e,2025-09-11T13:27:05.845592,Rent Payment,1261.09,Housing,The Broke Student,False
-a9073c968ec74268af265c5a26a9e16e,user_3da7464e,2025-09-12T13:27:05.845592,Starbucks,26.00,Food,The Broke Student,False
+a9073c968ec74268af265c5a26a9e16e,user_3da7464e,2025-09-12T13:27:05.845592,Starbucks,26.0,Food,The Broke Student,False
 6294501423914776aa596fa7aa66531f,user_3da7464e,2025-09-12T13:27:05.845592,Udemy,44.49,Education,The Broke Student,False
 bc9ea6a93cdd402aa2d3f30747068b23,user_3da7464e,2025-09-12T13:27:05.845592,Whole Foods,22.02,Food,The Broke Student,False
 5d545e5b98f44dfc8e93a6f3831f8226,user_3da7464e,2025-09-12T13:27:05.845592,Rent Payment,7575.55,Housing,The Broke Student,True
@@ -643,9 +643,9 @@ e6123c3fdf384443a8a9b34e04fb81d8,user_3da7464e,2025-09-16T13:27:05.845592,Camden
 d032a3690edc46b0be69ab0eeca9bba1,user_3da7464e,2025-09-17T13:27:05.845592,Maintenance Fee,1443.93,Housing,The Broke Student,False
 3e50999b3e1844d8a48ca0fa6066a3ca,user_3da7464e,2025-09-17T13:27:05.845592,Trader Joe's,38.69,Food,The Broke Student,False
 66b843ace1854165a65a8a0e46132921,user_3da7464e,2025-09-18T13:27:05.845592,McDonalds,24.31,Food,The Broke Student,False
-b718d880ac654583a500ab8f5b5f8942,user_3da7464e,2025-09-19T13:27:05.845592,Chegg,15.50,Education,The Broke Student,False
-15d095ab75264e0090f36a28f0924d10,user_3da7464e,2025-09-19T13:27:05.845592,McDonalds,18.00,Food,The Broke Student,False
-f8480913bf8a43dfb9392cf557a2e1eb,user_3da7464e,2025-09-19T13:27:05.845592,Lyft,59.00,Transportation,The Broke Student,False
+b718d880ac654583a500ab8f5b5f8942,user_3da7464e,2025-09-19T13:27:05.845592,Chegg,15.5,Education,The Broke Student,False
+15d095ab75264e0090f36a28f0924d10,user_3da7464e,2025-09-19T13:27:05.845592,McDonalds,18.0,Food,The Broke Student,False
+f8480913bf8a43dfb9392cf557a2e1eb,user_3da7464e,2025-09-19T13:27:05.845592,Lyft,59.0,Transportation,The Broke Student,False
 128fe3b03e254534b7df3f583a80e523,user_3da7464e,2025-09-19T13:27:05.845592,Chegg,21.67,Education,The Broke Student,False
 ea15f6f3fc144b15aa50d97828753218,user_3da7464e,2025-09-19T13:27:05.845592,Maintenance Fee,1054.35,Housing,The Broke Student,False
 8dae0f29505d47618ab9f63da9b92652,user_3da7464e,2025-09-20T13:27:05.845592,Maintenance Fee,948.78,Housing,The Broke Student,False
@@ -676,10 +676,10 @@ f4c061595a0b430895690d54c576ce7b,user_3da7464e,2025-09-29T13:27:05.845592,Mainte
 eba1b5e5b801441784f8dc98faaf8918,user_3da7464e,2025-09-29T13:27:05.845592,Rent Payment,874.25,Housing,The Broke Student,False
 a39626cb7bb74c5999ad925c00523638,user_3da7464e,2025-09-30T13:27:05.845592,Maintenance Fee,1164.84,Housing,The Broke Student,False
 7ff89ecb295d4748a28559625a8b3e57,user_3da7464e,2025-09-30T13:27:05.845592,Rent Payment,1066.94,Housing,The Broke Student,False
-1bc985f76d0e4dd4acd5c583867d2038,user_3da7464e,2025-09-30T13:27:05.845592,Lime Scooter,27.20,Transportation,The Broke Student,False
+1bc985f76d0e4dd4acd5c583867d2038,user_3da7464e,2025-09-30T13:27:05.845592,Lime Scooter,27.2,Transportation,The Broke Student,False
 82240bb1c276476f8d89d8ceaf824fd6,user_3da7464e,2025-10-01T13:27:05.845592,Shell Gas,13.51,Transportation,The Broke Student,False
 477e4845978545b294883c11ff3375a7,user_3da7464e,2025-10-01T13:27:05.845592,Maintenance Fee,892.36,Housing,The Broke Student,False
-806416be28c946059aad034116faec74,user_3da7464e,2025-10-01T13:27:05.845592,Subway,34.80,Food,The Broke Student,False
+806416be28c946059aad034116faec74,user_3da7464e,2025-10-01T13:27:05.845592,Subway,34.8,Food,The Broke Student,False
 2bce8882b51a48c2840e3c3bf073876a,user_3da7464e,2025-10-02T13:27:05.845592,Chevron,19.49,Transportation,The Broke Student,False
 86cea3efea854608b7e64b31c495a180,user_3da7464e,2025-10-03T13:27:05.845592,Camden Apartments,1002.46,Housing,The Broke Student,False
 1087041141974fd29d128cf47b923544,user_3da7464e,2025-10-04T13:27:05.845592,Subway,7.26,Food,The Broke Student,False
@@ -693,11 +693,11 @@ af4b604a5398491aa097a003c7937cf4,user_3da7464e,2025-10-04T13:27:05.845592,Mainte
 3cb77817fccb4b079d7b850910932093,user_3da7464e,2025-10-07T13:27:05.845592,Starbucks,9.61,Food,The Broke Student,False
 316c20f1083f41e6a0d7a1596878bb81,user_3da7464e,2025-10-07T13:27:05.845592,MTA Kiosk,53.04,Transportation,The Broke Student,False
 6f0becdb57fb4faa8e094254bc14ed47,user_3da7464e,2025-10-07T13:27:05.845592,Whole Foods,11.67,Food,The Broke Student,False
-ba1ff798546b42a381d8cbdd045af777,user_3da7464e,2025-10-07T13:27:05.845592,Starbucks,6.70,Food,The Broke Student,False
+ba1ff798546b42a381d8cbdd045af777,user_3da7464e,2025-10-07T13:27:05.845592,Starbucks,6.7,Food,The Broke Student,False
 2b634a55c8d24edeaa0fc460ec574af3,user_3da7464e,2025-10-07T13:27:05.845592,Rent Payment,816.59,Housing,The Broke Student,False
 c12a9af2457c45a1bdfc5716d4518b23,user_3da7464e,2025-10-08T13:27:05.845592,Rent Payment,878.43,Housing,The Broke Student,False
 c5de7d27554849debfa35fb5cc49c5f1,user_3da7464e,2025-10-08T13:27:05.845592,Chevron,55.79,Transportation,The Broke Student,False
-0db188698648495fb2b537d726396e35,user_3da7464e,2025-10-08T13:27:05.845592,Subway,33.20,Food,The Broke Student,False
+0db188698648495fb2b537d726396e35,user_3da7464e,2025-10-08T13:27:05.845592,Subway,33.2,Food,The Broke Student,False
 d980de165b004b66a83972bc8ac68a72,user_3da7464e,2025-10-08T13:27:05.845592,Subway,20.24,Food,The Broke Student,False
 35dca885f899400a85bc14e0e0cfc993,user_3da7464e,2025-10-09T13:27:05.845592,Maintenance Fee,1495.97,Housing,The Broke Student,False
 28c826d1d66f4d5fa8a055c9a7f8385c,user_3da7464e,2025-10-09T13:27:05.845592,Udemy,19.68,Education,The Broke Student,False
@@ -707,19 +707,19 @@ ce1b5e80bbe6431e8268822d15922315,user_3da7464e,2025-10-09T13:27:05.845592,Camden
 d880c7da121c496789cdb30ae4beae89,user_3da7464e,2025-10-10T13:27:05.845592,Subway,31.99,Food,The Broke Student,False
 5330b7bab39d493884d8b8c02dd678fa,user_3da7464e,2025-10-10T13:27:05.845592,Camden Apartments,1225.53,Housing,The Broke Student,False
 6f191c681eae491ba5639001a316762f,user_3da7464e,2025-10-10T13:27:05.845592,Subway,14.79,Food,The Broke Student,False
-eb09b3c9b87d439bb70772a7c12cd819,user_3da7464e,2025-10-11T13:27:05.845592,Camden Apartments,1386.00,Housing,The Broke Student,False
+eb09b3c9b87d439bb70772a7c12cd819,user_3da7464e,2025-10-11T13:27:05.845592,Camden Apartments,1386.0,Housing,The Broke Student,False
 fef9b737a1a841919994145ba07cff16,user_3da7464e,2025-10-11T13:27:05.845592,Chipotle,9.91,Food,The Broke Student,False
 bbb7e93330164b659c6a6784a1d5de51,user_3da7464e,2025-10-12T13:27:05.845592,Rent Payment,1034.41,Housing,The Broke Student,False
 a20f0b2aac584deb9b50f7abd6eb4097,user_3da7464e,2025-10-12T13:27:05.845592,University Bookstore,43.67,Education,The Broke Student,False
 3f62348452074b9995211b2f131958a2,user_3da7464e,2025-10-12T13:27:05.845592,Maintenance Fee,913.47,Housing,The Broke Student,False
 b2397cf4abaa4b449aaea05ef15ad61f,user_3da7464e,2025-10-13T13:27:05.845592,Whole Foods,12.22,Food,The Broke Student,False
 7a4523d6c9124dba9be500c95a5240c9,user_3da7464e,2025-10-13T13:27:05.845592,Lyft,11.48,Transportation,The Broke Student,False
-cc1329405d0544d5a035a66716eddbba,user_3da7464e,2025-10-13T13:27:05.845592,Rent Payment,1464.60,Housing,The Broke Student,False
+cc1329405d0544d5a035a66716eddbba,user_3da7464e,2025-10-13T13:27:05.845592,Rent Payment,1464.6,Housing,The Broke Student,False
 8215e4e0f0e54ee7a423c85594410508,user_3da7464e,2025-10-13T13:27:05.845592,Chipotle,28.14,Food,The Broke Student,False
 569d5c75992f45cb9991e70ad10f8b10,user_3da7464e,2025-10-14T13:27:05.845592,Maintenance Fee,856.46,Housing,The Broke Student,False
 87906312370146288256474058224787,user_3da7464e,2025-10-14T13:27:05.845592,Trader Joe's,39.13,Food,The Broke Student,False
-77bb3bc2f80048d3bba364471482ceb6,user_3da7464e,2025-10-15T13:27:05.845592,Starbucks,8.20,Food,The Broke Student,False
-add5391176524f24964a3828919b139c,user_3da7464e,2025-10-16T13:27:05.845592,Camden Apartments,12409.70,Housing,The Broke Student,True
+77bb3bc2f80048d3bba364471482ceb6,user_3da7464e,2025-10-15T13:27:05.845592,Starbucks,8.2,Food,The Broke Student,False
+add5391176524f24964a3828919b139c,user_3da7464e,2025-10-16T13:27:05.845592,Camden Apartments,12409.7,Housing,The Broke Student,True
 4fff7e97e2044a3daef5aa8bbb33b528,user_3da7464e,2025-10-17T13:27:05.845592,Uber,26.13,Transportation,The Broke Student,False
 8744f8d29d84479ca8478306027ee420,user_3da7464e,2025-10-17T13:27:05.845592,Maintenance Fee,877.94,Housing,The Broke Student,False
 1f1a8f49f10a454db7624663a112743f,user_3da7464e,2025-10-17T13:27:05.845592,University Bookstore,18.98,Education,The Broke Student,False
@@ -741,12 +741,12 @@ e96c34992b1c460aa0c84c35af0874b0,user_3da7464e,2025-10-22T13:27:05.845592,Camden
 a62a62c22a9e4a5d970b0a4a69905b64,user_3da7464e,2025-10-24T13:27:05.845592,Maintenance Fee,906.94,Housing,The Broke Student,False
 c721af1d2dbb44ad96bf1f04f2378923,user_3da7464e,2025-10-24T13:27:05.845592,Udemy,40.03,Education,The Broke Student,False
 6862c75b13f64155a5b0814d4f8d7046,user_3da7464e,2025-10-24T13:27:05.845592,Chipotle,12.42,Food,The Broke Student,False
-246d17971bfb4373bbf05e5ba2d3f29b,user_3da7464e,2025-10-25T13:27:05.845592,McDonalds,9.80,Food,The Broke Student,False
+246d17971bfb4373bbf05e5ba2d3f29b,user_3da7464e,2025-10-25T13:27:05.845592,McDonalds,9.8,Food,The Broke Student,False
 df265307e51844faabbe68591b9f1c03,user_3da7464e,2025-10-25T13:27:05.845592,Camden Apartments,990.35,Housing,The Broke Student,False
 90d19511038d4026adca40e1775130af,user_3da7464e,2025-10-25T13:27:05.845592,Udemy,30.06,Education,The Broke Student,False
 86aae881d04f426da134ae2d6e5c1ff4,user_3da7464e,2025-10-25T13:27:05.845592,McDonalds,37.47,Food,The Broke Student,False
 ce08baf3ce304798ab5d7183eef5de40,user_3da7464e,2025-10-26T13:27:05.845592,McDonalds,25.81,Food,The Broke Student,False
-861c8a31076e437a9869c845d661eb41,user_3da7464e,2025-10-26T13:27:05.845592,McDonalds,37.80,Food,The Broke Student,False
+861c8a31076e437a9869c845d661eb41,user_3da7464e,2025-10-26T13:27:05.845592,McDonalds,37.8,Food,The Broke Student,False
 27bcc78661c74ae09f1df93206f818c8,user_3da7464e,2025-10-27T13:27:05.845592,McDonalds,39.42,Food,The Broke Student,False
 3744712c604b482cbb8a853c5c2ac41c,user_3da7464e,2025-10-27T13:27:05.845592,Trader Joe's,23.67,Food,The Broke Student,False
 ad2dc54dd6e44d71b5eb479f27b5940e,user_3da7464e,2025-10-27T13:27:05.845592,Chegg,33.99,Education,The Broke Student,False
@@ -755,24 +755,24 @@ ad2dc54dd6e44d71b5eb479f27b5940e,user_3da7464e,2025-10-27T13:27:05.845592,Chegg,
 a541f89811304c76bf30ccc13fb65e2a,user_3da7464e,2025-10-28T13:27:05.845592,Maintenance Fee,1049.88,Housing,The Broke Student,False
 824c32a7126e41f08499210c6cab7df1,user_3da7464e,2025-10-28T13:27:05.845592,Lyft,48.84,Transportation,The Broke Student,False
 9692f17e27b5484dacb4712120337b27,user_3da7464e,2025-10-28T13:27:05.845592,Rent Payment,843.54,Housing,The Broke Student,False
-aaf7ced1bbfe4787a0dc184d66f0f038,user_3da7464e,2025-10-28T13:27:05.845592,Lyft,25.00,Transportation,The Broke Student,False
+aaf7ced1bbfe4787a0dc184d66f0f038,user_3da7464e,2025-10-28T13:27:05.845592,Lyft,25.0,Transportation,The Broke Student,False
 c248920b36f94d40953b5e32d8cd8a38,user_3da7464e,2025-10-28T13:27:05.845592,MTA Kiosk,15.95,Transportation,The Broke Student,False
 86afdbf034e64f258e3b922dcfe97cd1,user_3da7464e,2025-10-29T13:27:05.845592,Whole Foods,21.71,Food,The Broke Student,False
 852af26fedae4483b9a6be5646830458,user_3da7464e,2025-10-29T13:27:05.845592,Lyft,43.18,Transportation,The Broke Student,False
 cffb21fed2f34bc7966158ccc07e9da3,user_3da7464e,2025-10-29T13:27:05.845592,Starbucks,7.71,Food,The Broke Student,False
 3c4886abdc8046048a202900174913bf,user_3da7464e,2025-10-29T13:27:05.845592,McDonalds,19.27,Food,The Broke Student,False
-fd85715aa88242a3bd2d3680f7ec4858,user_3da7464e,2025-10-29T13:27:05.845592,Maintenance Fee,1127.40,Housing,The Broke Student,False
-0a7c6903ebd845fab0619ae0810ebd3e,user_3da7464e,2025-10-30T13:27:05.845592,Maintenance Fee,1378.40,Housing,The Broke Student,False
+fd85715aa88242a3bd2d3680f7ec4858,user_3da7464e,2025-10-29T13:27:05.845592,Maintenance Fee,1127.4,Housing,The Broke Student,False
+0a7c6903ebd845fab0619ae0810ebd3e,user_3da7464e,2025-10-30T13:27:05.845592,Maintenance Fee,1378.4,Housing,The Broke Student,False
 82cf48b98cfa408d89b786b4569ec361,user_3da7464e,2025-10-30T13:27:05.845592,DoorDash,15.02,Food,The Broke Student,False
 97638680d56a440797b72863fb9bda82,user_3da7464e,2025-10-30T13:27:05.845592,Maintenance Fee,1179.84,Housing,The Broke Student,False
 54ebc8d23dcb4d93b4d5c17fea16bdbf,user_3da7464e,2025-10-30T13:27:05.845592,DoorDash,17.66,Food,The Broke Student,False
-09fe23c00ccf4b578b295c3dc2113e76,user_3da7464e,2025-10-31T13:27:05.845592,Maintenance Fee,1356.10,Housing,The Broke Student,False
+09fe23c00ccf4b578b295c3dc2113e76,user_3da7464e,2025-10-31T13:27:05.845592,Maintenance Fee,1356.1,Housing,The Broke Student,False
 ce8e71e434054ce9b9ce3d009ec51b5c,user_3da7464e,2025-10-31T13:27:05.845592,Shell Gas,54.71,Transportation,The Broke Student,False
-88aa232cd03744c3bb84977b140c9159,user_3da7464e,2025-11-01T13:27:05.845592,Chevron,47.70,Transportation,The Broke Student,False
+88aa232cd03744c3bb84977b140c9159,user_3da7464e,2025-11-01T13:27:05.845592,Chevron,47.7,Transportation,The Broke Student,False
 1cc72a000c904bbc98402d619887ef5b,user_3da7464e,2025-11-01T13:27:05.845592,University Bookstore,46.23,Education,The Broke Student,False
 55ce74bc97e44ad98f1c541ee945d753,user_3da7464e,2025-11-01T13:27:05.845592,DoorDash,16.42,Food,The Broke Student,False
 983a4aa7b9a9485498eee84268b700bc,user_3da7464e,2025-11-01T13:27:05.845592,Uber,35.26,Transportation,The Broke Student,False
-f9af4f7117d04365a9ea286d9b5af4a1,user_3da7464e,2025-11-02T13:27:05.845592,Camden Apartments,826.40,Housing,The Broke Student,False
+f9af4f7117d04365a9ea286d9b5af4a1,user_3da7464e,2025-11-02T13:27:05.845592,Camden Apartments,826.4,Housing,The Broke Student,False
 0c5d48ed3a3c4be3b278edf748b6735e,user_3da7464e,2025-11-02T13:27:05.845592,Chipotle,10.56,Food,The Broke Student,False
 798c8f6f8a3c40b88ebd150f11798aa8,user_3da7464e,2025-11-02T13:27:05.845592,Maintenance Fee,840.12,Housing,The Broke Student,False
 86c74c9b711c4b9ba428f85c07c9b1b5,user_3da7464e,2025-11-03T13:27:05.845592,McDonalds,21.76,Food,The Broke Student,False
@@ -791,24 +791,24 @@ b78b36f39f7f467e9e2b1b2cf17aca72,user_3da7464e,2025-11-06T13:27:05.845592,McDona
 a897df4bc6f748049ab838424e3ccb9a,user_3da7464e,2025-11-07T13:27:05.845592,MTA Kiosk,54.75,Transportation,The Broke Student,False
 20b8ac6edeb14cc0bf4903e224c2f7cd,user_3da7464e,2025-11-08T13:27:05.845592,Chipotle,15.24,Food,The Broke Student,False
 4d5cbfb1eca940f486ccaa467ace58e5,user_3da7464e,2025-11-08T13:27:05.845592,Maintenance Fee,1001.93,Housing,The Broke Student,False
-0e27204bef6f44ff91937df5180ce798,user_3da7464e,2025-11-09T13:27:05.845592,Rent Payment,1405.90,Housing,The Broke Student,False
+0e27204bef6f44ff91937df5180ce798,user_3da7464e,2025-11-09T13:27:05.845592,Rent Payment,1405.9,Housing,The Broke Student,False
 1dc022ad1c3f41039ae383634032e478,user_3da7464e,2025-11-09T13:27:05.845592,Shell Gas,43.96,Transportation,The Broke Student,False
-3e610674e4f74ef69ba71f303ba796b4,user_3da7464e,2025-11-09T13:27:05.845592,Starbucks,30.70,Food,The Broke Student,False
+3e610674e4f74ef69ba71f303ba796b4,user_3da7464e,2025-11-09T13:27:05.845592,Starbucks,30.7,Food,The Broke Student,False
 bcce28893ebc4205b35b7c0e8e6ec792,user_3da7464e,2025-11-10T13:27:05.845592,Camden Apartments,1162.13,Housing,The Broke Student,False
 8892a5a2751b49338f169a223a129b21,user_3da7464e,2025-11-10T13:27:05.845592,Subway,28.78,Food,The Broke Student,False
 885a8319cff241dd8b2174fd741eeed9,user_3da7464e,2025-11-11T13:27:05.845592,Camden Apartments,1410.06,Housing,The Broke Student,False
-f1072007ee984c5cb2666c8718b407ca,user_3da7464e,2025-11-11T13:27:05.845592,Camden Apartments,1076.30,Housing,The Broke Student,False
+f1072007ee984c5cb2666c8718b407ca,user_3da7464e,2025-11-11T13:27:05.845592,Camden Apartments,1076.3,Housing,The Broke Student,False
 c48e334c379f4df8b46a706ecf632adf,user_3da7464e,2025-11-11T13:27:05.845592,Whole Foods,14.53,Food,The Broke Student,False
 65719613944240eda6f5d30bd1c0a1c1,user_3da7464e,2025-11-12T13:27:05.845592,Rent Payment,1130.62,Housing,The Broke Student,False
 6e0b50454c33469ead17c7a5ddae7b7e,user_3da7464e,2025-11-12T13:27:05.845592,Lime Scooter,29.97,Transportation,The Broke Student,False
 11de3549b54d4e6e8dcb4e53846b09e6,user_3da7464e,2025-11-12T13:27:05.845592,McDonalds,24.76,Food,The Broke Student,False
-3eddaed2993d44449bf37b63a84d67c4,user_3da7464e,2025-11-12T13:27:05.845592,Shell Gas,52.80,Transportation,The Broke Student,False
+3eddaed2993d44449bf37b63a84d67c4,user_3da7464e,2025-11-12T13:27:05.845592,Shell Gas,52.8,Transportation,The Broke Student,False
 ad6de0fc316b4d4ea80a16d5bf7b11eb,user_3da7464e,2025-11-13T13:27:05.845592,Chipotle,21.14,Food,The Broke Student,False
 7e227520591f443fa01d8d5bbeffca4c,user_3da7464e,2025-11-13T13:27:05.845592,Rent Payment,1447.61,Housing,The Broke Student,False
 904eef2c58604b809f6f206d7f6c266b,user_3da7464e,2025-11-14T13:27:05.845592,Rent Payment,959.47,Housing,The Broke Student,False
 3070094e4af94b0abc412f650c25ac58,user_3da7464e,2025-11-14T13:27:05.845592,McDonalds,38.09,Food,The Broke Student,False
 43e6b306ce97411a954d3c5228849e3e,user_3da7464e,2025-11-14T13:27:05.845592,DoorDash,37.79,Food,The Broke Student,False
-2d6374ddd80e4395aaa8a8e26c337cc9,user_3da7464e,2025-11-14T13:27:05.845592,Udemy,43.70,Education,The Broke Student,False
+2d6374ddd80e4395aaa8a8e26c337cc9,user_3da7464e,2025-11-14T13:27:05.845592,Udemy,43.7,Education,The Broke Student,False
 18f7ebae1ef44e358cc70305437a7112,user_3da7464e,2025-11-15T13:27:05.845592,Rent Payment,1428.68,Housing,The Broke Student,False
 a14fcad22cea4b609f229ef12c837194,user_3da7464e,2025-11-16T13:27:05.845592,Uber,57.53,Transportation,The Broke Student,False
 c4f57e24698645f4890124eb589d4c3d,user_3da7464e,2025-11-17T13:27:05.845592,Starbucks,20.47,Food,The Broke Student,False
@@ -823,12 +823,13 @@ b3742e79d9924e48b8225fa3a07cda2e,user_3da7464e,2025-11-19T13:27:05.845592,Lime S
 dca6fe1a172a438cbd6e0a7d14a2063d,user_3da7464e,2025-11-20T13:27:05.845592,Starbucks,14.55,Food,The Broke Student,False
 ed42a9be03064a759ae0b797e45fb3c5,user_3da7464e,2025-11-20T13:27:05.845592,Chegg,12.71,Education,The Broke Student,False
 527765513c384e22982f68a4a87d4e8c,user_3da7464e,2025-11-20T13:27:05.845592,Starbucks,27.12,Food,The Broke Student,False
-d37e1ac7896a4ccb8c68ee62df9158fe,user_3da7464e,2025-11-20T13:27:05.845592,Subway,11.30,Food,The Broke Student,False
+d37e1ac7896a4ccb8c68ee62df9158fe,user_3da7464e,2025-11-20T13:27:05.845592,Subway,11.3,Food,The Broke Student,False
 1d8f6c5bc8214269a79d5f12222d2a69,user_3da7464e,2025-11-20T13:27:05.845592,McDonalds,10.45,Food,The Broke Student,False
 a9eb7f85ceff45c3943884d2c08e24d4,user_3da7464e,2025-11-21T13:27:05.845592,University Bookstore,22.73,Education,The Broke Student,False
 204254a79e3246258c5899d373737d3e,user_3da7464e,2025-11-21T13:27:05.845592,Lyft,20.55,Transportation,The Broke Student,False
 d0408af93f994e1097370c898c2afeb4,user_3da7464e,2025-11-21T13:27:05.845592,Maintenance Fee,1127.09,Housing,The Broke Student,False
 9dbe3af22aa94ba1974441db2ff28ba5,user_3da7464e,2025-11-22T13:27:05.845592,Udemy,35.44,Education,The Broke Student,False
-49b5893dd17a45d1983f4ab6a7a28682,user_3da7464e,2025-11-22T13:27:05.845592,Chipotle,34.60,Food,The Broke Student,False
+49b5893dd17a45d1983f4ab6a7a28682,user_3da7464e,2025-11-22T13:27:05.845592,Chipotle,34.6,Food,The Broke Student,False
 ffdfc9936166432082e8fd8000a2f814,user_3da7464e,2025-11-22T13:27:05.845592,University Bookstore,39.21,Education,The Broke Student,False
-125f94102868435daece4b7edf89815a,user_3da7464e,2025-11-22T13:27:05.845592,Maintenance Fee,1188.10,Housing,The Broke Student,False
+125f94102868435daece4b7edf89815a,user_3da7464e,2025-11-22T13:27:05.845592,Maintenance Fee,1188.1,Housing,The Broke Student,False
+999999999999,user_test_99,2025-11-25T10:00:00,SpaceX Ticket,50000.0,Travel,The Partier,True

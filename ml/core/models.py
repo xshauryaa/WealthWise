@@ -3,17 +3,11 @@ from typing import List, Optional, Dict, Any
 from datetime import datetime
 from decimal import Decimal
 
-# ---------------------------------------------------------
-# Shared Models
-# ---------------------------------------------------------
 class SourceRef(BaseModel):
-    type: str  # "transaction", "budget", "knowledge_base"
+    type: str
     id: Optional[str] = None
     snippet: Optional[str] = None
 
-# ---------------------------------------------------------
-# Categorizer Models
-# ---------------------------------------------------------
 class CategorizeRequest(BaseModel):
     merchant: str
     amount: Decimal
@@ -29,9 +23,6 @@ class CategorizeResponse(BaseModel):
     reasoning: Optional[str] = None
     suggested_subcategory: Optional[str] = None
 
-# ---------------------------------------------------------
-# Anomaly Detection Models
-# ---------------------------------------------------------
 class TransactionContext(BaseModel):
     merchant: str
     amount: Decimal
@@ -40,8 +31,9 @@ class TransactionContext(BaseModel):
 
 class DetectAnomalyRequest(BaseModel):
     user_id: str
-    transaction: TransactionContext
-    historical_window_days: int = 30
+    # CRITICAL: Naming this explicitly
+    current_transaction: TransactionContext
+    history: List[TransactionContext] = Field(default_factory=list)
 
 class AnomalyComparison(BaseModel):
     category_mean: Decimal
@@ -51,13 +43,10 @@ class AnomalyComparison(BaseModel):
 
 class DetectAnomalyResponse(BaseModel):
     is_anomaly: bool
-    severity: str  # "low", "medium", "high", "none"
+    severity: str
     reasons: List[str]
     comparison: Optional[AnomalyComparison] = None
 
-# ---------------------------------------------------------
-# Chat / RAG Models
-# ---------------------------------------------------------
 class ChatRequest(BaseModel):
     user_id: str
     message: str
@@ -67,5 +56,5 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     response: str
     sources: List[SourceRef] = []
-    processing_time_ms: int
-    tokens_used: int
+    processing_time_ms: int = 0
+    tokens_used: int = 0
