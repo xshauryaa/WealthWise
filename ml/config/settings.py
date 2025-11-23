@@ -8,6 +8,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 TAXONOMY_PATH = BASE_DIR / "config" / "taxonomy.json"
+ENV_PATH = BASE_DIR / ".env"  # <--- FORCE ABSOLUTE PATH TO .ENV
 
 class Settings(BaseSettings):
     # Infrastructure
@@ -27,7 +28,8 @@ class Settings(BaseSettings):
     SIMILARITY_TOP_K: int = 5
     ANOMALY_STD_THRESHOLD: float = 2.0
 
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    # Point strictly to the calculated ENV_PATH
+    model_config = SettingsConfigDict(env_file=ENV_PATH, extra="ignore")
 
     def get_taxonomy(self) -> Dict[str, Any]:
         """Load the taxonomy JSON file."""
