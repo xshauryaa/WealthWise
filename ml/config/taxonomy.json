@@ -1,0 +1,28 @@
+{
+  "categories": [
+    "Food",
+    "Transportation",
+    "Housing",
+    "Utilities",
+    "Entertainment",
+    "Shopping",
+    "Income",
+    "Healthcare",
+    "Education",
+    "Savings",
+    "Uncategorized"
+  ],
+  "subcategories": {
+    "Food": ["Groceries", "Restaurants", "Coffee"],
+    "Transportation": ["Rideshare", "Public Transit", "Gas", "Car Payment"],
+    "Housing": ["Rent", "Maintenance", "Furniture"],
+    "Utilities": ["Phone", "Internet", "Electricity"],
+    "Entertainment": ["Streaming", "Events", "Games", "Nightlife"],
+    "Shopping": ["Clothing", "Electronics", "Home", "Gifts"],
+    "Income": ["Salary", "Freelance", "Gift"],
+    "Healthcare": ["Pharmacy", "Doctor", "Insurance"],
+    "Education": ["Tuition", "Books", "Courses"],
+    "Savings": ["Investment", "Emergency Fund"],
+    "Uncategorized": ["General"]
+  }
+}

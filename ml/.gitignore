@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Data (Keep synthetic scripts, ignore generated csvs/dbs)
+ml/data/*.csv
+ml/data/*.json
+!ml/data/synthetic/personas.json
+ml/data/chroma_db/
+
+# IDE
+.vscode/
+.idea/
