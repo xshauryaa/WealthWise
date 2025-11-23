@@ -1,0 +1,23 @@
+name: wealthwise-ml
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - fastapi
+    - uvicorn
+    - pydantic
+    - pydantic-settings
+    - google-generativeai
+    - chromadb
+    - redis
+    - pandas
+    - numpy
+    - python-dotenv
+    - tenacity
+    - pytest
+    - httpx
+    - faker
+    - jupyter

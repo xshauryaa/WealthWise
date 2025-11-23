@@ -1,0 +1,37 @@
+{
+  "The Partier": {
+    "income": 2000,
+    "spending_weights": {
+      "Food": 0.30,
+      "Entertainment": 0.35,
+      "Transportation": 0.15,
+      "Shopping": 0.10,
+      "Housing": 0.0
+    },
+    "anomaly_chance": 0.05,
+    "merchant_preferences": ["Uber", "Bars", "Netflix", "DoorDash"]
+  },
+  "The Saver": {
+    "income": 1500,
+    "spending_weights": {
+      "Food": 0.15,
+      "Savings": 0.40,
+      "Housing": 0.30,
+      "Transportation": 0.05,
+      "Utilities": 0.10
+    },
+    "anomaly_chance": 0.01,
+    "merchant_preferences": ["Trader Joe's", "Vanguard", "Public Transit"]
+  },
+  "The Broke Student": {
+    "income": 800,
+    "spending_weights": {
+      "Food": 0.40,
+      "Housing": 0.40,
+      "Transportation": 0.10,
+      "Education": 0.10
+    },
+    "anomaly_chance": 0.02,
+    "merchant_preferences": ["McDonalds", "Ramen Shop", "University Bookstore"]
+  }
+}

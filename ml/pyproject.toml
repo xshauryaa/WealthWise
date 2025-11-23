@@ -1,0 +1,37 @@
+[project]
+name = "wealthwise-ml"
+version = "0.1.0"
+description = "ML/RAG Microservice for WealthWise"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.1.0",
+    "google-generativeai>=0.3.2",
+    "chromadb>=0.4.22",
+    "redis>=5.0.1",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "python-dotenv>=1.0.0",
+    "tenacity>=8.2.3"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "httpx>=0.26.0", # For TestClient
+    "faker>=22.5.0",
+    "black>=24.1.0",
+    "isort>=5.13.0",
+    "jupyter>=1.0.0"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["ml/tests"]
+addopts = "-v --strict-markers"
+markers = [
+    "integration: marks tests as integration tests (slow)",
+    "unit: marks tests as unit tests (fast)",
+]
