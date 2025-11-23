@@ -1,0 +1,98 @@
+{
+  "transactions": [
+    {
+      "id": "txn_001",
+      "type": "expense",
+      "category": "Food & Dining",
+      "description": "Lunch at Cafe Central",
+      "amount": 28.50,
+      "date": "2024-11-22",
+      "merchant": "Cafe Central",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_002",
+      "type": "income",
+      "category": "Salary",
+      "description": "Monthly Salary",
+      "amount": 4500.00,
+      "date": "2024-11-20",
+      "merchant": "TechCorp Inc.",
+      "paymentMethod": "Direct Deposit"
+    },
+    {
+      "id": "txn_003",
+      "type": "expense",
+      "category": "Transportation",
+      "description": "Gas Station",
+      "amount": 45.75,
+      "date": "2024-11-19",
+      "merchant": "Shell Gas Station",
+      "paymentMethod": "Debit Card"
+    },
+    {
+      "id": "txn_004",
+      "type": "expense",
+      "category": "Entertainment",
+      "description": "Movie Tickets",
+      "amount": 32.00,
+      "date": "2024-11-18",
+      "merchant": "AMC Theatres",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_005",
+      "type": "expense",
+      "category": "Shopping",
+      "description": "Groceries",
+      "amount": 127.83,
+      "date": "2024-11-17",
+      "merchant": "Whole Foods Market",
+      "paymentMethod": "Debit Card"
+    }
+  ],
+  "monthlyExpenses": {
+    "november2024": {
+      "Food & Dining": 456.75,
+      "Transportation": 298.50,
+      "Entertainment": 145.00,
+      "Shopping": 623.25,
+      "Utilities": 234.67,
+      "Healthcare": 89.33
+    }
+  },
+  "budgetCategories": [
+    {
+      "id": "food",
+      "name": "Food & Dining",
+      "budgetLimit": 600.00,
+      "spent": 456.75,
+      "color": "#FF6B6B",
+      "icon": "🍽️"
+    },
+    {
+      "id": "transport",
+      "name": "Transportation",
+      "budgetLimit": 400.00,
+      "spent": 298.50,
+      "color": "#4ECDC4",
+      "icon": "🚗"
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "budgetLimit": 200.00,
+      "spent": 145.00,
+      "color": "#45B7D1",
+      "icon": "🎬"
+    },
+    {
+      "id": "shopping",
+      "name": "Shopping",
+      "budgetLimit": 800.00,
+      "spent": 623.25,
+      "color": "#96CEB4",
+      "icon": "🛍️"
+    }
+  ]
+}

@@ -15,6 +15,7 @@ import { ModulesScreen } from '../screens/ModulesScreen';
 import { ModuleTrackScreen } from '../screens/ModuleTrackScreen';
 import { MicroinvestScreen } from '../screens/MicroinvestScreen';
 import { ProfileScreen } from '../screens/ProfileScreen';
+import NavigationBar from '../components/NavigationBar.jsx';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -22,7 +23,7 @@ const Tab = createBottomTabNavigator();
 // Auth Stack Navigator
 function AuthStack() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="SignIn" component={SignInScreen} />
             <Stack.Screen name="SignUp" component={SignUpScreen} />
         </Stack.Navigator>
@@ -32,7 +33,7 @@ function AuthStack() {
 // Learning Stack Navigator
 function LearningStack() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Learning" component={LearningScreen} />
             <Stack.Screen name="Modules" component={ModulesScreen} />
             <Stack.Screen name="ModuleTrack" component={ModuleTrackScreen} />
@@ -42,7 +43,10 @@ function LearningStack() {
 // App Tab Navigator
 function AppTabNavigator() {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator  
+            screenOptions={{ headerShown: false }}
+            tabBar={(props) => <NavigationBar {...props} />}
+        >
             <Tab.Screen name="Home" component={HomeScreen} />
             <Tab.Screen name="Budget" component={BudgetScreen} />
             <Tab.Screen name="LearningStack" component={LearningStack} />
@@ -55,9 +59,9 @@ function AppTabNavigator() {
 // Main Stack Navigator
 function MainStack() {
     return (
-        <Stack.Navigator>
-            <Stack.Screen name="Chat" component={ChatScreen} />
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="AppTabs" component={AppTabNavigator} />
+            <Stack.Screen name="Chat" component={ChatScreen} />
         </Stack.Navigator>
     );
 }
@@ -65,8 +69,8 @@ function MainStack() {
 // Root Switch Navigator
 function RootNavigator() {
     // You can add authentication logic here to determine which stack to show
-    const isAuthenticated = false; // Replace with actual auth state
-    const hasCompletedOnboarding = false; // Replace with actual onboarding state
+    const isAuthenticated = true; // Replace with actual auth state
+    const hasCompletedOnboarding = true; // Replace with actual onboarding state
 
     return (
         <NavigationContainer>

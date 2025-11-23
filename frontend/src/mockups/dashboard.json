@@ -1,0 +1,115 @@
+{
+  "dashboard": {
+    "totalNetWorth": 21350.50,
+    "monthlyChange": 485.75,
+    "monthlyChangePercentage": 2.33,
+    "quickStats": {
+      "totalSavings": 12450.75,
+      "totalInvestments": 8900.25,
+      "totalDebts": 0.50,
+      "creditScore": 742
+    }
+  },
+  "recentActivity": [
+    {
+      "id": "activity_001",
+      "type": "transaction",
+      "description": "Lunch at Cafe Central",
+      "amount": -28.50,
+      "timestamp": "2024-11-22T12:30:00Z",
+      "category": "Food & Dining"
+    },
+    {
+      "id": "activity_002",
+      "type": "investment",
+      "description": "Round-up investment in VOO",
+      "amount": 1.50,
+      "timestamp": "2024-11-22T12:31:00Z",
+      "category": "Microinvest"
+    },
+    {
+      "id": "activity_003",
+      "type": "learning",
+      "description": "Completed 'Risk vs Return' module",
+      "timestamp": "2024-11-21T19:45:00Z",
+      "category": "Learning"
+    },
+    {
+      "id": "activity_004",
+      "type": "transaction",
+      "description": "Gas Station",
+      "amount": -45.75,
+      "timestamp": "2024-11-19T08:15:00Z",
+      "category": "Transportation"
+    }
+  ],
+  "financialGoals": [
+    {
+      "id": "goal_001",
+      "name": "Emergency Fund",
+      "targetAmount": 10000,
+      "currentAmount": 5000,
+      "progress": 50,
+      "deadline": "2024-12-31",
+      "priority": "high",
+      "color": "#FF6B6B"
+    },
+    {
+      "id": "goal_002",
+      "name": "Vacation Fund",
+      "targetAmount": 5000,
+      "currentAmount": 1250,
+      "progress": 25,
+      "deadline": "2025-06-30",
+      "priority": "medium",
+      "color": "#4ECDC4"
+    },
+    {
+      "id": "goal_003",
+      "name": "Retirement Savings",
+      "targetAmount": 500000,
+      "currentAmount": 8900,
+      "progress": 1.78,
+      "deadline": "2054-12-31",
+      "priority": "high",
+      "color": "#45B7D1"
+    }
+  ],
+  "marketOverview": {
+    "indices": [
+      {
+        "symbol": "^GSPC",
+        "name": "S&P 500",
+        "value": 4567.89,
+        "change": 23.45,
+        "changePercentage": 0.52
+      },
+      {
+        "symbol": "^DJI",
+        "name": "Dow Jones",
+        "value": 34567.12,
+        "change": -45.67,
+        "changePercentage": -0.13
+      },
+      {
+        "symbol": "^IXIC",
+        "name": "NASDAQ",
+        "value": 14234.56,
+        "change": 78.90,
+        "changePercentage": 0.56
+      }
+    ]
+  },
+  "monthlyInsights": {
+    "totalSpent": 1847.50,
+    "budgetUtilization": 77,
+    "savingsRate": 23,
+    "topSpendingCategory": "Food & Dining",
+    "investmentGrowth": 3.2,
+    "tips": [
+      "You're spending 23% more on dining than last month. Consider meal prepping to save money.",
+      "Your investment portfolio has grown 3.2% this month. Great job staying consistent!",
+      "You're on track to meet your emergency fund goal by the end of the year."
+    ]
+  }
+}

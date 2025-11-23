@@ -1,0 +1,43 @@
+{
+  "user": {
+    "id": "user_123",
+    "name": "Alex Johnson",
+    "email": "alex.johnson@example.com",
+    "avatar": "https://example.com/avatar.jpg",
+    "joinedDate": "2024-01-15",
+    "preferences": {
+      "currency": "USD",
+      "language": "en",
+      "notifications": true,
+      "darkMode": false
+    },
+    "financialGoals": {
+      "emergencyFund": 10000,
+      "retirement": 500000,
+      "vacation": 5000
+    }
+  },
+  "profile": {
+    "completionPercentage": 85,
+    "badges": [
+      {
+        "id": "early_bird",
+        "name": "Early Bird",
+        "description": "Completed first investment",
+        "earnedDate": "2024-02-01"
+      },
+      {
+        "id": "saver",
+        "name": "Smart Saver",
+        "description": "Saved $1000 in a month",
+        "earnedDate": "2024-03-15"
+      }
+    ],
+    "stats": {
+      "totalSavings": 12450.75,
+      "totalInvestments": 8900.25,
+      "monthlyGrowth": 3.5,
+      "streakDays": 45
+    }
+  }
+}

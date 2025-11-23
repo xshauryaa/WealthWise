@@ -8,7 +8,8 @@ export const colors = {
   // Additional utility colors
   grey: {
     light: '#F5F5F5',
-    medium: '#CCCCCC',
+    medium: '#D9D9D9',
+    medium2: '#CCCCCC',
     dark: '#666666',
   },
 };

@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import { useCustomFonts } from './src/config/fonts';
 import RootNavigator from './src/navigation/RootNavigator';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -24,7 +25,11 @@ export default function App() {
     );
   }
 
-  return <RootNavigator />;
+  return (
+    <SafeAreaProvider>
+      <RootNavigator />
+    </SafeAreaProvider>
+  );
 }
 
 const styles = StyleSheet.create({

@@ -1,0 +1,133 @@
+{
+  "notifications": [
+    {
+      "id": "notif_001",
+      "type": "budget_alert",
+      "title": "Budget Alert",
+      "message": "You've spent 80% of your dining budget this month",
+      "timestamp": "2024-11-22T09:00:00Z",
+      "read": false,
+      "priority": "medium",
+      "category": "Budget",
+      "actionable": true,
+      "actions": [
+        {
+          "label": "View Budget",
+          "type": "navigate",
+          "target": "BudgetScreen"
+        }
+      ]
+    },
+    {
+      "id": "notif_002",
+      "type": "investment_update",
+      "title": "Portfolio Update",
+      "message": "Your portfolio gained $23.45 today (+0.26%)",
+      "timestamp": "2024-11-22T16:00:00Z",
+      "read": true,
+      "priority": "low",
+      "category": "Investments",
+      "actionable": false
+    },
+    {
+      "id": "notif_003",
+      "type": "learning_reminder",
+      "title": "Learning Reminder",
+      "message": "Complete 'Building a Portfolio' to finish your course",
+      "timestamp": "2024-11-22T08:00:00Z",
+      "read": false,
+      "priority": "low",
+      "category": "Learning",
+      "actionable": true,
+      "actions": [
+        {
+          "label": "Continue Learning",
+          "type": "navigate",
+          "target": "LearningScreen"
+        }
+      ]
+    },
+    {
+      "id": "notif_004",
+      "type": "micro_investment",
+      "title": "Micro-Investment",
+      "message": "Round-up investment of $1.50 completed",
+      "timestamp": "2024-11-21T12:30:00Z",
+      "read": true,
+      "priority": "low",
+      "category": "Microinvest",
+      "actionable": false
+    },
+    {
+      "id": "notif_005",
+      "type": "goal_achievement",
+      "title": "Goal Milestone",
+      "message": "🎉 You've reached 50% of your emergency fund goal!",
+      "timestamp": "2024-11-20T10:15:00Z",
+      "read": false,
+      "priority": "high",
+      "category": "Goals",
+      "actionable": true,
+      "actions": [
+        {
+          "label": "View Goals",
+          "type": "navigate",
+          "target": "ProfileScreen"
+        }
+      ]
+    }
+  ],
+  "preferences": {
+    "pushNotifications": true,
+    "emailNotifications": false,
+    "budgetAlerts": true,
+    "portfolioUpdates": true,
+    "learningReminders": true,
+    "goalMilestones": true,
+    "marketNews": false,
+    "weeklyReports": true,
+    "quietHours": {
+      "enabled": true,
+      "start": "22:00",
+      "end": "08:00"
+    }
+  },
+  "notificationTypes": [
+    {
+      "type": "budget_alert",
+      "name": "Budget Alerts",
+      "description": "Get notified when you're approaching budget limits",
+      "enabled": true
+    },
+    {
+      "type": "investment_update",
+      "name": "Portfolio Updates",
+      "description": "Daily summary of your investment performance",
+      "enabled": true
+    },
+    {
+      "type": "learning_reminder",
+      "name": "Learning Reminders",
+      "description": "Reminders to continue your financial education",
+      "enabled": true
+    },
+    {
+      "type": "micro_investment",
+      "name": "Micro-Investment Confirmations",
+      "description": "Confirmations when round-ups are invested",
+      "enabled": false
+    },
+    {
+      "type": "goal_achievement",
+      "name": "Goal Milestones",
+      "description": "Celebrations when you reach financial milestones",
+      "enabled": true
+    },
+    {
+      "type": "market_news",
+      "name": "Market News",
+      "description": "Important market updates and news",
+      "enabled": false
+    }
+  ]
+}

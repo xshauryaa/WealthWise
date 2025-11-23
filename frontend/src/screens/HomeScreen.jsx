@@ -1,12 +1,47 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { FONTS } from '../config/fonts';
 
-export function HomeScreen() {
+import { Header } from '../components/Header.jsx';
+import RecentTransactions from '../components/RecentTransactions.jsx';
+import LessonShortcut from '../components/LessonShortcut.jsx';
+import ChatShortcut from '../components/ChatShortcut.jsx';
+import { padding } from '../styles/spacing.js';
+
+export const HomeScreen = ({ navigation }) => {
+  const handleViewHistory = () => {
+    // Navigate to budget screen or transaction history
+    navigation.navigate('Budget');
+  };
+
+  const handleGoToNextLesson = () => {
+    // Navigate to learning screen or specific lesson
+    navigation.navigate('LearningStack');
+  };
+
+  const handleViewChat = () => {
+    // Navigate to chat screen
+    navigation.navigate('Chat');
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home Screen</Text>
-      <Text style={styles.subtitle}>Welcome to your financial journey</Text>
+      <Header />
+      <ScrollView 
+        style={styles.scrollView}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.scrollContent}
+      > 
+        <ChatShortcut onViewChat={handleViewChat} />
+        <View style={styles.horizontalContainer}>
+          <View style={styles.transactionsContainer}>
+            <RecentTransactions onViewHistory={handleViewHistory} />
+          </View>
+          <View style={styles.lessonContainer}>
+            <LessonShortcut onGoToNextLesson={handleGoToNextLesson} />
+          </View>
+        </View>
+      </ScrollView>
     </View>
   );
 }
@@ -14,9 +49,19 @@ export function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#fff',
+    paddingVertical: 48,
+  },
+  horizontalContainer: {
+    flexDirection: 'row',
+    paddingHorizontal: 16,
+    gap: 8,
+  },
+  transactionsContainer: {
+    flex: 1,
+  },
+  lessonContainer: {
+    flex: 1,
   },
   title: {
     fontSize: 32,

@@ -1,0 +1,96 @@
+{
+  "portfolio": {
+    "totalValue": 8900.25,
+    "totalGain": 450.75,
+    "totalGainPercentage": 5.34,
+    "dailyChange": 23.45,
+    "dailyChangePercentage": 0.26
+  },
+  "investments": [
+    {
+      "id": "inv_001",
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "shares": 15,
+      "avgPrice": 150.25,
+      "currentPrice": 165.50,
+      "totalValue": 2482.50,
+      "gain": 228.75,
+      "gainPercentage": 10.17,
+      "type": "stock"
+    },
+    {
+      "id": "inv_002",
+      "symbol": "VOO",
+      "name": "Vanguard S&P 500 ETF",
+      "shares": 8,
+      "avgPrice": 380.00,
+      "currentPrice": 395.25,
+      "totalValue": 3162.00,
+      "gain": 122.00,
+      "gainPercentage": 4.01,
+      "type": "etf"
+    },
+    {
+      "id": "inv_003",
+      "symbol": "TSLA",
+      "name": "Tesla Inc.",
+      "shares": 5,
+      "avgPrice": 220.00,
+      "currentPrice": 245.75,
+      "totalValue": 1228.75,
+      "gain": 128.75,
+      "gainPercentage": 11.70,
+      "type": "stock"
+    }
+  ],
+  "microInvestments": [
+    {
+      "id": "micro_001",
+      "date": "2024-11-22",
+      "roundUpAmount": 1.50,
+      "purchaseAmount": 28.50,
+      "merchant": "Cafe Central",
+      "investedIn": "VOO"
+    },
+    {
+      "id": "micro_002",
+      "date": "2024-11-21",
+      "roundUpAmount": 2.25,
+      "purchaseAmount": 45.75,
+      "merchant": "Shell Gas Station",
+      "investedIn": "VTI"
+    },
+    {
+      "id": "micro_003",
+      "date": "2024-11-20",
+      "roundUpAmount": 0.17,
+      "purchaseAmount": 127.83,
+      "merchant": "Whole Foods",
+      "investedIn": "VOO"
+    }
+  ],
+  "watchlist": [
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "currentPrice": 485.50,
+      "dailyChange": 12.75,
+      "dailyChangePercentage": 2.70
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "currentPrice": 385.25,
+      "dailyChange": -5.25,
+      "dailyChangePercentage": -1.34
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc.",
+      "currentPrice": 145.75,
+      "dailyChange": 3.50,
+      "dailyChangePercentage": 2.46
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "courses": [
+    {
+      "id": "course_001",
+      "title": "Introduction to Investing",
+      "description": "Learn the basics of investing in stocks, bonds, and ETFs",
+      "difficulty": "Beginner",
+      "duration": "2 hours",
+      "progress": 75,
+      "modules": [
+        {
+          "id": "module_001",
+          "title": "What is Investing?",
+          "duration": "15 min",
+          "completed": true,
+          "type": "video"
+        },
+        {
+          "id": "module_002",
+          "title": "Types of Investments",
+          "duration": "20 min",
+          "completed": true,
+          "type": "video"
+        },
+        {
+          "id": "module_003",
+          "title": "Risk vs Return",
+          "duration": "25 min",
+          "completed": true,
+          "type": "interactive"
+        },
+        {
+          "id": "module_004",
+          "title": "Building a Portfolio",
+          "duration": "30 min",
+          "completed": false,
+          "type": "video"
+        }
+      ],
+      "category": "Investing",
+      "rating": 4.8,
+      "enrolledUsers": 15420
+    },
+    {
+      "id": "course_002",
+      "title": "Budgeting Mastery",
+      "description": "Master the art of budgeting and expense tracking",
+      "difficulty": "Beginner",
+      "duration": "1.5 hours",
+      "progress": 0,
+      "modules": [
+        {
+          "id": "module_005",
+          "title": "Creating Your First Budget",
+          "duration": "20 min",
+          "completed": false,
+          "type": "interactive"
+        },
+        {
+          "id": "module_006",
+          "title": "Tracking Expenses",
+          "duration": "15 min",
+          "completed": false,
+          "type": "video"
+        },
+        {
+          "id": "module_007",
+          "title": "50/30/20 Rule",
+          "duration": "25 min",
+          "completed": false,
+          "type": "video"
+        }
+      ],
+      "category": "Budgeting",
+      "rating": 4.6,
+      "enrolledUsers": 12890
+    },
+    {
+      "id": "course_003",
+      "title": "Cryptocurrency Basics",
+      "description": "Understanding digital currencies and blockchain technology",
+      "difficulty": "Intermediate",
+      "duration": "3 hours",
+      "progress": 25,
+      "modules": [
+        {
+          "id": "module_008",
+          "title": "What is Cryptocurrency?",
+          "duration": "30 min",
+          "completed": true,
+          "type": "video"
+        },
+        {
+          "id": "module_009",
+          "title": "Blockchain Technology",
+          "duration": "35 min",
+          "completed": false,
+          "type": "interactive"
+        },
+        {
+          "id": "module_010",
+          "title": "Major Cryptocurrencies",
+          "duration": "25 min",
+          "completed": false,
+          "type": "video"
+        }
+      ],
+      "category": "Crypto",
+      "rating": 4.4,
+      "enrolledUsers": 8950
+    }
+  ],
+  "achievements": [
+    {
+      "id": "achievement_001",
+      "title": "First Course Completed",
+      "description": "Completed your first learning course",
+      "earned": true,
+      "earnedDate": "2024-11-10",
+      "icon": "🎓"
+    },
+    {
+      "id": "achievement_002",
+      "title": "Streak Master",
+      "description": "7 days learning streak",
+      "earned": false,
+      "progress": 5,
+      "target": 7,
+      "icon": "🔥"
+    },
+    {
+      "id": "achievement_003",
+      "title": "Quiz Champion",
+      "description": "Score 100% on 5 quizzes",
+      "earned": false,
+      "progress": 2,
+      "target": 5,
+      "icon": "🏆"
+    }
+  ],
+  "categories": [
+    {
+      "id": "investing",
+      "name": "Investing",
+      "icon": "📈",
+      "courseCount": 12,
+      "color": "#4CAF50"
+    },
+    {
+      "id": "budgeting",
+      "name": "Budgeting",
+      "icon": "💰",
+      "courseCount": 8,
+      "color": "#2196F3"
+    },
+    {
+      "id": "crypto",
+      "name": "Cryptocurrency",
+      "icon": "₿",
+      "courseCount": 6,
+      "color": "#FF9800"
+    },
+    {
+      "id": "retirement",
+      "name": "Retirement Planning",
+      "icon": "🏖️",
+      "courseCount": 10,
+      "color": "#9C27B0"
+    }
+  ]
+}
