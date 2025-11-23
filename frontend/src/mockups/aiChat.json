@@ -13,20 +13,56 @@
         {
           "id": "msg_002",
           "type": "assistant",
-          "content": "Tech stocks can be volatile but have shown strong long-term growth. Consider diversifying your portfolio with tech ETFs rather than individual stocks. Your current portfolio shows 28% in tech, which is reasonable. Would you like me to suggest some specific tech ETFs?",
+          "content": "Great question! Tech stocks can be **volatile** but have shown *strong long-term growth*. Here's my analysis:\n\n## Current Market Conditions\n- Tech sector is experiencing some consolidation\n- AI and cloud computing are driving growth\n- Your current portfolio shows **28% in tech**, which is reasonable\n\n## My Recommendations\nConsider diversifying with **tech ETFs** rather than individual stocks for better risk management. Would you like me to suggest some specific options?",
           "timestamp": "2024-11-22T10:30:15Z"
         },
         {
           "id": "msg_003",
           "type": "user",
-          "content": "Yes, please recommend some tech ETFs",
+          "content": "Yes, please recommend some tech ETFs with their expense ratios",
           "timestamp": "2024-11-22T10:31:00Z"
         },
         {
           "id": "msg_004",
           "type": "assistant",
-          "content": "Here are some popular tech ETFs to consider:\n\n1. **QQQ (Invesco QQQ Trust)** - Tracks Nasdaq 100\n2. **VGT (Vanguard Information Technology ETF)** - Low expense ratio\n3. **XLK (Technology Select Sector SPDR)** - Focuses on S&P 500 tech companies\n\nBased on your risk profile and current portfolio, VGT might be a good fit due to its diversification and low fees.",
+          "content": "Here are the **top tech ETFs** I recommend:\n\n### 🏆 **Best Options for You**\n\n1. **QQQ (Invesco QQQ Trust)**\n   - Tracks *Nasdaq 100*\n   - Expense ratio: `0.20%`\n   - YTD return: +15.2%\n\n2. **VGT (Vanguard Information Technology ETF)**\n   - *Low expense ratio*\n   - Expense ratio: `0.10%`\n   - Strong diversification\n\n3. **XLK (Technology Select Sector SPDR)**\n   - Focuses on *S&P 500 tech companies*\n   - Expense ratio: `0.13%`\n   - Excellent liquidity\n\n### 📊 **My Analysis**\nBased on your **risk profile** and current portfolio, **VGT** might be the best fit due to:\n- ✅ Lowest fees\n- ✅ Broad diversification\n- ✅ Consistent performance\n\nWould you like me to show you how this would fit into your overall allocation?",
           "timestamp": "2024-11-22T10:31:30Z"
+        },
+        {
+          "id": "msg_005",
+          "type": "user",
+          "content": "That sounds good, but I'm also worried about the market timing. Should I invest all at once or use dollar-cost averaging?",
+          "timestamp": "2024-11-22T10:32:15Z"
+        },
+        {
+          "id": "msg_006",
+          "type": "assistant",
+          "content": "**Excellent question!** Market timing vs. dollar-cost averaging (DCA) is a common dilemma. Let me break this down:\n\n## 📈 **Dollar-Cost Averaging (DCA)**\n\n### ✅ **Pros:**\n- Reduces impact of volatility\n- Removes emotion from investing\n- *Perfect for beginners*\n- Builds discipline\n\n### ❌ **Cons:**\n- May miss out on gains in rising markets\n- Can be slower to reach full allocation\n\n## 💰 **Lump Sum Investing**\n\n### ✅ **Pros:**\n- Historically outperforms DCA ~66% of the time\n- *\"Time in market beats timing the market\"*\n- Immediate full exposure\n\n### ❌ **Cons:**\n- Higher risk if market drops immediately\n- Can be emotionally challenging\n\n## 🎯 **My Recommendation for You**\n\nGiven current market conditions, I suggest a **hybrid approach**:\n\n```\n📅 Investment Schedule:\nWeek 1: Invest 50% immediately\nWeeks 2-7: Invest remaining 50% over 6 weeks (8.33% each week)\n```\n\nThis gives you the benefit of immediate exposure while reducing timing risk. **What's your comfort level with this approach?**",
+          "timestamp": "2024-11-22T10:33:00Z"
+        },
+        {
+          "id": "msg_007",
+          "type": "user",
+          "content": "That makes sense! Can you also help me understand how this fits with my emergency fund? I have about $15,000 saved.",
+          "timestamp": "2024-11-22T10:34:30Z"
+        },
+        {
+          "id": "msg_008",
+          "type": "assistant",
+          "content": "**Perfect!** Let's analyze your emergency fund situation:\n\n## 🛡️ **Emergency Fund Health Check**\n\nWith **$15,000** saved, let's see how this stacks up:\n\n### 📊 **Your Monthly Expenses Analysis**\n*Based on your transaction history:*\n- Housing: `$1,200/month`\n- Food & Dining: `$600/month`\n- Transportation: `$400/month`\n- Utilities & Bills: `$300/month`\n- **Total Essential Expenses: ~$2,500/month**\n\n### ✅ **Emergency Fund Status: EXCELLENT**\n\n```\n$15,000 ÷ $2,500 = 6 months coverage\n```\n\nYou're in the **ideal range** of 3-6 months! 🎉\n\n## 💡 **Investment Strategy Recommendation**\n\nSince your emergency fund is solid:\n\n1. **Keep emergency fund as-is** in high-yield savings (earning ~4.5%)\n2. **Proceed with tech ETF investment** using the hybrid approach\n3. **Consider increasing monthly contributions** to investments\n\n### 🎯 **Next Steps:**\n- How much are you planning to invest initially?\n- Are you contributing regularly to retirement accounts?\n\n*This foundation puts you in a **strong position** to grow wealth while maintaining security!*",
+          "timestamp": "2024-11-22T10:35:45Z"
+        },
+        {
+          "id": "msg_009",
+          "type": "user",
+          "content": "I was thinking of investing $5,000 initially. I contribute $500/month to my 401k with a 4% company match.",
+          "timestamp": "2024-11-22T10:37:00Z"
+        },
+        {
+          "id": "msg_010",
+          "type": "assistant",
+          "content": "**Outstanding planning!** Let me give you a comprehensive analysis:\n\n## 💼 **401(k) Analysis**\n\n### ✅ **You're Doing Great!**\n- Contributing `$500/month` = `$6,000/year`\n- With **4% company match**, you're getting *free money*! 💰\n- **Total annual retirement savings: ~$8,000+**\n\n### 📈 **Optimization Tip:**\nMake sure you're contributing **at least 4%** of salary to get full match - this is a guaranteed **100% return**!\n\n## 🎯 **$5,000 Investment Strategy**\n\nPerfect amount for starting! Here's my recommended allocation:\n\n### **Option A: Conservative Diversified** *(Recommended)*\n```\n🏢 VGT (Tech ETF):     $2,500 (50%)\n🌍 VTI (Total Market): $1,500 (30%)\n🌎 VXUS (International): $1,000 (20%)\n```\n\n### **Option B: Tech-Focused**\n```\n🏢 VGT (Tech ETF):     $3,000 (60%)\n🏛️ VOO (S&P 500):     $2,000 (40%)\n```\n\n## 📅 **Implementation Timeline**\n\n**Week 1:** Invest `$2,500` (50%)\n**Weeks 2-7:** Invest `$417/week` for remaining amount\n\n### 🔮 **Projected Growth** *(Historical averages)*\n- **1 Year:** ~$5,400-$5,700\n- **5 Years:** ~$7,500-$8,500\n- **10 Years:** ~$11,500-$14,000\n\n*Past performance doesn't guarantee future results, but tech has historically grown 10-12% annually.*\n\n**Which allocation appeals to you more?** 🤔",
+          "timestamp": "2024-11-22T10:39:15Z"
         }
       ]
     },
@@ -35,31 +71,31 @@
       "timestamp": "2024-11-21T14:15:00Z",
       "messages": [
         {
-          "id": "msg_005",
+          "id": "msg_011",
           "type": "user",
           "content": "I'm spending too much on dining out. Help me budget better.",
           "timestamp": "2024-11-21T14:15:00Z"
         },
         {
-          "id": "msg_006",
+          "id": "msg_012",
           "type": "assistant",
-          "content": "I see you've spent $456.75 on dining this month, which is 76% of your $600 budget. Here are some strategies:\n\n1. **Meal prep on Sundays** - Can reduce dining out by 40%\n2. **Set a weekly dining limit** - Try $100/week\n3. **Use the 'cook at home' challenge** - Cook 5 meals at home before dining out\n\nWould you like me to help you create a meal planning strategy?",
+          "content": "I can definitely help you optimize your dining budget! Let me analyze your recent spending:\n\n## 📊 **Your Dining Analysis**\n\n### 💸 **Current Spending:**\n- **This month:** `$456.75`\n- **Budget:** `$600`\n- **Usage:** *76% of budget* (within limits but room for improvement)\n\n### 🍽️ **Spending Breakdown:**\n- **Lunch (weekdays):** `$180` (~$9/day)\n- **Dinner delivery:** `$156` (4 orders)\n- **Weekend dining:** `$120.75` (2 dinners)\n\n## 💡 **Optimization Strategies**\n\n### **Strategy 1: The 80/20 Rule**\n- Cook at home **80% of meals**\n- Dine out for **20% of meals** (special occasions)\n- *Potential savings: **$150-200/month***\n\n### **Strategy 2: Meal Prep Sundays**\n- Prep **5 lunches** every Sunday\n- Cook **3-4 dinners** in batches\n- *Saves time AND money*\n\n### **Strategy 3: Smart Substitutions**\n- Replace delivery with **pickup** (saves $5-7/order)\n- Use **lunch specials** instead of dinner prices\n- Try **happy hour** dining\n\n**Which strategy resonates most with your lifestyle?** 🤔",
           "timestamp": "2024-11-21T14:15:45Z"
         }
       ]
     }
   ],
   "aiAdvisorProfile": {
-    "name": "WealthBot",
-    "personality": "Friendly and knowledgeable financial advisor",
+    "name": "Penny",
+    "personality": "Friendly, knowledgeable, and encouraging financial advisor",
     "specialties": [
       "Investment advice",
-      "Budgeting strategies",
+      "Budgeting strategies", 
       "Risk assessment",
       "Portfolio optimization",
       "Financial goal setting"
     ],
-    "responseStyle": "Educational, encouraging, and data-driven"
+    "responseStyle": "Educational, encouraging, data-driven, and uses emojis for clarity"
   },
   "suggestedQuestions": [
     "How should I diversify my portfolio?",
@@ -73,21 +109,21 @@
   ],
   "quickActions": [
     {
-      "id": "portfolio_analysis",
+      "id": "portfolio_analysis", 
       "title": "Analyze My Portfolio",
       "description": "Get insights about your current investments",
       "icon": "📊"
     },
     {
       "id": "budget_review",
-      "title": "Review My Budget",
+      "title": "Review My Budget", 
       "description": "Check your spending patterns this month",
       "icon": "💸"
     },
     {
       "id": "goal_progress",
       "title": "Goal Progress Check",
-      "description": "See how you're doing with your financial goals",
+      "description": "See how you're doing with your financial goals", 
       "icon": "🎯"
     },
     {
