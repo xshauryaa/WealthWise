@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
   },
   messagesList: {
     flex: 1,
-    backgroundColor: colors.grey.light,
+    backgroundColor: colors.light,
   },
   messagesContent: {
     paddingVertical: 20,

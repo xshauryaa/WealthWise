@@ -3,12 +3,12 @@
     {
       "id": "txn_001",
       "type": "expense",
-      "category": "Food & Dining",
-      "description": "Lunch at Cafe Central",
-      "amount": 28.50,
-      "date": "2024-11-22",
-      "merchant": "Cafe Central",
-      "paymentMethod": "Credit Card"
+      "category": "Housing",
+      "description": "Monthly Rent",
+      "amount": 1800.00,
+      "date": "2025-11-01",
+      "merchant": "Bay Area Properties",
+      "paymentMethod": "Bank Transfer"
     },
     {
       "id": "txn_002",
@@ -16,39 +16,289 @@
       "category": "Salary",
       "description": "Monthly Salary",
       "amount": 4500.00,
-      "date": "2024-11-20",
+      "date": "2025-11-20",
       "merchant": "TechCorp Inc.",
       "paymentMethod": "Direct Deposit"
     },
     {
       "id": "txn_003",
       "type": "expense",
-      "category": "Transportation",
-      "description": "Gas Station",
-      "amount": 45.75,
-      "date": "2024-11-19",
-      "merchant": "Shell Gas Station",
-      "paymentMethod": "Debit Card"
+      "category": "Food & Dining",
+      "description": "Lunch at Cafe Central",
+      "amount": 18.50,
+      "date": "2025-11-22",
+      "merchant": "Cafe Central",
+      "paymentMethod": "Credit Card"
     },
     {
       "id": "txn_004",
       "type": "expense",
-      "category": "Entertainment",
-      "description": "Movie Tickets",
-      "amount": 32.00,
-      "date": "2024-11-18",
-      "merchant": "AMC Theatres",
-      "paymentMethod": "Credit Card"
+      "category": "Transportation",
+      "description": "Gas Station",
+      "amount": 35.75,
+      "date": "2025-11-19",
+      "merchant": "Shell Gas Station",
+      "paymentMethod": "Debit Card"
     },
     {
       "id": "txn_005",
       "type": "expense",
+      "category": "Entertainment",
+      "description": "Movie Tickets",
+      "amount": 24.00,
+      "date": "2025-11-18",
+      "merchant": "AMC Theatres",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_006",
+      "type": "expense",
       "category": "Shopping",
       "description": "Groceries",
-      "amount": 127.83,
-      "date": "2024-11-17",
+      "amount": 89.83,
+      "date": "2025-11-17",
       "merchant": "Whole Foods Market",
       "paymentMethod": "Debit Card"
+    },
+    {
+      "id": "txn_007",
+      "type": "expense",
+      "category": "Food & Dining",
+      "description": "Dinner at Italian Restaurant",
+      "amount": 47.25,
+      "date": "2025-11-16",
+      "merchant": "Luigi's Italian",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_008",
+      "type": "expense",
+      "category": "Utilities",
+      "description": "Electricity Bill",
+      "amount": 89.45,
+      "date": "2025-11-15",
+      "merchant": "Pacific Electric",
+      "paymentMethod": "Auto Pay"
+    },
+    {
+      "id": "txn_009",
+      "type": "expense",
+      "category": "Transportation",
+      "description": "Uber Ride",
+      "amount": 14.75,
+      "date": "2025-11-14",
+      "merchant": "Uber",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_010",
+      "type": "expense",
+      "category": "Healthcare",
+      "description": "Pharmacy Purchase",
+      "amount": 19.99,
+      "date": "2025-11-13",
+      "merchant": "CVS Pharmacy",
+      "paymentMethod": "Debit Card"
+    },
+    {
+      "id": "txn_011",
+      "type": "expense",
+      "category": "Food & Dining",
+      "description": "Coffee Shop",
+      "amount": 8.75,
+      "date": "2025-11-12",
+      "merchant": "Starbucks",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_012",
+      "type": "expense",
+      "category": "Entertainment",
+      "description": "Streaming Service",
+      "amount": 15.99,
+      "date": "2025-11-11",
+      "merchant": "Netflix",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_013",
+      "type": "expense",
+      "category": "Shopping",
+      "description": "Online Purchase",
+      "amount": 63.99,
+      "date": "2025-11-10",
+      "merchant": "Amazon",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_014",
+      "type": "expense",
+      "category": "Insurance",
+      "description": "Car Insurance",
+      "amount": 125.00,
+      "date": "2025-11-09",
+      "merchant": "State Farm",
+      "paymentMethod": "Auto Pay"
+    },
+    {
+      "id": "txn_015",
+      "type": "expense",
+      "category": "Food & Dining",
+      "description": "Fast Food",
+      "amount": 12.45,
+      "date": "2025-11-08",
+      "merchant": "McDonald's",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_016",
+      "type": "expense",
+      "category": "Shopping",
+      "description": "Clothing Store",
+      "amount": 86.78,
+      "date": "2025-11-07",
+      "merchant": "H&M",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_017",
+      "type": "expense",
+      "category": "Utilities",
+      "description": "Internet Bill",
+      "amount": 65.99,
+      "date": "2025-11-06",
+      "merchant": "Comcast",
+      "paymentMethod": "Auto Pay"
+    },
+    {
+      "id": "txn_018",
+      "type": "expense",
+      "category": "Food & Dining",
+      "description": "Brunch",
+      "amount": 32.30,
+      "date": "2025-11-05",
+      "merchant": "The Local Bistro",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_019",
+      "type": "expense",
+      "category": "Transportation",
+      "description": "Public Transport",
+      "amount": 8.50,
+      "date": "2025-11-04",
+      "merchant": "Metro Transit",
+      "paymentMethod": "Transit Card"
+    },
+    {
+      "id": "txn_020",
+      "type": "expense",
+      "category": "Entertainment",
+      "description": "Concert Tickets",
+      "amount": 75.00,
+      "date": "2025-11-03",
+      "merchant": "Ticketmaster",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_021",
+      "type": "expense",
+      "category": "Housing",
+      "description": "Renters Insurance",
+      "amount": 25.00,
+      "date": "2025-11-02",
+      "merchant": "Allstate Insurance",
+      "paymentMethod": "Auto Pay"
+    },
+    {
+      "id": "txn_022",
+      "type": "income",
+      "category": "Salary",
+      "description": "Monthly Salary",
+      "amount": 4500.00,
+      "date": "2025-10-20",
+      "merchant": "TechCorp Inc.",
+      "paymentMethod": "Direct Deposit"
+    },
+    {
+      "id": "txn_023",
+      "type": "expense",
+      "category": "Shopping",
+      "description": "Grocery Shopping",
+      "amount": 78.67,
+      "date": "2025-10-31",
+      "merchant": "Safeway",
+      "paymentMethod": "Debit Card"
+    },
+    {
+      "id": "txn_024",
+      "type": "expense",
+      "category": "Housing",
+      "description": "Monthly Rent",
+      "amount": 1800.00,
+      "date": "2025-10-01",
+      "merchant": "Bay Area Properties",
+      "paymentMethod": "Bank Transfer"
+    },
+    {
+      "id": "txn_025",
+      "type": "expense",
+      "category": "Food & Dining",
+      "description": "Pizza Delivery",
+      "amount": 22.75,
+      "date": "2025-10-30",
+      "merchant": "Domino's Pizza",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_026",
+      "type": "expense",
+      "category": "Healthcare",
+      "description": "Doctor Visit",
+      "amount": 95.00,
+      "date": "2025-10-29",
+      "merchant": "City Medical Center",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_027",
+      "type": "expense",
+      "category": "Transportation",
+      "description": "Gas Station",
+      "amount": 42.30,
+      "date": "2025-10-28",
+      "merchant": "Chevron",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_028",
+      "type": "expense",
+      "category": "Entertainment",
+      "description": "Gaming Purchase",
+      "amount": 29.99,
+      "date": "2025-10-27",
+      "merchant": "Steam",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_029",
+      "type": "expense",
+      "category": "Food & Dining",
+      "description": "Sushi Restaurant",
+      "amount": 48.90,
+      "date": "2025-10-26",
+      "merchant": "Tokyo Sushi",
+      "paymentMethod": "Credit Card"
+    },
+    {
+      "id": "txn_030",
+      "type": "expense",
+      "category": "Utilities",
+      "description": "Gas Bill",
+      "amount": 45.67,
+      "date": "2025-10-25",
+      "merchant": "PG&E",
+      "paymentMethod": "Auto Pay"
     }
   ],
   "monthlyExpenses": {
@@ -63,36 +313,68 @@
   },
   "budgetCategories": [
     {
+      "id": "housing",
+      "name": "Housing",
+      "budgetLimit": 2000.00,
+      "spent": 1825.00,
+      "color": "#FF6B6B",
+      "icon": "�"
+    },
+    {
       "id": "food",
       "name": "Food & Dining",
-      "budgetLimit": 600.00,
-      "spent": 456.75,
-      "color": "#FF6B6B",
+      "budgetLimit": 400.00,
+      "spent": 321.75,
+      "color": "#4ECDC4",
       "icon": "🍽️"
     },
     {
       "id": "transport",
       "name": "Transportation",
-      "budgetLimit": 400.00,
-      "spent": 298.50,
-      "color": "#4ECDC4",
+      "budgetLimit": 300.00,
+      "spent": 158.50,
+      "color": "#45B7D1",
       "icon": "🚗"
+    },
+    {
+      "id": "shopping",
+      "name": "Shopping",
+      "budgetLimit": 500.00,
+      "spent": 240.60,
+      "color": "#96CEB4",
+      "icon": "🛍️"
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "budgetLimit": 200.00,
+      "spent": 155.44,
+      "color": "#FFEAA7",
+      "icon": "⚡"
     },
     {
       "id": "entertainment",
       "name": "Entertainment",
       "budgetLimit": 200.00,
-      "spent": 145.00,
-      "color": "#45B7D1",
+      "spent": 114.99,
+      "color": "#DDA0DD",
       "icon": "🎬"
     },
     {
-      "id": "shopping",
-      "name": "Shopping",
-      "budgetLimit": 800.00,
-      "spent": 623.25,
-      "color": "#96CEB4",
-      "icon": "🛍️"
+      "id": "healthcare",
+      "name": "Healthcare",
+      "budgetLimit": 150.00,
+      "spent": 19.99,
+      "color": "#98D8C8",
+      "icon": "🏥"
+    },
+    {
+      "id": "insurance",
+      "name": "Insurance",
+      "budgetLimit": 300.00,
+      "spent": 150.00,
+      "color": "#FFB6C1",
+      "icon": "🛡️"
     }
   ]
 }
