@@ -11,6 +11,7 @@ import { HomeScreen } from '../screens/HomeScreen';
 import { BudgetScreen } from '../screens/BudgetScreen';
 import { ChatScreen } from '../screens/ChatScreen';
 import { LearningScreen } from '../screens/LearningScreen';
+import { FriendProfileScreen } from '../screens/FriendProfileScreen';
 import { ModulesScreen } from '../screens/ModulesScreen';
 import { ModuleTrackScreen } from '../screens/ModuleTrackScreen';
 import { MicroinvestScreen } from '../screens/MicroinvestScreen';
@@ -35,6 +36,7 @@ function LearningStack() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Learning" component={LearningScreen} />
+            <Stack.Screen name="FriendProfile" component={FriendProfileScreen} />
             <Stack.Screen name="Modules" component={ModulesScreen} />
             <Stack.Screen name="ModuleTrack" component={ModuleTrackScreen} />
         </Stack.Navigator>

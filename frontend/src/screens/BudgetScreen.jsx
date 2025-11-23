@@ -13,6 +13,7 @@ import { PieChart } from 'react-native-chart-kit';
 import { SvgXml } from 'react-native-svg';
 import { colors } from '../styles/colors';
 import { Header } from '../components/Header';
+import { TransactionDetailsModal } from '../components/TransactionDetailsModal';
 import budgetData from '../mockups/budget.json';
 
 // Import SVG icons
@@ -23,6 +24,8 @@ const { width, height } = Dimensions.get('window');
 
 export function BudgetScreen() {
   const [selectedPeriod, setSelectedPeriod] = useState('30');
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedTransaction, setSelectedTransaction] = useState(null);
   
   const periods = [
     { label: 'Last 30 Days', value: '30' },
@@ -86,6 +89,16 @@ export function BudgetScreen() {
     return Object.values(categoryTotals).reduce((sum, amount) => sum + amount, 0);
   }, [categoryTotals]);
 
+  const handleTransactionPress = (transaction) => {
+    setSelectedTransaction(transaction);
+    setIsModalVisible(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
+    setSelectedTransaction(null);
+  };
+
   const renderTransaction = ({ item }) => {
     const isIncome = item.type === 'income';
     const categoryBudget = budgetData.budgetCategories.find(
@@ -93,7 +106,11 @@ export function BudgetScreen() {
     );
     
     return (
-      <View style={styles.transactionItem}>
+      <TouchableOpacity 
+        style={styles.transactionItem}
+        onPress={() => handleTransactionPress(item)}
+        activeOpacity={0.7}
+      >
         <View style={styles.transactionHeader}>
           <View style={styles.transactionInfo}>
             <View style={styles.categoryIndicator}>
@@ -123,7 +140,7 @@ export function BudgetScreen() {
             <Text style={styles.categoryText}>{item.category}</Text>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
 
@@ -293,6 +310,13 @@ export function BudgetScreen() {
         {/* Bottom spacing */}
         <View style={styles.bottomSpacing} />
       </ScrollView>
+
+      {/* Transaction Details Modal */}
+      <TransactionDetailsModal 
+        isVisible={isModalVisible}
+        onClose={handleCloseModal}
+        transaction={selectedTransaction}
+      />
     </SafeAreaView>
   );
 }
