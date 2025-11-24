@@ -17,7 +17,7 @@ ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
 # Database
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://postgres:postgres@localhost:5432/wealthwise_investing"
+    "postgresql://wld@localhost:5432/wealthwise_investing"
 )
 
 # Application Settings

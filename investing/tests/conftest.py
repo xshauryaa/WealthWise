@@ -1,8 +1,6 @@
 """Pytest configuration and fixtures for WealthWise investing service."""
-
 import pytest
 import os
-
 
 @pytest.fixture(autouse=True)
 def setup_test_env(monkeypatch):
@@ -17,12 +15,12 @@ def setup_test_env(monkeypatch):
     if not os.getenv("ALPHA_VANTAGE_API_KEY"):
         monkeypatch.setenv("ALPHA_VANTAGE_API_KEY", "test_api_key")
     
-    # Set test database URL
+    # Use the actual development database (not a separate test database)
+    # In Chunk 4, we use the same database for dev and testing
     monkeypatch.setenv(
         "DATABASE_URL",
-        "postgresql://postgres:postgres@localhost:5432/wealthwise_test"
+        "postgresql://wld@localhost:5432/wealthwise_investing"
     )
-
 
 @pytest.fixture
 def sample_config():
@@ -32,7 +30,6 @@ def sample_config():
         "environment": "test",
         "database_url": "postgresql://test:test@localhost:5432/test_db"
     }
-
 
 @pytest.fixture
 def mock_env_vars(monkeypatch):

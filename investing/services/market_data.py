@@ -102,132 +102,186 @@ class AlphaVantageClient:
                 time.sleep(2 ** attempt)
 
 
+# class CachedMarketDataService:
+#     """Market data service with Redis caching and per-ticker rate limiting."""
+    
+#     def __init__(
+#         self, 
+#         client: AlphaVantageClient, 
+#         redis_url: str = None,
+#         cache_ttl: int = 300,  # 5 minutes
+#         rate_limit: int = 5,  # 5 calls per minute
+#         rate_window: int = 60  # 60 seconds
+#     ):
+#         """
+#         Initialize the cached market data service.
+        
+#         Args:
+#             client: AlphaVantageClient instance for fetching data
+#             redis_url: Redis connection URL (default: from config)
+#             cache_ttl: Cache time-to-live in seconds (default: 300)
+#             rate_limit: Maximum calls per time window per ticker (default: 5)
+#             rate_window: Time window for rate limiting in seconds (default: 60)
+#         """
+#         self.client = client
+#         self.cache_ttl = cache_ttl
+#         self.rate_limit = rate_limit
+#         self.rate_window = rate_window
+        
+#         # Initialize Redis connection
+#         if redis_url is None:
+#             from investing.config import REDIS_URL
+#             redis_url = REDIS_URL
+        
+#         try:
+#             self.redis_client = redis.from_url(redis_url, decode_responses=True)
+#             # Test connection
+#             self.redis_client.ping()
+#         except (redis.ConnectionError, redis.TimeoutError) as e:
+#             raise ConfigurationError(f"Failed to connect to Redis: {str(e)}")
+    
+#     def _get_cache_key(self, ticker: str) -> str:
+#         """Generate cache key for a ticker."""
+#         return f"price:{ticker.upper()}"
+    
+#     def _get_rate_limit_key(self, ticker: str) -> str:
+#         """Generate rate limit key for a ticker."""
+#         return f"ratelimit:{ticker.upper()}"
+    
+#     def _check_rate_limit(self, ticker: str) -> None:
+#         """
+#         Check if request is within rate limit for the ticker.
+        
+#         Args:
+#             ticker: Stock ticker symbol
+            
+#         Raises:
+#             APIKeyExhausted: If rate limit exceeded
+#         """
+#         rate_key = self._get_rate_limit_key(ticker)
+#         current_time = time.time()
+        
+#         # Get current request timestamps for this ticker
+#         timestamps = self.redis_client.lrange(rate_key, 0, -1)
+#         timestamps = [float(ts) for ts in timestamps]
+        
+#         # Remove timestamps outside the current window
+#         valid_timestamps = [ts for ts in timestamps if current_time - ts < self.rate_window]
+        
+#         # Check if rate limit exceeded
+#         if len(valid_timestamps) >= self.rate_limit:
+#             raise APIKeyExhausted(
+#                 f"Rate limit exceeded for {ticker}: "
+#                 f"{self.rate_limit} calls per {self.rate_window} seconds"
+#             )
+        
+#         # Add current timestamp
+#         self.redis_client.rpush(rate_key, current_time)
+        
+#         # Clean up old timestamps
+#         self.redis_client.ltrim(rate_key, -self.rate_limit, -1)
+        
+#         # Set expiration on rate limit key
+#         self.redis_client.expire(rate_key, self.rate_window)
+    
+#     def get_price(self, ticker: str) -> float:
+#         """
+#         Get current stock price with caching and rate limiting.
+        
+#         First checks cache. If cache miss, checks rate limit before
+#         fetching from API. Caches successful API responses.
+        
+#         Args:
+#             ticker: Stock ticker symbol (e.g., 'AAPL', 'MSFT')
+            
+#         Returns:
+#             Current stock price
+            
+#         Raises:
+#             TickerNotFound: If ticker is invalid
+#             APIKeyExhausted: If rate limit exceeded
+#             APITimeout: If API request times out
+#             APIError: If API returns unexpected error
+#             ConfigurationError: If Redis connection fails
+#         """
+#         cache_key = self._get_cache_key(ticker)
+        
+#         # Try to get from cache
+#         try:
+#             cached_price = self.redis_client.get(cache_key)
+#             if cached_price is not None:
+#                 return float(cached_price)
+#         except (redis.ConnectionError, redis.TimeoutError) as e:
+#             # If Redis fails, fall through to API call
+#             # but don't crash the service
+#             pass
+        
+#         # Cache miss - check rate limit
+#         self._check_rate_limit(ticker)
+        
+#         # Fetch from API
+#         price = self.client.get_price(ticker)
+        
+#         # Store in cache
+#         try:
+#             self.redis_client.setex(cache_key, self.cache_ttl, price)
+#         except (redis.ConnectionError, redis.TimeoutError) as e:
+#             # If Redis fails, still return the price
+#             # but don't crash the service
+#             pass
+        
+#         return price
+# investing/services/market_data.py
+
+import logging
+import redis
+from redis.exceptions import ConnectionError, TimeoutError
+
+# Keep your imports (AlphaVantageClient, etc.)
+# ...
+
+logger = logging.getLogger(__name__)
+
 class CachedMarketDataService:
-    """Market data service with Redis caching and per-ticker rate limiting."""
-    
-    def __init__(
-        self, 
-        client: AlphaVantageClient, 
-        redis_url: str = None,
-        cache_ttl: int = 300,  # 5 minutes
-        rate_limit: int = 5,  # 5 calls per minute
-        rate_window: int = 60  # 60 seconds
-    ):
-        """
-        Initialize the cached market data service.
-        
-        Args:
-            client: AlphaVantageClient instance for fetching data
-            redis_url: Redis connection URL (default: from config)
-            cache_ttl: Cache time-to-live in seconds (default: 300)
-            rate_limit: Maximum calls per time window per ticker (default: 5)
-            rate_window: Time window for rate limiting in seconds (default: 60)
-        """
-        self.client = client
-        self.cache_ttl = cache_ttl
-        self.rate_limit = rate_limit
-        self.rate_window = rate_window
-        
-        # Initialize Redis connection
-        if redis_url is None:
-            from investing.config import REDIS_URL
-            redis_url = REDIS_URL
+    def __init__(self, client: AlphaVantageClient, redis_url: str):
+        self._client = client
+        self._redis_available = False
         
         try:
-            self.redis_client = redis.from_url(redis_url, decode_responses=True)
-            # Test connection
-            self.redis_client.ping()
-        except (redis.ConnectionError, redis.TimeoutError) as e:
-            raise ConfigurationError(f"Failed to connect to Redis: {str(e)}")
-    
-    def _get_cache_key(self, ticker: str) -> str:
-        """Generate cache key for a ticker."""
-        return f"price:{ticker.upper()}"
-    
-    def _get_rate_limit_key(self, ticker: str) -> str:
-        """Generate rate limit key for a ticker."""
-        return f"ratelimit:{ticker.upper()}"
-    
-    def _check_rate_limit(self, ticker: str) -> None:
-        """
-        Check if request is within rate limit for the ticker.
-        
-        Args:
-            ticker: Stock ticker symbol
+            # Attempt to connect to Redis
+            self._redis = redis.from_url(redis_url, socket_connect_timeout=1)
+            self._redis.ping() # Check if it's actually alive
+            self._redis_available = True
+            logger.info("✅ Redis connected successfully. Caching enabled.")
             
-        Raises:
-            APIKeyExhausted: If rate limit exceeded
-        """
-        rate_key = self._get_rate_limit_key(ticker)
-        current_time = time.time()
-        
-        # Get current request timestamps for this ticker
-        timestamps = self.redis_client.lrange(rate_key, 0, -1)
-        timestamps = [float(ts) for ts in timestamps]
-        
-        # Remove timestamps outside the current window
-        valid_timestamps = [ts for ts in timestamps if current_time - ts < self.rate_window]
-        
-        # Check if rate limit exceeded
-        if len(valid_timestamps) >= self.rate_limit:
-            raise APIKeyExhausted(
-                f"Rate limit exceeded for {ticker}: "
-                f"{self.rate_limit} calls per {self.rate_window} seconds"
-            )
-        
-        # Add current timestamp
-        self.redis_client.rpush(rate_key, current_time)
-        
-        # Clean up old timestamps
-        self.redis_client.ltrim(rate_key, -self.rate_limit, -1)
-        
-        # Set expiration on rate limit key
-        self.redis_client.expire(rate_key, self.rate_window)
-    
+        except (ConnectionError, TimeoutError, Exception) as e:
+            # If Redis fails, we log it but DO NOT CRASH
+            self._redis_available = False
+            logger.warning(f"⚠️ Redis connection failed: {e}")
+            logger.warning("⚠️ Running in 'No-Cache' mode (Performance will be slower).")
+
     def get_price(self, ticker: str) -> float:
-        """
-        Get current stock price with caching and rate limiting.
-        
-        First checks cache. If cache miss, checks rate limit before
-        fetching from API. Caches successful API responses.
-        
-        Args:
-            ticker: Stock ticker symbol (e.g., 'AAPL', 'MSFT')
-            
-        Returns:
-            Current stock price
-            
-        Raises:
-            TickerNotFound: If ticker is invalid
-            APIKeyExhausted: If rate limit exceeded
-            APITimeout: If API request times out
-            APIError: If API returns unexpected error
-            ConfigurationError: If Redis connection fails
-        """
-        cache_key = self._get_cache_key(ticker)
-        
-        # Try to get from cache
+        # 1. If Redis is down, just fetch directly
+        if not self._redis_available:
+            return self._client.get_price(ticker)
+
+        # 2. If Redis is up, try to get from cache
         try:
-            cached_price = self.redis_client.get(cache_key)
-            if cached_price is not None:
+            cached_price = self._redis.get(f"price:{ticker}")
+            if cached_price:
                 return float(cached_price)
-        except (redis.ConnectionError, redis.TimeoutError) as e:
-            # If Redis fails, fall through to API call
-            # but don't crash the service
-            pass
-        
-        # Cache miss - check rate limit
-        self._check_rate_limit(ticker)
-        
-        # Fetch from API
-        price = self.client.get_price(ticker)
-        
-        # Store in cache
-        try:
-            self.redis_client.setex(cache_key, self.cache_ttl, price)
-        except (redis.ConnectionError, redis.TimeoutError) as e:
-            # If Redis fails, still return the price
-            # but don't crash the service
-            pass
-        
+        except Exception:
+            # If reading cache fails, ignore and fetch fresh
+            pass 
+
+        # 3. Fetch fresh price
+        price = self._client.get_price(ticker)
+
+        # 4. Save to cache (fire and forget)
+        if self._redis_available:
+            try:
+                self._redis.setex(f"price:{ticker}", 300, str(price)) # 5 min TTL
+            except Exception:
+                pass
+                
         return price
