@@ -33,10 +33,8 @@ export const HomeScreen = ({ navigation }) => {
         contentContainerStyle={styles.scrollContent}
       > 
         <ChatShortcut onViewChat={handleViewChat} />
-        <View style={styles.verticalContainer}>
-          <RecentTransactions onViewHistory={handleViewHistory} />
-          <LessonShortcut onGoToNextLesson={handleGoToNextLesson} />
-        </View>
+        <RecentTransactions onViewHistory={handleViewHistory} />
+        <LessonShortcut onGoToNextLesson={handleGoToNextLesson} />
       </ScrollView>
     </View>
   );

@@ -34,11 +34,10 @@ const LessonShortcut = ({ onGoToNextLesson }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: (width - 2 * padding.SCREEN_PADDING),
     backgroundColor: colors.primary || '#2E8B57',
     borderRadius: width > 400 ? 12 : 10,
     padding: width > 400 ? 12 : 10,
-    marginHorizontal: 0,
+    marginHorizontal: width > 400 ? 16 : 12,
     marginVertical: 4,
     shadowColor: '#000',
     shadowOffset: {
@@ -48,7 +47,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.15,
     shadowRadius: 8,
     elevation: 8,
-    alignSelf: 'flex-end',
     justifyContent: 'space-between',
   },
   illustrationContainer: {
@@ -60,8 +58,8 @@ const styles = StyleSheet.create({
     marginBottom: width > 400 ? 6 : 4,
   },
   moduleImage: {
-    width: width > 400 ? 140 : 120,
-    height: width > 400 ? 140 : 120,
+    width: width > 400 ? 130 : 120,
+    height: width > 400 ? 130 : 120,
     borderRadius: 8,
   },
   actionButton: {

@@ -139,7 +139,7 @@ export function ModuleTrackScreen({ navigation, route }) {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <Header 
-        title={moduleTitle || "MODULE TRACK"}
+        title="Learning"
         showBackButton={true}
         onBackPress={() => navigation.goBack()}
       />

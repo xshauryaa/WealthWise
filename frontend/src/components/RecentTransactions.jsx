@@ -60,11 +60,10 @@ const RecentTransactions = ({ onViewHistory }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: (width - 2 * padding.SCREEN_PADDING),
     backgroundColor: colors.primary || '#2E8B57',
     borderRadius: width > 400 ? 12 : 10,
     padding: width > 400 ? 12 : 10,
-    marginHorizontal: 0,
+    marginHorizontal: width > 400 ? 16 : 12,
     marginVertical: 4,
     shadowColor: '#000',
     shadowOffset: {
@@ -75,7 +74,6 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 8,
     justifyContent: 'space-between',
-    alignSelf: 'flex-start',
   },
   title: {
     fontSize: width > 400 ? 18 : 15,
@@ -88,7 +86,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: width > 400 ? 4 : 3,
+    paddingVertical: width > 400 ? 8 : 4,
   },
   transactionInfo: {
     flex: 1,
