@@ -1,0 +1,6 @@
+{
+  "tier1": ["VOO"],
+  "tier2": ["VOO", "BND"],
+  "tier3": ["VOO", "VTI", "BND"],
+  "tier4": ["VOO", "VTI", "AGG", "VXUS"]
+}

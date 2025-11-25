@@ -1,0 +1,20 @@
+# Core API framework
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+
+# HTTP client
+requests==2.31.0
+
+# Configuration
+python-dotenv==1.0.0
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-mock==3.12.0
+
+# Code quality
+black==23.11.0
+ruff==0.1.6
+mypy==1.7.1
