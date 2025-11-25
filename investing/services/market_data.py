@@ -2,8 +2,12 @@
 
 import requests
 import time
-from typing import Optional
+import pandas as pd
+import logging
+import os
+from typing import Optional, List, Dict, Union
 import redis
+from redis.exceptions import ConnectionError, TimeoutError
 
 from investing.exceptions import (
     APIError,
@@ -13,275 +17,142 @@ from investing.exceptions import (
     ConfigurationError
 )
 
+logger = logging.getLogger(__name__)
 
 class AlphaVantageClient:
     """Client for fetching real-time stock prices from Alpha Vantage API."""
     
     BASE_URL = "https://www.alphavantage.co/query"
     
-    def __init__(self, api_key: str, timeout: int = 5, max_retries: int = 3):
-        """
-        Initialize the Alpha Vantage client.
-        
-        Args:
-            api_key: Alpha Vantage API key
-            timeout: Request timeout in seconds (default: 5)
-            max_retries: Maximum number of retry attempts (default: 3)
-            
-        Raises:
-            ConfigurationError: If api_key is None or empty
-        """
+    def __init__(self, api_key: str, timeout: int = 10, max_retries: int = 3):
         if not api_key:
-            raise ConfigurationError(
-                "Alpha Vantage API key is required. "
-                "Please set ALPHA_VANTAGE_API_KEY environment variable."
-            )
+            api_key = os.getenv("ALPHA_VANTAGE_API_KEY")
+        
+        if not api_key:
+            raise ConfigurationError("Alpha Vantage API key is missing.")
         
         self.api_key = api_key
         self.timeout = timeout
         self.max_retries = max_retries
     
     def get_price(self, ticker: str) -> float:
-        """
-        Get the current price for a given stock ticker.
-        
-        Args:
-            ticker: Stock ticker symbol (e.g., 'AAPL', 'MSFT')
-            
-        Returns:
-            Current stock price as a float
-            
-        Raises:
-            TickerNotFound: If the ticker symbol is invalid
-            APIKeyExhausted: If API rate limit is exceeded
-            APITimeout: If the request times out
-            APIError: If the API returns an unexpected error
-        """
+        """Get current real-time price (GLOBAL_QUOTE)."""
         params = {
             "function": "GLOBAL_QUOTE",
             "symbol": ticker.upper(),
             "apikey": self.api_key
         }
-        
+        return self._make_request(params, "05. price", "Global Quote")
+
+    def fetch_daily_history(self, ticker: str) -> pd.DataFrame:
+        """
+        Fetches the last 100 days of daily adjusted closing prices.
+        Uses TIME_SERIES_DAILY (Free Tier compatible).
+        """
+        params = {
+            "function": "TIME_SERIES_DAILY",
+            "symbol": ticker.upper(),
+            "outputsize": "compact",
+            "apikey": self.api_key
+        }
+
+        data = self._make_request(params, parse_key="Time Series (Daily)")
+
+        rows = []
+        if data:
+            for date_str, metrics in data.items():
+                try:
+                    # Use "4. close" for TIME_SERIES_DAILY
+                    price = float(metrics["4. close"])
+                    rows.append({"date": date_str, "price": price})
+                except (KeyError, ValueError):
+                    continue
+
+        if not rows:
+            logger.warning(f"No valid history found for {ticker}")
+            return pd.DataFrame(columns=['date', 'price'])
+
+        df = pd.DataFrame(rows)
+        df['date'] = pd.to_datetime(df['date'])
+        df = df.sort_values('date').reset_index(drop=True)
+        return df
+
+    def _make_request(self, params: Dict, parse_key: str = None, root_key: str = None) -> Union[float, Dict, None]:
         for attempt in range(self.max_retries):
             try:
-                response = requests.get(
-                    self.BASE_URL,
-                    params=params,
-                    timeout=self.timeout
-                )
+                response = requests.get(self.BASE_URL, params=params, timeout=self.timeout)
                 response.raise_for_status()
                 data = response.json()
                 
-                # Check for rate limit error (Alpha Vantage returns a "Note" field)
                 if "Note" in data:
-                    note_text = data["Note"]
-                    if "call frequency" in note_text.lower() or "rate limit" in note_text.lower():
-                        raise APIKeyExhausted(note_text)
-                
-                # Check for invalid ticker
+                    note = data["Note"].lower()
+                    if "call frequency" in note or "rate limit" in note:
+                        raise APIKeyExhausted(data["Note"])
+
                 if "Error Message" in data:
-                    raise TickerNotFound(f"Ticker '{ticker}' not found")
+                    raise TickerNotFound(f"Ticker '{params.get('symbol')}' not found")
+
+                if root_key:
+                    if root_key not in data:
+                         if attempt == self.max_retries - 1:
+                             raise APIError(f"Missing '{root_key}' in response")
+                         continue
+                    data = data[root_key]
+
+                if parse_key:
+                    if isinstance(data, dict) and parse_key in data:
+                        if "Time Series" in parse_key:
+                            return data[parse_key]
+                        try:
+                            return float(data[parse_key])
+                        except ValueError:
+                            return data[parse_key]
+
+                if parse_key is None and root_key is None:
+                    return data
                 
-                # Extract price from response
-                if "Global Quote" in data and "05. price" in data["Global Quote"]:
-                    price_str = data["Global Quote"]["05. price"]
-                    return float(price_str)
-                
-                # Unexpected response format
-                raise APIError(f"Unexpected API response format: {data}")
-                
+                if attempt == self.max_retries - 1:
+                     return None
+
             except requests.Timeout:
-                if attempt == self.max_retries - 1:
-                    raise APITimeout(f"Request timed out after {self.max_retries} attempts")
-                time.sleep(2 ** attempt)  # Exponential backoff
-                
+                if attempt == self.max_retries - 1: raise APITimeout("Request timed out")
+                time.sleep(0.5)
             except requests.RequestException as e:
-                if attempt == self.max_retries - 1:
-                    raise APIError(f"API request failed: {str(e)}")
-                time.sleep(2 ** attempt)
-
-
-# class CachedMarketDataService:
-#     """Market data service with Redis caching and per-ticker rate limiting."""
-    
-#     def __init__(
-#         self, 
-#         client: AlphaVantageClient, 
-#         redis_url: str = None,
-#         cache_ttl: int = 300,  # 5 minutes
-#         rate_limit: int = 5,  # 5 calls per minute
-#         rate_window: int = 60  # 60 seconds
-#     ):
-#         """
-#         Initialize the cached market data service.
+                if attempt == self.max_retries - 1: raise APIError(f"API request failed: {str(e)}")
+                time.sleep(0.5)
         
-#         Args:
-#             client: AlphaVantageClient instance for fetching data
-#             redis_url: Redis connection URL (default: from config)
-#             cache_ttl: Cache time-to-live in seconds (default: 300)
-#             rate_limit: Maximum calls per time window per ticker (default: 5)
-#             rate_window: Time window for rate limiting in seconds (default: 60)
-#         """
-#         self.client = client
-#         self.cache_ttl = cache_ttl
-#         self.rate_limit = rate_limit
-#         self.rate_window = rate_window
-        
-#         # Initialize Redis connection
-#         if redis_url is None:
-#             from investing.config import REDIS_URL
-#             redis_url = REDIS_URL
-        
-#         try:
-#             self.redis_client = redis.from_url(redis_url, decode_responses=True)
-#             # Test connection
-#             self.redis_client.ping()
-#         except (redis.ConnectionError, redis.TimeoutError) as e:
-#             raise ConfigurationError(f"Failed to connect to Redis: {str(e)}")
-    
-#     def _get_cache_key(self, ticker: str) -> str:
-#         """Generate cache key for a ticker."""
-#         return f"price:{ticker.upper()}"
-    
-#     def _get_rate_limit_key(self, ticker: str) -> str:
-#         """Generate rate limit key for a ticker."""
-#         return f"ratelimit:{ticker.upper()}"
-    
-#     def _check_rate_limit(self, ticker: str) -> None:
-#         """
-#         Check if request is within rate limit for the ticker.
-        
-#         Args:
-#             ticker: Stock ticker symbol
-            
-#         Raises:
-#             APIKeyExhausted: If rate limit exceeded
-#         """
-#         rate_key = self._get_rate_limit_key(ticker)
-#         current_time = time.time()
-        
-#         # Get current request timestamps for this ticker
-#         timestamps = self.redis_client.lrange(rate_key, 0, -1)
-#         timestamps = [float(ts) for ts in timestamps]
-        
-#         # Remove timestamps outside the current window
-#         valid_timestamps = [ts for ts in timestamps if current_time - ts < self.rate_window]
-        
-#         # Check if rate limit exceeded
-#         if len(valid_timestamps) >= self.rate_limit:
-#             raise APIKeyExhausted(
-#                 f"Rate limit exceeded for {ticker}: "
-#                 f"{self.rate_limit} calls per {self.rate_window} seconds"
-#             )
-        
-#         # Add current timestamp
-#         self.redis_client.rpush(rate_key, current_time)
-        
-#         # Clean up old timestamps
-#         self.redis_client.ltrim(rate_key, -self.rate_limit, -1)
-        
-#         # Set expiration on rate limit key
-#         self.redis_client.expire(rate_key, self.rate_window)
-    
-#     def get_price(self, ticker: str) -> float:
-#         """
-#         Get current stock price with caching and rate limiting.
-        
-#         First checks cache. If cache miss, checks rate limit before
-#         fetching from API. Caches successful API responses.
-        
-#         Args:
-#             ticker: Stock ticker symbol (e.g., 'AAPL', 'MSFT')
-            
-#         Returns:
-#             Current stock price
-            
-#         Raises:
-#             TickerNotFound: If ticker is invalid
-#             APIKeyExhausted: If rate limit exceeded
-#             APITimeout: If API request times out
-#             APIError: If API returns unexpected error
-#             ConfigurationError: If Redis connection fails
-#         """
-#         cache_key = self._get_cache_key(ticker)
-        
-#         # Try to get from cache
-#         try:
-#             cached_price = self.redis_client.get(cache_key)
-#             if cached_price is not None:
-#                 return float(cached_price)
-#         except (redis.ConnectionError, redis.TimeoutError) as e:
-#             # If Redis fails, fall through to API call
-#             # but don't crash the service
-#             pass
-        
-#         # Cache miss - check rate limit
-#         self._check_rate_limit(ticker)
-        
-#         # Fetch from API
-#         price = self.client.get_price(ticker)
-        
-#         # Store in cache
-#         try:
-#             self.redis_client.setex(cache_key, self.cache_ttl, price)
-#         except (redis.ConnectionError, redis.TimeoutError) as e:
-#             # If Redis fails, still return the price
-#             # but don't crash the service
-#             pass
-        
-#         return price
-# investing/services/market_data.py
-
-import logging
-import redis
-from redis.exceptions import ConnectionError, TimeoutError
-
-# Keep your imports (AlphaVantageClient, etc.)
-# ...
-
-logger = logging.getLogger(__name__)
+        return None
 
 class CachedMarketDataService:
-    def __init__(self, client: AlphaVantageClient, redis_url: str):
+    def __init__(self, client: AlphaVantageClient, redis_url: str = None):
         self._client = client
         self._redis_available = False
         
+        if not redis_url:
+            redis_url = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+
         try:
-            # Attempt to connect to Redis
             self._redis = redis.from_url(redis_url, socket_connect_timeout=1)
-            self._redis.ping() # Check if it's actually alive
+            self._redis.ping()
             self._redis_available = True
             logger.info("✅ Redis connected successfully. Caching enabled.")
-            
-        except (ConnectionError, TimeoutError, Exception) as e:
-            # If Redis fails, we log it but DO NOT CRASH
+        except (ConnectionError, TimeoutError, Exception):
             self._redis_available = False
-            logger.warning(f"⚠️ Redis connection failed: {e}")
-            logger.warning("⚠️ Running in 'No-Cache' mode (Performance will be slower).")
 
     def get_price(self, ticker: str) -> float:
-        # 1. If Redis is down, just fetch directly
         if not self._redis_available:
             return self._client.get_price(ticker)
-
-        # 2. If Redis is up, try to get from cache
         try:
-            cached_price = self._redis.get(f"price:{ticker}")
-            if cached_price:
-                return float(cached_price)
-        except Exception:
-            # If reading cache fails, ignore and fetch fresh
-            pass 
-
-        # 3. Fetch fresh price
+            cached = self._redis.get(f"price:{ticker}")
+            if cached: return float(cached)
+        except Exception: pass
+        
         price = self._client.get_price(ticker)
-
-        # 4. Save to cache (fire and forget)
+        
         if self._redis_available:
-            try:
-                self._redis.setex(f"price:{ticker}", 300, str(price)) # 5 min TTL
-            except Exception:
-                pass
-                
+            try: self._redis.setex(f"price:{ticker}", 300, str(price))
+            except Exception: pass
         return price
+    
+    def fetch_history(self, ticker: str) -> pd.DataFrame:
+        return self._client.fetch_daily_history(ticker)

@@ -10,14 +10,15 @@ from investing.services.allocation_engine import AllocationEngine
 
 app = FastAPI(
     title="WealthWise Investing Service",
-    version="0.1.0",
-    description="Micro-investment backend for personalized ETF portfolios."
+    version="0.2.0",
+    description="Micro-investment backend with Dynamic Sector Rotation."
 )
 
 @app.get("/health", response_model=schemas.HealthResponse)
 def health_check(db: Session = Depends(get_db)):
     db_status = "unknown"
     try:
+        # Simple check
         db.execute(text("SELECT 1"))
         db_status = "connected"
     except Exception as e:
@@ -30,7 +31,7 @@ def health_check(db: Session = Depends(get_db)):
         timestamp=datetime.utcnow(),
         services={
             "database": db_status,
-            "version": "0.1.0"
+            "version": "0.2.0"
         }
     )
 
@@ -58,22 +59,26 @@ def get_price(
             detail=f"Market data provider error: {str(e)}"
         )
 
-# --- NEW: Recommendation Endpoint (Chunk 11) ---
-
 @app.post("/portfolio/recommend", response_model=schemas.PortfolioRecommendation)
 def recommend_portfolio(
     request: schemas.RecommendRequest,
+    db: Session = Depends(get_db),  # <--- NEW: We need DB access here
     engine: AllocationEngine = Depends(get_allocation_engine),
     market: CachedMarketDataService = Depends(get_market_service)
 ):
     """
-    Generates a portfolio allocation with real-time pricing.
+    Generates a portfolio allocation.
+    Uses Dynamic Sector Rotation if available in the DB.
     """
-    # 1. Get Target Weights (The "Brain")
     try:
-        allocations = engine.recommend_portfolio(request.balance, request.risk_profile)
+        # 1. Get Target Weights (The "Brain")
+        # CRITICAL FIX: We pass 'db' so the engine can check Momentum Scores
+        allocations = engine.recommend_portfolio(
+            request.balance, 
+            request.risk_profile,
+            db=db 
+        )
     except ValueError as e:
-        # Handles logic errors (like negative balance, though Pydantic catches most)
         raise HTTPException(status_code=400, detail=str(e))
 
     # 2. Enrich with Real-Time Prices (The "Market")
@@ -83,13 +88,12 @@ def recommend_portfolio(
         try:
             current_price = market.get_price(alloc.ticker)
         except (TickerNotFound, APIError) as e:
-            # Fail Fast: If we can't price it, we can't recommend it safely
             raise HTTPException(
                 status_code=503, 
                 detail=f"Unable to price asset {alloc.ticker}: {str(e)}"
             )
         
-        # Calculate how much money goes into this ETF
+        # Calculate dollar amount
         dollar_amount = request.balance * alloc.weight
 
         result_allocations.append(schemas.ETFRecommendation(

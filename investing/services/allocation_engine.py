@@ -1,8 +1,11 @@
 import json
 import math
 from pathlib import Path
-from typing import List, Tuple, Literal, Dict
+from typing import List, Tuple, Literal, Dict, Optional
 from dataclasses import dataclass
+from sqlalchemy.orm import Session
+from sqlalchemy import select
+from investing.models.etf_universe import EtfUniverse
 
 @dataclass
 class ETFAllocation:
@@ -11,13 +14,8 @@ class ETFAllocation:
 
 class AllocationEngine:
     """
-    Determines ETF recommendations based on user balance and risk profile.
-    
-    Tiers:
-    - Tier 1 ($0-$100): 1 ETF (VOO) - Risk profiles ignored
-    - Tier 2 ($100-$500): 2 ETFs (VOO, BND)
-    - Tier 3 ($500-$2000): 3 ETFs (VOO, VTI, BND)
-    - Tier 4 ($2000+): 4 ETFs (VOO, VTI, AGG, VXUS)
+    Determines ETF recommendations based on user balance, risk profile,
+    AND dynamic market data (Sector Momentum).
     """
 
     # (lower_inclusive, upper_exclusive, etf_count)
@@ -58,67 +56,106 @@ class AllocationEngine:
         elif count == 3:
             return {"VOO": 0.40, "VTI": 0.30, "BND": 0.30}
         elif count == 4:
-            # 70% Stocks (VOO+VTI+VXUS), 30% Bonds (AGG)
+            # 70% Stocks / 30% Bonds
             return {"VOO": 0.25, "VTI": 0.25, "VXUS": 0.20, "AGG": 0.30}
         else:
             raise ValueError(f"No allocation map for {count} ETFs")
 
+    def _get_momentum_winner(self, db: Session) -> Optional[str]:
+        """
+        Queries the database for the sector ETF with the highest momentum score.
+        Returns None if no data exists or scores are negative (market crash).
+        """
+        if db is None:
+            return None
+            
+        # Fetch top momentum score
+        stmt = select(EtfUniverse).order_by(EtfUniverse.momentum_score.desc()).limit(1)
+        winner = db.execute(stmt).scalars().first()
+        
+        if winner and winner.momentum_score > 0:
+            return winner.ticker
+        return None
+
     def recommend_portfolio(
         self, 
         balance: float, 
-        risk_profile: Literal["conservative", "balanced", "growth"] = "balanced"
+        risk_profile: Literal["conservative", "balanced", "growth"] = "balanced",
+        db: Session = None
     ) -> List[ETFAllocation]:
         """
-        Returns target portfolio with weights adjusted for risk.
-        
-        Adjustments (Additive):
-        - Conservative: -20% Stocks, +20% Bonds
-        - Growth: +15% Stocks, -15% Bonds
+        Returns target portfolio with weights adjusted for risk AND market momentum.
         """
         # 1. Determine Tier
         count = self.get_etf_count(balance)
-        
-        # 1.5 Validation: Ensure this tier exists in our config Source of Truth
-        # (This catches the 'corrupt config' scenario where Python logic drifts from JSON config)
         tier_key = f"tier{count}"
-        if tier_key not in self._etf_map:
-            raise KeyError(f"Configuration for {tier_key} missing in etfs.json")
         
         # 2. Tier 1 Override (Capital Constraint)
-        # If balance < $100, you get VOO regardless of risk profile
         if count == 1:
             return [ETFAllocation(ticker="VOO", weight=1.0)]
 
-        # 3. Get Base (Balanced) Weights
+        # 3. Get Base Weights
         weights = self._get_base_allocations(count)
 
-        # 4. Apply Risk Adjustments
-        # Strategy: Shift weight between primary Stock (VOO) and primary Bond (BND or AGG)
-        bond_ticker = "AGG" if "AGG" in weights else "BND"
+        # 4. DYNAMIC INJECTION (Phase 2 Logic)
+        momentum_ticker = self._get_momentum_winner(db)
         
+        if momentum_ticker:
+            # The Strategy: We want to free up 30% (0.30) for the winner.
+            target_tilt = 0.30
+            needed = target_tilt
+            
+            # Source 1: VOO
+            if "VOO" in weights:
+                available = weights["VOO"]
+                take = min(available, needed)
+                weights["VOO"] = round(available - take, 2)
+                needed -= take
+            
+            # Source 2: VTI (If VOO ran out, like in Tier 4)
+            if needed > 0 and "VTI" in weights:
+                available = weights["VTI"]
+                take = min(available, needed)
+                weights["VTI"] = round(available - take, 2)
+                needed -= take
+            
+            # If we successfully freed up space, add the winner
+            # (We check needed < 0.01 to account for float rounding errors)
+            if needed < 0.01:
+                weights[momentum_ticker] = weights.get(momentum_ticker, 0) + target_tilt
+        
+        # 5. Risk Profile Adjustments
+        bond_ticker = "AGG" if "AGG" in weights else "BND"
         adjustment = 0.0
+        
         if risk_profile == "conservative":
-            adjustment = 0.20  # Shift 20% to bonds
+            adjustment = 0.20
         elif risk_profile == "growth":
-            adjustment = -0.15 # Shift 15% away from bonds (to stocks)
-        elif risk_profile != "balanced":
-            raise ValueError(f"Invalid risk profile: {risk_profile}")
+            adjustment = -0.15 
 
         if adjustment != 0.0:
-            # FIX: Round BEFORE checking constraints to avoid floating point errors
-            new_bond_weight = round(weights[bond_ticker] + adjustment, 2)
-            new_stock_weight = round(weights["VOO"] - adjustment, 2)
+            # Apply risk adjustment to Stocks vs Bonds
+            # Note: We prioritize keeping the Momentum Tilt intact.
+            # We shift weight between the Core Stock (VOO) and Bond.
+            
+            # If VOO was depleted by the tilt (Tier 4), use VTI for adjustment
+            stock_ticker = "VOO" if weights.get("VOO", 0) > 0.1 else "VTI"
+            
+            if stock_ticker in weights and bond_ticker in weights:
+                current_bond = weights[bond_ticker]
+                current_stock = weights[stock_ticker]
+                
+                new_bond = round(current_bond + adjustment, 2)
+                new_stock = round(current_stock - adjustment, 2)
+                
+                # Safety Cap
+                if 0.05 <= new_bond <= 0.95 and 0.05 <= new_stock <= 0.95:
+                    weights[bond_ticker] = new_bond
+                    weights[stock_ticker] = new_stock
 
-            # Cap/Floor logic to prevent negative weights
-            if 0.05 <= new_bond_weight <= 0.95 and 0.05 <= new_stock_weight <= 0.95:
-                weights[bond_ticker] = new_bond_weight
-                weights["VOO"] = new_stock_weight
-            else:
-                # Fallback: if adjustment breaks constraints, keep balanced (or log warning)
-                pass 
-
-        # 5. Convert to List
+        # 6. Clean up zero weights and return
         return [
             ETFAllocation(ticker=k, weight=v) 
-            for k, v in weights.items()
+            for k, v in weights.items() 
+            if v > 0.01 # Filter out near-zero weights
         ]
