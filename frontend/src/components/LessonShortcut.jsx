@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { colors } from '../styles/colors';
-import Right from '../../assets/Right.svg';
+import { ChevronRight } from 'lucide-react-native';
 import { padding } from '../styles/spacing';
 
 const { width } = Dimensions.get('window');
@@ -26,7 +26,7 @@ const LessonShortcut = ({ onGoToNextLesson }) => {
         activeOpacity={0.8}
       >
         <Text style={styles.actionButtonText}>Go to Next Lesson</Text>
-        <Right color="#000000" />
+        <ChevronRight color="#000000" size={24} />
       </TouchableOpacity>
     </View>
   );
@@ -34,8 +34,7 @@ const LessonShortcut = ({ onGoToNextLesson }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: (width - 2 * padding.SCREEN_PADDING)/2 - 4,
-    height: 200,
+    width: (width - 2 * padding.SCREEN_PADDING),
     backgroundColor: colors.primary || '#2E8B57',
     borderRadius: width > 400 ? 12 : 10,
     padding: width > 400 ? 12 : 10,
@@ -61,8 +60,8 @@ const styles = StyleSheet.create({
     marginBottom: width > 400 ? 6 : 4,
   },
   moduleImage: {
-    width: width > 400 ? 100 : 70,
-    height: width > 400 ? 100 : 70,
+    width: width > 400 ? 140 : 120,
+    height: width > 400 ? 140 : 120,
     borderRadius: 8,
   },
   actionButton: {

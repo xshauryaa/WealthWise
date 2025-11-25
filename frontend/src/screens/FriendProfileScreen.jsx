@@ -11,8 +11,7 @@ import {
 import { Header } from '../components/Header';
 import { colors } from '../styles/colors';
 import { FONTS } from '../config/fonts';
-import StarFilled from '../../assets/system-icons/Star-Filled.svg';
-import Streak from '../../assets/system-icons/Streak.svg';
+import { Star, Flame, Award } from 'lucide-react-native';
 
 const { width, height } = Dimensions.get('window');
 
@@ -59,13 +58,13 @@ export function FriendProfileScreen({ route, navigation }) {
           {/* Stats Row */}
           <View style={styles.statsRow}>
             <View style={styles.statCard}>
-              <StarFilled width={32} height={32} fill={colors.warning} />
+              <Star size={32} color={colors.tertiary} fill={colors.tertiary} />
               <Text style={styles.statNumber}>{friendData.stars}</Text>
               <Text style={styles.statLabel}>Stars</Text>
             </View>
             
             <View style={styles.statCard}>
-              <Streak width={28} height={32} fill={colors.error} />
+              <Flame size={32} color="#FF7700" fill="#FF7700" />
               <Text style={styles.statNumber}>{friendData.streak}</Text>
               <Text style={styles.statLabel}>Day Streak</Text>
             </View>
@@ -99,10 +98,10 @@ export function FriendProfileScreen({ route, navigation }) {
                   styles.achievementIcon,
                   !achievement.earned && styles.achievementIconDisabled
                 ]}>
-                  <StarFilled 
-                    width={24} 
-                    height={24} 
-                    fill={achievement.earned ? colors.warning : colors.gray} 
+                  <Award 
+                    size={24} 
+                    color={achievement.earned ? colors.tertiary : colors.gray}
+                    fill={achievement.earned ? colors.tertiary : 'transparent'} 
                   />
                 </View>
                 <Text style={[

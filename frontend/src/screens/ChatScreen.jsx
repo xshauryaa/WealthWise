@@ -13,7 +13,7 @@ import {
   Image
 } from 'react-native';
 import { colors } from '../styles/colors';
-import Send from '../../assets/system-icons/Send.svg';
+import { Send } from 'lucide-react-native';
 import MarkdownText from '../components/MarkdownText';
 import chatData from '../mockups/aiChat.json';
 
@@ -163,8 +163,7 @@ export function ChatScreen() {
               disabled={!inputText.trim()}
             >
               <Send 
-                width={20} 
-                height={20} 
+                size={20} 
                 color={inputText.trim() ? colors.light : colors.grey.medium2}
               />
             </TouchableOpacity>

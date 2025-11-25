@@ -11,6 +11,7 @@ import { HomeScreen } from '../screens/HomeScreen';
 import { BudgetScreen } from '../screens/BudgetScreen';
 import { ChatScreen } from '../screens/ChatScreen';
 import { LearningScreen } from '../screens/LearningScreen';
+import { LessonScreen } from '../screens/LessonScreen';
 import { FriendProfileScreen } from '../screens/FriendProfileScreen';
 import { ModulesScreen } from '../screens/ModulesScreen';
 import { ModuleTrackScreen } from '../screens/ModuleTrackScreen';
@@ -39,6 +40,7 @@ function LearningStack() {
             <Stack.Screen name="FriendProfile" component={FriendProfileScreen} />
             <Stack.Screen name="Modules" component={ModulesScreen} />
             <Stack.Screen name="ModuleTrack" component={ModuleTrackScreen} />
+            <Stack.Screen name="LessonScreen" component={LessonScreen} />
         </Stack.Navigator>
     );
 }

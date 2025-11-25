@@ -11,8 +11,7 @@ import {
 import { colors } from '../styles/colors';
 import { FONTS } from '../config/fonts';
 import { Header } from '../components/Header';
-import StarFilled from '../../assets/system-icons/Star-Filled.svg';
-import Streak from '../../assets/system-icons/Streak.svg';
+import { Star, Flame, ChevronRight } from 'lucide-react-native';
 
 const { width, height } = Dimensions.get('window');
 
@@ -48,116 +47,113 @@ export function LearningScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <Header title="WealthWise." />
+      <View style={{ gap: 12, flex: 1, }}>
+        {/* Main Content */}
+        <View style={styles.content}>
+            {/* Stats Section */}
+            <View style={styles.statsContainer}>
+            {/* Lessons Completed */}
+            <View style={styles.statItem}>
+                <Text style={styles.statNumber}>543</Text>
+                <Star 
+                size={40} 
+                color={colors.tertiary}
+                fill={colors.tertiary}
+                />
+            </View>
 
-      {/* Main Content */}
-      <View style={styles.content}>
-        {/* Stats Section */}
-        <View style={styles.statsContainer}>
-          {/* Lessons Completed */}
-          <View style={styles.statItem}>
-            <Text style={styles.statNumber}>543</Text>
-            <StarFilled 
-              width={96} 
-              height={96} 
-              fill={colors.warning}
-            />
-          </View>
+            {/* Streak */}
+            <View style={styles.statItem}>
+                <Text style={styles.statNumber}>14</Text>
+                <Flame 
+                size={40} 
+                color="#FF7700"
+                fill="#FF7700"
+                />
+            </View>
+            </View>
 
-          {/* Streak */}
-          <View style={styles.statItem}>
-            <Text style={styles.statNumber}>14</Text>
-            <Streak 
-              width={96} 
-              height={96} 
-              fill={colors.error}
-            />
-          </View>
+            {/* View Lessons Button */}
+            <TouchableOpacity 
+                style={styles.viewLessonsButton}
+                activeOpacity={0.8}
+                onPress={() => navigation.navigate('Modules')}
+            >
+            <Text style={styles.viewLessonsText}>View Lessons</Text>
+            <ChevronRight color="#FFFFFF" size={24} />
+            </TouchableOpacity>
         </View>
 
-        {/* View Lessons Button */}
-        <TouchableOpacity 
-          style={styles.viewLessonsButton}
-          activeOpacity={0.8}
-          onPress={() => navigation.navigate('Modules')}
-        >
-          <Text style={styles.viewLessonsText}>View Lessons</Text>
-          <View style={styles.arrowContainer}>
-            <Text style={styles.arrow}>›</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-
-      {/* Curved Background Section */}
-      <View style={styles.curvedSection}>
-        <View style={styles.curvedBackground}>
-          <Text style={styles.leaderboardTitle}>LEADERBOARD</Text>
-          
-          {/* Friends List */}
-          <FlatList
+        {/* Leaderboard Section */}
+        <View style={styles.leaderboardSection}>
+            <Text style={styles.leaderboardTitle}>LEADERBOARD</Text>
+            
+            {/* Friends List */}
+            <FlatList
             data={friendsData}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <TouchableOpacity 
+                <TouchableOpacity 
                 style={[
-                  styles.friendItem, 
-                  item.isCurrentUser && styles.currentUserItem
+                    styles.friendItem, 
+                    item.isCurrentUser && styles.currentUserItem
                 ]}
                 activeOpacity={0.7}
                 onPress={() => navigateToFriendProfile(item)}
                 disabled={item.isCurrentUser}
-              >
+                >
                 <View style={styles.friendRank}>
-                  <Text style={[
+                    <Text style={[
                     styles.rankText,
                     item.isCurrentUser && styles.currentUserText
-                  ]}>
+                    ]}>
                     {item.rank}
-                  </Text>
+                    </Text>
                 </View>
                 
                 <View style={styles.friendInfo}>
-                  <Text style={[
+                    <Text style={[
                     styles.friendName,
                     item.isCurrentUser && styles.currentUserText
-                  ]}>
+                    ]}>
                     {item.name}
-                  </Text>
-                  
-                  <View style={styles.friendStats}>
+                    </Text>
+                    
+                    <View style={styles.friendStats}>
                     <View style={styles.statRow}>
-                      <StarFilled 
-                        width={20} 
-                        height={20} 
-                        fill={colors.warning}
-                      />
-                      <Text style={[
+                        <Star 
+                        size={24} 
+                        color={colors.tertiary}
+                        fill={colors.tertiary}
+                        />
+                        <Text style={[
                         styles.statValue,
                         item.isCurrentUser && styles.currentUserText
-                      ]}>
+                        ]}>
                         {item.stars}
-                      </Text>
+                        </Text>
                     </View>
                     
                     <View style={styles.statRow}>
-                      <Streak 
-                        width={18} 
-                        height={20} 
-                        fill={colors.error}
-                      />
-                      <Text style={[
+                        <Flame 
+                        size={24} 
+                        color="#FF7700"
+                        fill="#FF7700"
+                        />
+                        <Text style={[
                         styles.statValue,
                         item.isCurrentUser && styles.currentUserText
-                      ]}>
+                        ]}>
                         {item.streak}
-                      </Text>
+                        </Text>
                     </View>
-                  </View>
+                    </View>
                 </View>
-              </TouchableOpacity>
+                </TouchableOpacity>
             )}
             style={styles.friendsList}
             showsVerticalScrollIndicator={false}
-          />
+            />
         </View>
       </View>
     </SafeAreaView>
@@ -168,25 +164,24 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.light,
+    justifyContent: 'center',
   },
   content: {
-    flex: 1,
     alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingTop: 20,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
   },
   statsContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 4,
-    marginTop: 10,
-    gap: 50,
+    gap: 32,
   },
   statItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 0,
+    gap: 12,
   },
   statNumber: {
     fontSize: 48,
@@ -194,72 +189,51 @@ const styles = StyleSheet.create({
     color: colors.primary,
   },
   viewLessonsButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    width: '100%',
     backgroundColor: colors.primary,
-    paddingVertical: 16,
-    paddingHorizontal: 24,
-    borderRadius: 25,
-    width: width * 0.6,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    elevation: 5,
+    borderRadius: width > 400 ? 12 : 8,
+    paddingVertical: width > 400 ? 12 : 8,
+    paddingHorizontal: width > 400 ? 12 : 8,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: width > 400 ? 8 : 4,
+    borderWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.1)',
   },
   viewLessonsText: {
     fontSize: 18,
     fontWeight: '600',
     color: colors.light,
-    fontFamily: 'AlbertSans_600SemiBold',
+    fontFamily: 'AlbertSans_500Medium',
   },
-  arrowContainer: {
-    width: 24,
-    height: 24,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  arrow: {
-    fontSize: 16,
-    color: colors.light,
-    fontWeight: 'bold',
-  },
-  curvedSection: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: height * 0.55,
-    overflow: 'hidden',
-  },
-  curvedBackground: {
-    width: width * 1.5,
-    height: height * 0.75,
+  leaderboardSection: {
+    flex: 1,
     backgroundColor: colors.secondary,
-    borderTopLeftRadius: width * 0.75,
-    borderTopRightRadius: width * 0.75,
-    position: 'absolute',
-    bottom: -height * 0.2,
-    left: -width * 0.25,
-    alignItems: 'center',
-    paddingTop: height * 0.08,
+    marginHorizontal: 16,
+    marginBottom: 12,
+    borderRadius: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 16,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 5,
   },
   leaderboardTitle: {
     fontSize: 32,
     fontFamily: FONTS.crushed,
     color: colors.primary,
     letterSpacing: 0.5,
-    marginBottom: 24,
+    marginBottom: 8,
+    textAlign: 'center',
   },
   friendsList: {
-    width: width * 0.9,
-    maxHeight: height * 0.35,
+    flex: 1,
   },
   friendItem: {
     flexDirection: 'row',
@@ -327,7 +301,7 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   statValue: {
-    fontSize: 16,
+    fontSize: 24,
     fontFamily: FONTS.crushed,
     color: colors.light,
     fontWeight: '600',

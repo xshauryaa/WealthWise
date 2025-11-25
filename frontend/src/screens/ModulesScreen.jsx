@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
   },
   moduleImageContainer: {
     height: 160,
-    backgroundColor: colors.primary,
+    backgroundColor: colors.secondary,
+    paddingTop: 12,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     overflow: 'hidden',
@@ -174,7 +175,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   moduleTitle: {
-    fontSize: 16,
+    fontSize: 20,
     fontFamily: FONTS.crushed,
     color: colors.darkGray,
     textAlign: 'center',

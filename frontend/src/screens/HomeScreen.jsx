@@ -33,13 +33,9 @@ export const HomeScreen = ({ navigation }) => {
         contentContainerStyle={styles.scrollContent}
       > 
         <ChatShortcut onViewChat={handleViewChat} />
-        <View style={styles.horizontalContainer}>
-          <View style={styles.transactionsContainer}>
-            <RecentTransactions onViewHistory={handleViewHistory} />
-          </View>
-          <View style={styles.lessonContainer}>
-            <LessonShortcut onGoToNextLesson={handleGoToNextLesson} />
-          </View>
+        <View style={styles.verticalContainer}>
+          <RecentTransactions onViewHistory={handleViewHistory} />
+          <LessonShortcut onGoToNextLesson={handleGoToNextLesson} />
         </View>
       </ScrollView>
     </View>
@@ -52,16 +48,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingVertical: 48,
   },
-  horizontalContainer: {
-    flexDirection: 'row',
+  verticalContainer: {
+    flexDirection: 'column',
     paddingHorizontal: 16,
-    gap: 8,
-  },
-  transactionsContainer: {
-    flex: 1,
-  },
-  lessonContainer: {
-    flex: 1,
+    gap: 16,
   },
   title: {
     fontSize: 32,

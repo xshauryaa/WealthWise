@@ -10,15 +10,11 @@ import {
   FlatList
 } from 'react-native';
 import { PieChart } from 'react-native-chart-kit';
-import { SvgXml } from 'react-native-svg';
 import { colors } from '../styles/colors';
 import { Header } from '../components/Header';
 import { TransactionDetailsModal } from '../components/TransactionDetailsModal';
+import { Star, AlertTriangle } from 'lucide-react-native';
 import budgetData from '../mockups/budget.json';
-
-// Import SVG icons
-const StarOutlineSvg = require('../../assets/system-icons/Star-Outline.svg');
-const WarningSvg = require('../../assets/system-icons/Warning.svg');
 
 const { width, height } = Dimensions.get('window');
 
@@ -208,12 +204,11 @@ export function BudgetScreen() {
           {totalIncome - totalSpent >= 0 ? (
             <View style={[styles.insightToast, styles.positiveToast]}>
               <View style={styles.insightIconContainer}>
-                <SvgXml 
-                  xml={`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.9718 2.70846C11.4382 1.93348 12.5618 1.93348 13.0282 2.70847L15.3586 6.58087C15.5262 6.85928 15.7995 7.05784 16.116 7.13116L20.5191 8.15091C21.4002 8.35499 21.7474 9.42356 21.1545 10.1066L18.1918 13.5196C17.9788 13.765 17.8744 14.0863 17.9025 14.41L18.2932 18.9127C18.3714 19.8138 17.4625 20.4742 16.6296 20.1214L12.4681 18.3583C12.1689 18.2316 11.8311 18.2316 11.5319 18.3583L7.37038 20.1214C6.53754 20.4742 5.62856 19.8138 5.70677 18.9127L6.09754 14.41C6.12563 14.0863 6.02124 13.765 5.80823 13.5196L2.8455 10.1066C2.25257 9.42356 2.59977 8.35499 3.48095 8.15091L7.88397 7.13116C8.20053 7.05784 8.47383 6.85928 8.64138 6.58087L10.9718 2.70846Z" stroke="${colors.primary}" stroke-width="1.5"/>
-                  </svg>`}
-                  width={24} 
-                  height={24} 
+                <Star 
+                  size={24} 
+                  color={colors.primary}
+                  fill="none"
+                  strokeWidth={1.5}
                 />
               </View>
               <View style={styles.insightTextContainer}>
@@ -225,14 +220,11 @@ export function BudgetScreen() {
           ) : (
             <View style={[styles.insightToast, styles.warningToast]}>
               <View style={styles.insightIconContainer}>
-                <SvgXml 
-                  xml={`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 17.9261C2 17.3187 2.15479 16.7214 2.44975 16.1904L8.63566 5.0558C9.18399 4.06881 10.1381 3.37239 11.2452 3.15096C11.7435 3.05131 12.2565 3.05131 12.7548 3.15096C13.8619 3.37239 14.816 4.06881 15.3643 5.05581L21.5502 16.1904C21.8452 16.7214 22 17.3187 22 17.9261C22 19.8999 20.3999 21.5 18.4261 21.5H5.57391C3.60009 21.5 2 19.8999 2 17.9261Z" stroke="#f44336" stroke-width="1.5"/>
-                    <path d="M12 9L12 13" stroke="#f44336" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 16L12 16.5" stroke="#f44336" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>`}
-                  width={24} 
-                  height={24} 
+                <AlertTriangle 
+                  size={24} 
+                  color="#f44336"
+                  fill="none"
+                  strokeWidth={1.5}
                 />
               </View>
               <View style={styles.insightTextContainer}>

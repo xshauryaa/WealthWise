@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 import { colors } from '../styles/colors';
 import budgetData from '../mockups/budget.json';
-import Right from '../../assets/Right.svg';
+import { ChevronRight } from 'lucide-react-native';
 import { padding } from '../styles/spacing';
 
 const { width } = Dimensions.get('window');
@@ -52,7 +52,7 @@ const RecentTransactions = ({ onViewHistory }) => {
         activeOpacity={0.8}
       >
         <Text style={styles.viewHistoryText}>View History</Text>
-        <Right color="#000000" />
+        <ChevronRight color="#000000" size={24} />
       </TouchableOpacity>
     </View>
   );
@@ -60,8 +60,7 @@ const RecentTransactions = ({ onViewHistory }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: (width - 2 * padding.SCREEN_PADDING)/2 - 4,
-    height: 200,
+    width: (width - 2 * padding.SCREEN_PADDING),
     backgroundColor: colors.primary || '#2E8B57',
     borderRadius: width > 400 ? 12 : 10,
     padding: width > 400 ? 12 : 10,
@@ -95,19 +94,19 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   merchantName: {
-    fontSize: width > 400 ? 14 : 11,
+    fontSize: width > 400 ? 18 : 15,
     fontWeight: '500',
     color: '#FFFFFF',
     marginBottom: 2,
     fontFamily: 'AlbertSans_500Medium',
   },
   transactionDate: {
-    fontSize: width > 400 ? 11 : 9,
+    fontSize: width > 400 ? 14 : 12,
     color: 'rgba(255, 255, 255, 0.8)',
     fontFamily: 'AlbertSans_400Regular',
   },
   amount: {
-    fontSize: width > 400 ? 14 : 11,
+    fontSize: width > 400 ? 18 : 15,
     fontWeight: '600',
     color: '#FFFFFF',
     fontFamily: 'AlbertSans_400Regular',

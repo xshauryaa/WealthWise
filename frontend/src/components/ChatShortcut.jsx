@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Image, Dimensions } from 'react-native';
 import { colors } from '../styles/colors';
-import Right from '../../assets/Right.svg';
-import Send from '../../assets/system-icons/Send.svg';
+import { ChevronRight, Send } from 'lucide-react-native';
 
 const { width } = Dimensions.get('window');
 
@@ -52,8 +51,7 @@ const ChatShortcut = ({ onViewChat }) => {
           activeOpacity={0.8}
         >
           <Send 
-            width={width > 400 ? 20 : 16} 
-            height={width > 400 ? 20 : 16} 
+            size={width > 400 ? 20 : 16} 
             color="#FFFFFF" 
           />
         </TouchableOpacity>
@@ -66,7 +64,7 @@ const ChatShortcut = ({ onViewChat }) => {
         activeOpacity={0.8}
       >
         <Text style={styles.viewChatText}>View Chat</Text>
-        <Right color="#000000" />
+        <ChevronRight color="#000000" size={24} />
       </TouchableOpacity>
     </View>
   );
