@@ -16,6 +16,14 @@ import hashlib
 from datetime import datetime
 import logging
 
+# Load environment variables from .env file if it exists
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    # dotenv is optional, continue without it
+    pass
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -35,13 +43,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Configuration
-GEMINI_API_KEY = "AIzaSyACQoVgolr435LoOTvRaJ0FRdBqPhrtPBU"  # From .env file
-CHROMA_DB_PATH = "/Users/shauryathareja/Projects/WealthWise/ML/data/chroma_db"
-DATA_PATH = "/Users/shauryathareja/Projects/WealthWise/ML/data/synthetic/transactions.csv"
+# Configuration - Load from environment variables
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+CHROMA_DB_PATH = os.getenv("CHROMA_DB_PATH", "./data/chroma_db")
+DATA_PATH = os.getenv("DATA_PATH", "./data/synthetic/transactions.csv")
 
-# Initialize Gemini
-genai.configure(api_key=GEMINI_API_KEY)
+# Validate required environment variables
+if not GEMINI_API_KEY:
+    logger.warning("⚠️ GEMINI_API_KEY not found in environment variables. AI responses will use fallback mode.")
+else:
+    # Initialize Gemini only if API key is available
+    genai.configure(api_key=GEMINI_API_KEY)
+    logger.info("✅ Gemini AI configured successfully")
 
 # Initialize ChromaDB
 client = chromadb.PersistentClient(path=CHROMA_DB_PATH)
@@ -102,6 +115,13 @@ def initialize_rag_system():
         
         # Load and train with synthetic data
         logger.info("📊 Loading training data...")
+        
+        if not os.path.exists(DATA_PATH):
+            logger.warning(f"⚠️ Training data file not found at: {DATA_PATH}")
+            logger.info("💡 RAG system will work with fallback responses only")
+            is_trained = False
+            return
+        
         df = pd.read_csv(DATA_PATH)
         
         logger.info(f"🔄 Training RAG system with {len(df)} transactions...")
@@ -196,6 +216,10 @@ def get_rag_context(query: str, user_id: str = None, limit: int = 5):
 def generate_rag_response(user_query: str, context: str, user_id: str, budget_context: str = "", spending_insights: Dict = None):
     """Generate response using Gemini with RAG context and budget data"""
     try:
+        # Check if Gemini API key is available
+        if not GEMINI_API_KEY:
+            logger.info("🔄 Using intelligent fallback (no API key)")
+            return generate_intelligent_fallback_with_budget(user_query, context, budget_context, spending_insights)
         # Combine RAG context with budget context for richer responses
         combined_context = context
         if budget_context:
@@ -549,4 +573,10 @@ async def detect_anomalies(request: AnomalyRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    
+    # Get host and port from environment variables with defaults
+    host = os.getenv("ML_SERVER_HOST", "127.0.0.1")
+    port = int(os.getenv("ML_SERVER_PORT", "8000"))
+    
+    logger.info(f"🚀 Starting ML server on {host}:{port}")
+    uvicorn.run(app, host=host, port=port)
