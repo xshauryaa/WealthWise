@@ -10,20 +10,74 @@ import {
   KeyboardAvoidingView,
   Platform,
   Dimensions,
-  Image
+  Image,
+  ActivityIndicator,
+  Alert
 } from 'react-native';
 import { colors } from '../styles/colors';
 import { Send } from 'lucide-react-native';
 import MarkdownText from '../components/MarkdownText';
+import { mlService } from '../services/mlService';
 import chatData from '../mockups/aiChat.json';
 
 const { width, height } = Dimensions.get('window');
 
 export function ChatScreen() {
-  // Load all messages from the first conversation
-  const [messages, setMessages] = useState([...chatData.conversations[0].messages]);
+  // Load initial welcome messages from mock data
+  const [messages, setMessages] = useState([...chatData.conversations[0].messages.slice(0, 2)]);
   const [inputText, setInputText] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [isMLServiceAvailable, setIsMLServiceAvailable] = useState(false);
   const flatListRef = useRef(null);
+  
+  // Generate a simple user ID (in production, this would come from auth)
+  const userId = 'user_001';
+
+  // Check ML service health on component mount
+  useEffect(() => {
+    checkMLServiceHealth();
+    // Set up periodic health checks every 30 seconds
+    const healthCheckInterval = setInterval(checkMLServiceHealth, 30000);
+    
+    return () => clearInterval(healthCheckInterval);
+  }, []);
+
+  const checkMLServiceHealth = async () => {
+    const wasAvailable = isMLServiceAvailable;
+    const isHealthy = await mlService.checkHealth();
+    setIsMLServiceAvailable(isHealthy);
+    
+    if (isHealthy && !wasAvailable) {
+      console.log('✅ ML Service is now available - RAG system activated!');
+    } else if (isHealthy) {
+      console.log('✅ ML Service is available');
+    } else {
+      console.log('⚠️ ML Service is unavailable, using fallback responses');
+    }
+  };
+
+  const showMLServiceStatus = () => {
+    Alert.alert(
+      "ML Service Status", 
+      isMLServiceAvailable 
+        ? "✅ RAG System is connected and ready!\n\nYour messages are being processed by our advanced AI advisor powered by ChromaDB and Gemini Flash." 
+        : "⚠️ ML Service is currently offline.\n\nUsing intelligent fallback responses. The full RAG system with ChromaDB and Gemini Flash will be available when the ML backend is running.",
+      [
+        { text: "Got it", style: "default" },
+        ...(isMLServiceAvailable ? [{ 
+          text: "Test RAG", 
+          style: "default",
+          onPress: () => testRAGConnection()
+        }] : [])
+      ]
+    );
+  };
+
+  const testRAGConnection = async () => {
+    const testMessage = "Tell me about budgeting strategies";
+    setInputText(testMessage);
+    setTimeout(() => sendMessage(), 100);
+  };
 
   const renderMessage = ({ item }) => {
     const isUser = item.type === 'user';
@@ -67,38 +121,68 @@ export function ChatScreen() {
     );
   };
 
-  const sendMessage = () => {
-    if (inputText.trim()) {
-      const newMessage = {
-        id: `msg_${Date.now()}`,
-        type: 'user',
-        content: inputText.trim(),
+  const sendMessage = async () => {
+    if (!inputText.trim()) return;
+    
+    const userMessage = {
+      id: `msg_${Date.now()}`,
+      type: 'user',
+      content: inputText.trim(),
+      timestamp: new Date().toISOString()
+    };
+    
+    // Add user message immediately
+    setMessages(prevMessages => [...prevMessages, userMessage]);
+    const messageText = inputText.trim();
+    setInputText('');
+    setIsLoading(true);
+    
+    // Auto-scroll to bottom
+    setTimeout(() => {
+      flatListRef.current?.scrollToEnd({ animated: true });
+    }, 100);
+
+    try {
+      // Try to get response from ML service
+      const aiResponse = await mlService.sendChatMessage(userId, messageText);
+      
+      const assistantMessage = {
+        id: `msg_${Date.now() + 1}`,
+        type: 'assistant',
+        content: aiResponse,
         timestamp: new Date().toISOString()
       };
+
+      setMessages(prevMessages => [...prevMessages, assistantMessage]);
       
-      setMessages(prevMessages => [...prevMessages, newMessage]);
-      setInputText('');
+    } catch (error) {
+      console.error('Error getting AI response:', error);
       
-      // Auto-scroll to bottom
-      setTimeout(() => {
-        flatListRef.current?.scrollToEnd({ animated: true });
-      }, 100);
+      // Fallback to intelligent responses if ML service fails
+      const fallbackResponses = [
+        "I apologize, but I'm having trouble connecting to my advanced AI systems right now. However, I'm still here to help with basic **financial guidance**!\n\nSome quick tips:\n• Track your daily expenses\n• Set up automatic savings\n• Review your budget weekly 📊",
+        "It seems there's a temporary issue with my connection. In the meantime, here's some valuable advice:\n\n• **Emergency fund**: Aim for 3-6 months of expenses\n• **50/30/20 rule**: 50% needs, 30% wants, 20% savings\n• Start investing even with small amounts 💰",
+        "I'm experiencing some technical difficulties, but don't let that stop your **financial journey**!\n\nConsider:\n• Exploring our Learning section for insights\n• Setting up microinvestments\n• Tracking your spending patterns 🎯",
+      ];
       
-      // Simulate assistant response
-      setTimeout(() => {
-        const assistantMessage = {
-          id: `msg_${Date.now() + 1}`,
-          type: 'assistant',
-          content: "Thanks for your message! I'm here to help you with your **financial questions**. \n\nHere are some things I can help with:\n\n• **Investment advice** and portfolio optimization\n• **Budgeting strategies** to save more money\n• **Risk assessment** for your investments\n• **Goal setting** and financial planning\n\nHow can I assist you today? 💰",
-          timestamp: new Date().toISOString()
-        };
-        setMessages(prevMessages => [...prevMessages, assistantMessage]);
-        
-        setTimeout(() => {
-          flatListRef.current?.scrollToEnd({ animated: true });
-        }, 100);
-      }, 1500);
+      const randomFallback = fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
+      
+      const assistantMessage = {
+        id: `msg_${Date.now() + 1}`,
+        type: 'assistant',
+        content: randomFallback,
+        timestamp: new Date().toISOString()
+      };
+
+      setMessages(prevMessages => [...prevMessages, assistantMessage]);
+    } finally {
+      setIsLoading(false);
     }
+    
+    // Auto-scroll to bottom after assistant response
+    setTimeout(() => {
+      flatListRef.current?.scrollToEnd({ animated: true });
+    }, 200);
   };
 
   useEffect(() => {
@@ -125,7 +209,11 @@ export function ChatScreen() {
             />
             <View style={styles.headerText}>
               <Text style={styles.headerTitle}>Penny</Text>
-              <Text style={styles.headerSubtitle}>Your Financial Assistant</Text>
+              <TouchableOpacity onPress={showMLServiceStatus}>
+                <Text style={[styles.headerSubtitle, { color: isMLServiceAvailable ? colors.success : colors.warning }]}>
+                  {!__DEV__ ? (isMLServiceAvailable ? '🤖 RAG System Active' : '🔄 Intelligent Fallback Mode') : 'Your Intelligent Financial Wizard'}
+                </Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -142,6 +230,29 @@ export function ChatScreen() {
           onContentSizeChange={() => flatListRef.current?.scrollToEnd({ animated: true })}
         />
 
+        {/* Loading Indicator */}
+        {isLoading && (
+          <View style={styles.loadingContainer}>
+            <View style={styles.loadingMessage}>
+              <View style={styles.avatarContainer}>
+                <Image 
+                  source={require('../../assets/penny-images/Penny1.png')} 
+                  style={styles.avatarImage}
+                  resizeMode="contain"
+                />
+              </View>
+              <View style={styles.loadingContent}>
+                <ActivityIndicator 
+                  size="small" 
+                  color={colors.primary} 
+                  style={styles.loadingSpinner}
+                />
+                <Text style={styles.loadingText}>Penny is thinking...</Text>
+              </View>
+            </View>
+          </View>
+        )}
+
         {/* Input */}
         <View style={styles.inputContainer}>
           <View style={styles.inputWrapper}>
@@ -157,14 +268,14 @@ export function ChatScreen() {
               onSubmitEditing={sendMessage}
             />
             <TouchableOpacity 
-              style={[styles.sendButton, inputText.trim() ? styles.sendButtonActive : styles.sendButtonInactive]}
+              style={[styles.sendButton, (inputText.trim() && !isLoading) ? styles.sendButtonActive : styles.sendButtonInactive]}
               onPress={sendMessage}
               activeOpacity={0.8}
-              disabled={!inputText.trim()}
+              disabled={!inputText.trim() || isLoading}
             >
               <Send 
                 size={20} 
-                color={inputText.trim() ? colors.light : colors.grey.medium2}
+                color={(inputText.trim() && !isLoading) ? colors.light : colors.grey.medium2}
               />
             </TouchableOpacity>
           </View>
@@ -342,5 +453,32 @@ const styles = StyleSheet.create({
   },
   sendButtonInactive: {
     backgroundColor: colors.grey.medium2,
+  },
+  loadingContainer: {
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+  },
+  loadingMessage: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  loadingContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.grey.ultraLight,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 18,
+    marginLeft: 8,
+  },
+  loadingSpinner: {
+    marginRight: 8,
+  },
+  loadingText: {
+    fontSize: 14,
+    color: colors.grey.dark,
+    fontFamily: 'AlbertSans_400Regular',
+    fontStyle: 'italic',
   },
 });
